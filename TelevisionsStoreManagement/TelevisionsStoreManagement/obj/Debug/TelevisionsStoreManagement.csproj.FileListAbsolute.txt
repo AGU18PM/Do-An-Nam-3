@@ -1,0 +1,11 @@
+C:\Users\pntn0\OneDrive\Tài liệu\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\bin\Debug\TelevisionsStoreManagement.exe.config
+C:\Users\pntn0\OneDrive\Tài liệu\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\bin\Debug\TelevisionsStoreManagement.exe
+C:\Users\pntn0\OneDrive\Tài liệu\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\bin\Debug\TelevisionsStoreManagement.pdb
+C:\Users\pntn0\OneDrive\Tài liệu\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.csprojAssemblyReference.cache
+C:\Users\pntn0\OneDrive\Tài liệu\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.fLoading.resources
+C:\Users\pntn0\OneDrive\Tài liệu\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.fLogin.resources
+C:\Users\pntn0\OneDrive\Tài liệu\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.Properties.Resources.resources
+C:\Users\pntn0\OneDrive\Tài liệu\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.csproj.GenerateResource.cache
+C:\Users\pntn0\OneDrive\Tài liệu\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.csproj.CoreCompileInputs.cache
+C:\Users\pntn0\OneDrive\Tài liệu\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.exe
+C:\Users\pntn0\OneDrive\Tài liệu\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.pdb
