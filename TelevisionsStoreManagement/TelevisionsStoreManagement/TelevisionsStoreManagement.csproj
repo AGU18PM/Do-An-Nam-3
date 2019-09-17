@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\DataProvider.cs" />
+    <Compile Include="GUI\Account.cs" />
     <Compile Include="GUI\fLoading.cs">
       <SubType>Form</SubType>
     </Compile>

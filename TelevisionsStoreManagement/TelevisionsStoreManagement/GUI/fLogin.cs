@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TelevisionsStoreManagement.GUI;
 
 namespace TelevisionsStoreManagement
 {
@@ -15,6 +16,18 @@ namespace TelevisionsStoreManagement
         public fLogin()
         {
             InitializeComponent();
+            lbError.Hide();
+        }
+        private void BtnLogin_Click(object sender, EventArgs e)
+        {
+            if (Account.Instance.login(txbUsername.Text, txbPassword.Text))
+            {
+                Hide();
+                fLoading f = new fLoading();
+                f.ShowDialog();
+            }
+            else
+                lbError.Show();
         }
     }
 }
