@@ -15,7 +15,7 @@ namespace TelevisionsStoreManagement
         public fLoading()
         {
             InitializeComponent();
-            this.Hide();
+            Hide();
             fLogin login = new fLogin();
             login.ShowDialog();
         }
