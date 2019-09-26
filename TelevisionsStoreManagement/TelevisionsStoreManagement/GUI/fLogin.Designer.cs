@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fLogin));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbError = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -43,7 +44,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.lbError = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -64,6 +64,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(334, 301);
             this.panel1.TabIndex = 0;
+            // 
+            // lbError
+            // 
+            this.lbError.AutoSize = true;
+            this.lbError.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbError.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbError.ForeColor = System.Drawing.Color.Maroon;
+            this.lbError.Location = new System.Drawing.Point(27, 160);
+            this.lbError.Name = "lbError";
+            this.lbError.Size = new System.Drawing.Size(94, 29);
+            this.lbError.TabIndex = 4;
+            this.lbError.Text = "Incorect";
             // 
             // label4
             // 
@@ -90,7 +102,7 @@
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
+            //this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // panel3
             // 
@@ -224,18 +236,6 @@
             this.button1.TabStop = false;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // lbError
-            // 
-            this.lbError.AutoSize = true;
-            this.lbError.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbError.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbError.ForeColor = System.Drawing.Color.Maroon;
-            this.lbError.Location = new System.Drawing.Point(27, 160);
-            this.lbError.Name = "lbError";
-            this.lbError.Size = new System.Drawing.Size(94, 29);
-            this.lbError.TabIndex = 4;
-            this.lbError.Text = "Incorect";
             // 
             // fLogin
             // 

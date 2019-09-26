@@ -20,3 +20,4 @@ C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Televisio
 C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.csproj.CoreCompileInputs.cache
 C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.exe
 C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.pdb
+C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.GUI.fMain.resources
