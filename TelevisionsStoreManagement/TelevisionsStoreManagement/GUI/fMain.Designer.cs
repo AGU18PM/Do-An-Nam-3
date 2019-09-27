@@ -63,6 +63,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tabPage1 = new TelevisionsStoreManagement.UC.TabPage();
             this.PanelMenuMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner6)).BeginInit();
@@ -506,12 +507,20 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(190, 185);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(1011, 437);
+            this.tabPage1.TabIndex = 4;
+            // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1370, 730);
+            this.Controls.Add(this.tabPage1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.PanelMenuMain);
@@ -574,5 +583,6 @@
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnRestoreDown;
         private System.Windows.Forms.Panel PanelForm;
+        private UC.TabPage tabPage1;
     }
 }
