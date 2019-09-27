@@ -55,14 +55,14 @@
             this.PanelColorMain = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnMinimize = new System.Windows.Forms.Button();
-            this.btnRestoreDown = new System.Windows.Forms.Button();
+            this.PanelForm = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnRestoreDown = new System.Windows.Forms.Button();
+            this.btnMinimize = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.PanelForm = new System.Windows.Forms.Panel();
             this.PanelMenuMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner6)).BeginInit();
@@ -72,9 +72,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.PanelForm.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.PanelForm.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelMenuMain
@@ -114,7 +114,7 @@
             this.labelAdmin.AutoSize = true;
             this.labelAdmin.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAdmin.ForeColor = System.Drawing.Color.DimGray;
-            this.labelAdmin.Location = new System.Drawing.Point(52, 150);
+            this.labelAdmin.Location = new System.Drawing.Point(49, 150);
             this.labelAdmin.Name = "labelAdmin";
             this.labelAdmin.Size = new System.Drawing.Size(82, 14);
             this.labelAdmin.TabIndex = 7;
@@ -406,35 +406,15 @@
             this.panel2.Size = new System.Drawing.Size(1180, 30);
             this.panel2.TabIndex = 2;
             // 
-            // btnMinimize
+            // PanelForm
             // 
-            this.btnMinimize.BackColor = System.Drawing.SystemColors.Control;
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinimize.ForeColor = System.Drawing.Color.DimGray;
-            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(0, 0);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(52, 30);
-            this.btnMinimize.TabIndex = 6;
-            this.btnMinimize.UseVisualStyleBackColor = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // btnRestoreDown
-            // 
-            this.btnRestoreDown.BackColor = System.Drawing.SystemColors.Control;
-            this.btnRestoreDown.FlatAppearance.BorderSize = 0;
-            this.btnRestoreDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRestoreDown.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRestoreDown.ForeColor = System.Drawing.Color.DimGray;
-            this.btnRestoreDown.Image = ((System.Drawing.Image)(resources.GetObject("btnRestoreDown.Image")));
-            this.btnRestoreDown.Location = new System.Drawing.Point(54, 0);
-            this.btnRestoreDown.Name = "btnRestoreDown";
-            this.btnRestoreDown.Size = new System.Drawing.Size(52, 30);
-            this.btnRestoreDown.TabIndex = 5;
-            this.btnRestoreDown.UseVisualStyleBackColor = false;
-            this.btnRestoreDown.Click += new System.EventHandler(this.btnRestoreDown_Click);
+            this.PanelForm.Controls.Add(this.btnExit);
+            this.PanelForm.Controls.Add(this.btnRestoreDown);
+            this.PanelForm.Controls.Add(this.btnMinimize);
+            this.PanelForm.Location = new System.Drawing.Point(1019, 0);
+            this.PanelForm.Name = "PanelForm";
+            this.PanelForm.Size = new System.Drawing.Size(161, 30);
+            this.PanelForm.TabIndex = 7;
             // 
             // btnExit
             // 
@@ -451,13 +431,43 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnRestoreDown
+            // 
+            this.btnRestoreDown.BackColor = System.Drawing.SystemColors.Control;
+            this.btnRestoreDown.FlatAppearance.BorderSize = 0;
+            this.btnRestoreDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRestoreDown.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestoreDown.ForeColor = System.Drawing.Color.DimGray;
+            this.btnRestoreDown.Image = ((System.Drawing.Image)(resources.GetObject("btnRestoreDown.Image")));
+            this.btnRestoreDown.Location = new System.Drawing.Point(54, 0);
+            this.btnRestoreDown.Name = "btnRestoreDown";
+            this.btnRestoreDown.Size = new System.Drawing.Size(52, 30);
+            this.btnRestoreDown.TabIndex = 5;
+            this.btnRestoreDown.UseVisualStyleBackColor = false;
+            this.btnRestoreDown.Click += new System.EventHandler(this.btnRestoreDown_Click);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.BackColor = System.Drawing.SystemColors.Control;
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinimize.ForeColor = System.Drawing.Color.DimGray;
+            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
+            this.btnMinimize.Location = new System.Drawing.Point(0, 0);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(52, 30);
+            this.btnMinimize.TabIndex = 6;
+            this.btnMinimize.UseVisualStyleBackColor = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ControlDark;
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Location = new System.Drawing.Point(380, 20);
+            this.panel3.Location = new System.Drawing.Point(266, 10);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(105, 139);
             this.panel3.TabIndex = 3;
@@ -496,16 +506,6 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // PanelForm
-            // 
-            this.PanelForm.Controls.Add(this.btnExit);
-            this.PanelForm.Controls.Add(this.btnRestoreDown);
-            this.PanelForm.Controls.Add(this.btnMinimize);
-            this.PanelForm.Location = new System.Drawing.Point(1019, 0);
-            this.PanelForm.Name = "PanelForm";
-            this.PanelForm.Size = new System.Drawing.Size(161, 30);
-            this.PanelForm.TabIndex = 7;
-            // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -530,10 +530,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner1)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.PanelForm.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.PanelForm.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
