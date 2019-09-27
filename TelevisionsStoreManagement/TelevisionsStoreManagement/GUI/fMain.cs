@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using TelevisionsStoreManagement.UC;
 
 namespace TelevisionsStoreManagement.GUI
 {
@@ -17,6 +18,8 @@ namespace TelevisionsStoreManagement.GUI
         {
             InitializeComponent();
             Color_Button();
+            HomePageCtr uc = new HomePageCtr();
+            addControl(uc);
         }
 
         string startupURL = Application.StartupPath;
@@ -63,18 +66,19 @@ namespace TelevisionsStoreManagement.GUI
             btnHelp.Image = Image.FromFile(startupURL + "\\Icon\\help-icon-grey.png");
             btnSetting.Image = Image.FromFile(startupURL + "\\Icon\\setting-icon-gray.png");
             btnReven.Image = Image.FromFile(startupURL + "\\Icon\\revenue-icon-gray.png");
-            btnDepot.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
+            btnWareHouse.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
             btnPayment.Image = Image.FromFile(startupURL + "\\Icon\\pay-icon.png");
             btnHome.Image = Image.FromFile(startupURL + "\\Icon\\button_home_blue.png");
             //
             btnSetting.ForeColor = System.Drawing.Color.DimGray;
             btnHelp.ForeColor = System.Drawing.Color.DimGray;
             btnReven.ForeColor = System.Drawing.Color.DimGray;
-            btnDepot.ForeColor = System.Drawing.Color.DimGray;
+            btnWareHouse.ForeColor = System.Drawing.Color.DimGray;
             btnPayment.ForeColor = System.Drawing.Color.DimGray;
             btnProduct.ForeColor = System.Drawing.Color.DimGray;
             btnHome.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
-
+            HomePageCtr uc = new HomePageCtr();
+            addControl(uc);
         }
 
         private void btnProduct_Click(object sender, EventArgs e)
@@ -99,17 +103,20 @@ namespace TelevisionsStoreManagement.GUI
             btnHelp.Image = Image.FromFile(startupURL + "\\Icon\\help-icon-grey.png");
             btnSetting.Image = Image.FromFile(startupURL + "\\Icon\\setting-icon-gray.png");
             btnReven.Image = Image.FromFile(startupURL + "\\Icon\\revenue-icon-gray.png");
-            btnDepot.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
+            btnWareHouse.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
             btnPayment.Image = Image.FromFile(startupURL + "\\Icon\\pay-icon.png");
             btnHome.Image = Image.FromFile(startupURL + "\\Icon\\home-icon1.png");
             //
             btnSetting.ForeColor = System.Drawing.Color.DimGray;
             btnHelp.ForeColor = System.Drawing.Color.DimGray;
             btnReven.ForeColor = System.Drawing.Color.DimGray;
-            btnDepot.ForeColor = System.Drawing.Color.DimGray;
+            btnWareHouse.ForeColor = System.Drawing.Color.DimGray;
             btnPayment.ForeColor = System.Drawing.Color.DimGray;
             btnHome.ForeColor = System.Drawing.Color.DimGray;
             btnProduct.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
+
+            ProductCtr uc = new ProductCtr();
+            addControl(uc);
         }
 
         private void btnPayment_Click(object sender, EventArgs e)
@@ -134,14 +141,14 @@ namespace TelevisionsStoreManagement.GUI
             btnHelp.Image = Image.FromFile(startupURL + "\\Icon\\help-icon-grey.png");
             btnSetting.Image = Image.FromFile(startupURL + "\\Icon\\setting-icon-gray.png");
             btnReven.Image = Image.FromFile(startupURL + "\\Icon\\revenue-icon-gray.png");
-            btnDepot.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
+            btnWareHouse.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
             btnPayment.Image = Image.FromFile(startupURL + "\\Icon\\pay-icon-blue.png");
             btnHome.Image = Image.FromFile(startupURL + "\\Icon\\home-icon1.png");
             //
             btnSetting.ForeColor = System.Drawing.Color.DimGray;
             btnHelp.ForeColor = System.Drawing.Color.DimGray;
             btnReven.ForeColor = System.Drawing.Color.DimGray;
-            btnDepot.ForeColor = System.Drawing.Color.DimGray;
+            btnWareHouse.ForeColor = System.Drawing.Color.DimGray;
             btnProduct.ForeColor = System.Drawing.Color.DimGray;            
             btnHome.ForeColor = System.Drawing.Color.DimGray;
             btnPayment.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
@@ -169,18 +176,18 @@ namespace TelevisionsStoreManagement.GUI
             btnHelp.Image = Image.FromFile(startupURL + "\\Icon\\help-icon-grey.png");
             btnSetting.Image = Image.FromFile(startupURL + "\\Icon\\setting-icon-gray.png");
             btnReven.Image = Image.FromFile(startupURL + "\\Icon\\revenue-icon-gray.png");
-            btnDepot.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-blue.png");
+            btnWareHouse.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-blue.png");
             btnPayment.Image = Image.FromFile(startupURL + "\\Icon\\pay-icon.png");
             btnHome.Image = Image.FromFile(startupURL + "\\Icon\\home-icon1.png");
             //
             btnSetting.ForeColor = System.Drawing.Color.DimGray;
             btnHelp.ForeColor = System.Drawing.Color.DimGray;
             btnReven.ForeColor = System.Drawing.Color.DimGray;
-            btnDepot.ForeColor = System.Drawing.Color.DimGray;
+            btnWareHouse.ForeColor = System.Drawing.Color.DimGray;
             btnProduct.ForeColor = System.Drawing.Color.DimGray;
             btnPayment.ForeColor = System.Drawing.Color.DimGray;
             btnHome.ForeColor = System.Drawing.Color.DimGray;            
-            btnDepot.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
+            btnWareHouse.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
         }
 
         private void btnReven_Click(object sender, EventArgs e)
@@ -205,14 +212,14 @@ namespace TelevisionsStoreManagement.GUI
             btnHelp.Image = Image.FromFile(startupURL + "\\Icon\\help-icon-grey.png");
             btnSetting.Image = Image.FromFile(startupURL + "\\Icon\\setting-icon-gray.png");
             btnReven.Image = Image.FromFile(startupURL + "\\Icon\\revenue-icon-blue .png");
-            btnDepot.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
+            btnWareHouse.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
             btnPayment.Image = Image.FromFile(startupURL + "\\Icon\\pay-icon.png");
             btnHome.Image = Image.FromFile(startupURL + "\\Icon\\home-icon1.png");
             //
             btnSetting.ForeColor = System.Drawing.Color.DimGray;
             btnHelp.ForeColor = System.Drawing.Color.DimGray;
             btnReven.ForeColor = System.Drawing.Color.DimGray;
-            btnDepot.ForeColor = System.Drawing.Color.DimGray;
+            btnWareHouse.ForeColor = System.Drawing.Color.DimGray;
             btnProduct.ForeColor = System.Drawing.Color.DimGray;
             btnPayment.ForeColor = System.Drawing.Color.DimGray;
             btnHome.ForeColor = System.Drawing.Color.DimGray;
@@ -246,14 +253,14 @@ namespace TelevisionsStoreManagement.GUI
             btnHelp.Image = Image.FromFile(startupURL + "\\Icon\\help-icon-grey.png");
             btnSetting.Image = Image.FromFile(startupURL + "\\Icon\\setting-icon-blue.png");
             btnReven.Image = Image.FromFile(startupURL + "\\Icon\\revenue-icon-gray.png");
-            btnDepot.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
+            btnWareHouse.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
             btnPayment.Image = Image.FromFile(startupURL + "\\Icon\\pay-icon.png");
             btnHome.Image = Image.FromFile(startupURL + "\\Icon\\home-icon1.png");
             //
             btnProduct.ForeColor = System.Drawing.Color.DimGray;
             btnHelp.ForeColor = System.Drawing.Color.DimGray;
             btnReven.ForeColor = System.Drawing.Color.DimGray;
-            btnDepot.ForeColor = System.Drawing.Color.DimGray;
+            btnWareHouse.ForeColor = System.Drawing.Color.DimGray;
             btnPayment.ForeColor = System.Drawing.Color.DimGray;
             btnHome.ForeColor = System.Drawing.Color.DimGray;
             btnSetting.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
@@ -282,14 +289,14 @@ namespace TelevisionsStoreManagement.GUI
             btnHelp.Image = Image.FromFile(startupURL + "\\Icon\\help-icon-blue.png");
             btnSetting.Image = Image.FromFile(startupURL + "\\Icon\\setting-icon-gray.png");
             btnReven.Image = Image.FromFile(startupURL + "\\Icon\\revenue-icon-gray.png");
-            btnDepot.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
+            btnWareHouse.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
             btnPayment.Image = Image.FromFile(startupURL + "\\Icon\\pay-icon.png");
             btnHome.Image = Image.FromFile(startupURL + "\\Icon\\home-icon1.png");
             //
             btnProduct.ForeColor = System.Drawing.Color.DimGray;
             btnSetting.ForeColor = System.Drawing.Color.DimGray;
             btnReven.ForeColor = System.Drawing.Color.DimGray;
-            btnDepot.ForeColor = System.Drawing.Color.DimGray;
+            btnWareHouse.ForeColor = System.Drawing.Color.DimGray;
             btnPayment.ForeColor = System.Drawing.Color.DimGray;
             btnHome.ForeColor = System.Drawing.Color.DimGray;
             btnHelp.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
@@ -301,16 +308,17 @@ namespace TelevisionsStoreManagement.GUI
             if (PanelForm.Location.X == 1019 && PanelForm.Location.Y == 0 )
             {
                 PanelForm.Location = new Point(840, 0);
-                this.Size = new Size(1191, 578);
-                this.Location = new Point(93, 66);
-                
+                Size = new Size(1191, 578);
+                Location = new Point(93, 66);
 
+               // MainPanel.Size = new Size(137, 65);
             }
             else if (PanelForm.Location.X == 840 && PanelForm.Location.Y == 0)
             {
                 PanelForm.Location = new Point(1019, 0);
-                this.Size = new Size(1370, 730);
-                this.Location = new Point(0, 0);
+                Size = new Size(1370, 730);
+                Location = new Point(0, 0);
+              //  MainPanel.Size = new Size(1056, 504);
             }
 
 
@@ -322,6 +330,13 @@ namespace TelevisionsStoreManagement.GUI
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void addControl(Control control)
+        {
+            control.Dock = DockStyle.Fill;
+            MainPanel.Controls.Clear();
+            MainPanel.Controls.Add(control);
+        }
+        
         
     }
 }

@@ -34,6 +34,7 @@ CREATE TABLE TIVI
 	NAME NVARCHAR(100) NOT NULL,
 	IDCATEGORY INT NOT NULL,
 	PRICE FLOAT NOT NULL DEFAULT 0,
+	picture VARCHAR(50),
 	FOREIGN KEY (IDCATEGORY) REFERENCES TIVICATEGORY(ID)
 )
 GO
@@ -94,4 +95,19 @@ BEGIN
 END
 GO
 
-SELECT * FROM dbo.ACCOUNT
+INSERT INTO dbo.TIVI
+        ( NAME, IDCATEGORY, PRICE, picture )
+VALUES  ( N'S10', -- NAME - nvarchar(100)
+          1, -- IDCATEGORY - int
+          10000000.0,  -- PRICE - float
+		  'C:\\Users\\pntn0\\OneDrive\\Desktop'
+          )
+
+		  SELECT * FROM dbo.TIVI
+		  INSERT INTO dbo.TIVI
+		          ( NAME, IDCATEGORY, PRICE,picture )
+		  VALUES  ( N'S9', -- NAME - nvarchar(100)
+		            1, -- IDCATEGORY - int
+		            8000000.0,  -- PRICE - float
+		            'C:\\Users\\pntn0\\OneDrive\\Desktop'
+					)

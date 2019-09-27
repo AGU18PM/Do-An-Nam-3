@@ -47,7 +47,7 @@
             this.PanelColorRevenue = new System.Windows.Forms.Panel();
             this.btnReven = new System.Windows.Forms.Button();
             this.PanelColorDepot = new System.Windows.Forms.Panel();
-            this.btnDepot = new System.Windows.Forms.Button();
+            this.btnWareHouse = new System.Windows.Forms.Button();
             this.PanelColorPayment = new System.Windows.Forms.Panel();
             this.PanelColorProduct = new System.Windows.Forms.Panel();
             this.btnPayment = new System.Windows.Forms.Button();
@@ -63,7 +63,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tabPage1 = new TelevisionsStoreManagement.UC.TabPage();
+            this.MainPanel = new System.Windows.Forms.Panel();
             this.PanelMenuMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner6)).BeginInit();
@@ -98,7 +98,7 @@
             this.PanelMenuMain.Controls.Add(this.PanelColorRevenue);
             this.PanelMenuMain.Controls.Add(this.btnReven);
             this.PanelMenuMain.Controls.Add(this.PanelColorDepot);
-            this.PanelMenuMain.Controls.Add(this.btnDepot);
+            this.PanelMenuMain.Controls.Add(this.btnWareHouse);
             this.PanelMenuMain.Controls.Add(this.PanelColorPayment);
             this.PanelMenuMain.Controls.Add(this.PanelColorProduct);
             this.PanelMenuMain.Controls.Add(this.btnPayment);
@@ -306,22 +306,22 @@
             this.PanelColorDepot.Size = new System.Drawing.Size(190, 5);
             this.PanelColorDepot.TabIndex = 3;
             // 
-            // btnDepot
+            // btnWareHouse
             // 
-            this.btnDepot.BackColor = System.Drawing.SystemColors.Control;
-            this.btnDepot.FlatAppearance.BorderSize = 0;
-            this.btnDepot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDepot.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDepot.ForeColor = System.Drawing.Color.DimGray;
-            this.btnDepot.Image = ((System.Drawing.Image)(resources.GetObject("btnDepot.Image")));
-            this.btnDepot.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDepot.Location = new System.Drawing.Point(0, 325);
-            this.btnDepot.Name = "btnDepot";
-            this.btnDepot.Size = new System.Drawing.Size(190, 46);
-            this.btnDepot.TabIndex = 4;
-            this.btnDepot.Text = "Kho";
-            this.btnDepot.UseVisualStyleBackColor = false;
-            this.btnDepot.Click += new System.EventHandler(this.btnDepot_Click);
+            this.btnWareHouse.BackColor = System.Drawing.SystemColors.Control;
+            this.btnWareHouse.FlatAppearance.BorderSize = 0;
+            this.btnWareHouse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWareHouse.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWareHouse.ForeColor = System.Drawing.Color.DimGray;
+            this.btnWareHouse.Image = ((System.Drawing.Image)(resources.GetObject("btnWareHouse.Image")));
+            this.btnWareHouse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnWareHouse.Location = new System.Drawing.Point(0, 325);
+            this.btnWareHouse.Name = "btnWareHouse";
+            this.btnWareHouse.Size = new System.Drawing.Size(190, 46);
+            this.btnWareHouse.TabIndex = 4;
+            this.btnWareHouse.Text = "Kho";
+            this.btnWareHouse.UseVisualStyleBackColor = false;
+            this.btnWareHouse.Click += new System.EventHandler(this.btnDepot_Click);
             // 
             // PanelColorPayment
             // 
@@ -507,12 +507,12 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // tabPage1
+            // MainPanel
             // 
-            this.tabPage1.Location = new System.Drawing.Point(190, 185);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1011, 437);
-            this.tabPage1.TabIndex = 4;
+            this.MainPanel.Location = new System.Drawing.Point(205, 185);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(1056, 504);
+            this.MainPanel.TabIndex = 5;
             // 
             // fMain
             // 
@@ -520,7 +520,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1370, 730);
-            this.Controls.Add(this.tabPage1);
+            this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.PanelMenuMain);
@@ -557,7 +557,7 @@
         private System.Windows.Forms.Button btnPayment;
         private System.Windows.Forms.Button btnReven;
         private System.Windows.Forms.Panel PanelColorDepot;
-        private System.Windows.Forms.Button btnDepot;
+        private System.Windows.Forms.Button btnWareHouse;
         private System.Windows.Forms.Panel PanelColorPayment;
         private System.Windows.Forms.Panel PanelColorRevenue;
         private System.Windows.Forms.Panel panel2;
@@ -583,6 +583,7 @@
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnRestoreDown;
         private System.Windows.Forms.Panel PanelForm;
-        private UC.TabPage tabPage1;
+     //   private UC.TabPage tabPage1;
+        private System.Windows.Forms.Panel MainPanel;
     }
 }

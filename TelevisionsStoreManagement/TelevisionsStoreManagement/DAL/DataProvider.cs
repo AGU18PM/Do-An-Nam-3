@@ -20,7 +20,7 @@ namespace TelevisionsStoreManagement.DAL
 
         private DataProvider() { }
 
-        private string connectionSTR = @"Data Source=DESKTOP-NQP8BVD;Initial Catalog=QUANLYTIVI;Integrated Security=True";
+        private string connectionSTR = @"Data Source=DESKTOP-NQP8BVD;Initial Catalog=QUANLYTIVI2;Integrated Security=True";
 
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {

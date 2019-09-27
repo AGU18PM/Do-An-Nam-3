@@ -16,23 +16,26 @@ namespace TelevisionsStoreManagement
         public fLogin()
         {
             InitializeComponent();
-            //lbError.Hide();
+            lbError.Hide();
             InitializeComponent();
+
             Hide();
             fMain main = new fMain();
             main.ShowDialog();
 
         }
-        /*private void BtnLogin_Click(object sender, EventArgs e)
+        
+
+        private void BtnLogin_Click(object sender, EventArgs e)
         {
             if (Account.Instance.login(txbUsername.Text, txbPassword.Text))
             {
                 Hide();
-                fLoading f = new fLoading();
+                fMain f = new fMain();
                 f.ShowDialog();
             }
             else
                 lbError.Show();
-        }*/
+        }
     }
 }

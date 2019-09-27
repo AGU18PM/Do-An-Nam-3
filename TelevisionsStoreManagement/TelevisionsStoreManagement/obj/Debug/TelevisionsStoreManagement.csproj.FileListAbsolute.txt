@@ -23,3 +23,5 @@ C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Televisio
 C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.GUI.fMain.resources
 C:\Users\pntn0\OneDrive\Tài liệu\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.GUI.fMain.resources
 C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.UC.TabPage.resources
+C:\Users\pntn0\OneDrive\Tài liệu\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.UC.HomePageCtr.resources
+C:\Users\pntn0\OneDrive\Tài liệu\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.UC.ProductCtr.resources

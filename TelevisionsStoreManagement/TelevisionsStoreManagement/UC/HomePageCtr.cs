@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TelevisionsStoreManagement.UC
 {
-    public partial class TabPage : UserControl
+    public partial class HomePageCtr : UserControl
     {
-        public TabPage()
+        public HomePageCtr()
         {
             InitializeComponent();
         }
