@@ -69,3 +69,29 @@ CREATE TABLE BILLINFO
 	FOREIGN KEY (IDBILL) REFERENCES BILL(ID),
 	FOREIGN KEY (IDTIVI) REFERENCES TIVI(ID)
 )
+
+INSERT INTO dbo.ACCOUNT
+        ( NAME ,
+          USERNAME ,
+          PASSWORD ,
+          ROLE ,
+          STATUS
+        )
+VALUES  ( N'Nam Béo' , -- NAME - nvarchar(100)
+          'pntn0705' , -- USERNAME - varchar(100)
+          'Cccc1254' , -- PASSWORD - varchar(1000)
+          1 , -- ROLE - int
+          1  -- STATUS - int
+        )
+
+		SELECT * FROM dbo.ACCOUNT
+
+CREATE PROC USP_Login
+@Username nvarchar(100), @Password nvarchar(1000)
+AS
+BEGIN
+	SELECT * FROM dbo.ACCOUNT WHERE USERNAME = @Username AND PASSWORD = @Password
+END
+GO
+
+SELECT * FROM dbo.ACCOUNT

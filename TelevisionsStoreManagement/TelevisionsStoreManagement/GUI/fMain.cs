@@ -19,6 +19,7 @@ namespace TelevisionsStoreManagement.GUI
             Color_Button();
         }
 
+        string startupURL = Application.StartupPath;
         private void Color_Button()
         {
             //
@@ -37,7 +38,7 @@ namespace TelevisionsStoreManagement.GUI
             PanelColorRevenue.Hide();
             PanelColorSetting.Hide();
             PanelColorHelp.Hide();
-            btnHome.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\button_home_blue.png");
+            btnHome.Image = Image.FromFile(startupURL+"\\Icon\\button_home_blue.png"); 
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -58,13 +59,13 @@ namespace TelevisionsStoreManagement.GUI
             PanelColorSetting.Hide();
             PanelColorHelp.Hide();
             //
-            btnProduct.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\menu-icon-gray.png");
-            btnHelp.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\help-icon-grey.png");
-            btnSetting.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\setting-icon-gray.png");
-            btnReven.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\revenue-icon-gray.png");
-            btnDepot.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\box-icon-gray.png");
-            btnPayment.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\pay-icon.png");
-            btnHome.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\button_home_blue.png");
+            btnProduct.Image = Image.FromFile(startupURL + "\\Icon\\menu-icon-gray.png");
+            btnHelp.Image = Image.FromFile(startupURL + "\\Icon\\help-icon-grey.png");
+            btnSetting.Image = Image.FromFile(startupURL + "\\Icon\\setting-icon-gray.png");
+            btnReven.Image = Image.FromFile(startupURL + "\\Icon\\revenue-icon-gray.png");
+            btnDepot.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
+            btnPayment.Image = Image.FromFile(startupURL + "\\Icon\\pay-icon.png");
+            btnHome.Image = Image.FromFile(startupURL + "\\Icon\\button_home_blue.png");
             //
             btnSetting.ForeColor = System.Drawing.Color.DimGray;
             btnHelp.ForeColor = System.Drawing.Color.DimGray;
@@ -94,13 +95,13 @@ namespace TelevisionsStoreManagement.GUI
             PanelColorSetting.Hide();
             PanelColorHelp.Hide();
             //
-            btnProduct.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\menu-icon-blue.png");
-            btnHelp.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\help-icon-grey.png");
-            btnSetting.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\setting-icon-gray.png");
-            btnReven.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\revenue-icon-gray.png");
-            btnDepot.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\box-icon-gray.png");
-            btnPayment.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\pay-icon.png");
-            btnHome.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\\home-icon1.png");
+            btnProduct.Image = Image.FromFile(startupURL+"\\Icon\\menu-icon-blue.png");
+            btnHelp.Image = Image.FromFile(startupURL + "\\Icon\\help-icon-grey.png");
+            btnSetting.Image = Image.FromFile(startupURL + "\\Icon\\setting-icon-gray.png");
+            btnReven.Image = Image.FromFile(startupURL + "\\Icon\\revenue-icon-gray.png");
+            btnDepot.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
+            btnPayment.Image = Image.FromFile(startupURL + "\\Icon\\pay-icon.png");
+            btnHome.Image = Image.FromFile(startupURL + "\\Icon\\home-icon1.png");
             //
             btnSetting.ForeColor = System.Drawing.Color.DimGray;
             btnHelp.ForeColor = System.Drawing.Color.DimGray;
@@ -129,13 +130,13 @@ namespace TelevisionsStoreManagement.GUI
             PanelColorSetting.Hide();
             PanelColorHelp.Hide();
             //
-            btnProduct.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\menu-icon-gray.png");
-            btnHelp.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\help-icon-grey.png");
-            btnSetting.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\setting-icon-gray.png");
-            btnReven.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\revenue-icon-gray.png");
-            btnDepot.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\box-icon-gray.png");
-            btnPayment.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\pay-icon-blue.png");
-            btnHome.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\\home-icon1.png");
+            btnProduct.Image = Image.FromFile(startupURL + "\\Icon\\menu-icon-gray.png");
+            btnHelp.Image = Image.FromFile(startupURL + "\\Icon\\help-icon-grey.png");
+            btnSetting.Image = Image.FromFile(startupURL + "\\Icon\\setting-icon-gray.png");
+            btnReven.Image = Image.FromFile(startupURL + "\\Icon\\revenue-icon-gray.png");
+            btnDepot.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
+            btnPayment.Image = Image.FromFile(startupURL + "\\Icon\\pay-icon-blue.png");
+            btnHome.Image = Image.FromFile(startupURL + "\\Icon\\home-icon1.png");
             //
             btnSetting.ForeColor = System.Drawing.Color.DimGray;
             btnHelp.ForeColor = System.Drawing.Color.DimGray;
@@ -164,13 +165,13 @@ namespace TelevisionsStoreManagement.GUI
             PanelColorSetting.Hide();
             PanelColorHelp.Hide();
             //
-            btnProduct.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\menu-icon-gray.png");
-            btnHelp.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\help-icon-grey.png");
-            btnSetting.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\setting-icon-gray.png");
-            btnReven.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\revenue-icon-gray.png");
-            btnDepot.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\box-icon-blue.png");
-            btnPayment.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\pay-icon.png");
-            btnHome.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\\home-icon1.png");
+            btnProduct.Image = Image.FromFile(startupURL + "\\Icon\\menu-icon-gray.png");
+            btnHelp.Image = Image.FromFile(startupURL + "\\Icon\\help-icon-grey.png");
+            btnSetting.Image = Image.FromFile(startupURL + "\\Icon\\setting-icon-gray.png");
+            btnReven.Image = Image.FromFile(startupURL + "\\Icon\\revenue-icon-gray.png");
+            btnDepot.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-blue.png");
+            btnPayment.Image = Image.FromFile(startupURL + "\\Icon\\pay-icon.png");
+            btnHome.Image = Image.FromFile(startupURL + "\\Icon\\home-icon1.png");
             //
             btnSetting.ForeColor = System.Drawing.Color.DimGray;
             btnHelp.ForeColor = System.Drawing.Color.DimGray;
@@ -200,13 +201,13 @@ namespace TelevisionsStoreManagement.GUI
             PanelColorSetting.Hide();
             PanelColorHelp.Hide();
             //
-            btnProduct.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\menu-icon-gray.png");
-            btnHelp.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\help-icon-grey.png");
-            btnSetting.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\setting-icon-gray.png");
-            btnReven.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\revenue-icon-blue .png");
-            btnDepot.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\box-icon-gray.png");
-            btnPayment.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\pay-icon.png");
-            btnHome.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\\home-icon1.png");
+            btnProduct.Image = Image.FromFile(startupURL + "\\Icon\\menu-icon-gray.png");
+            btnHelp.Image = Image.FromFile(startupURL + "\\Icon\\help-icon-grey.png");
+            btnSetting.Image = Image.FromFile(startupURL + "\\Icon\\setting-icon-gray.png");
+            btnReven.Image = Image.FromFile(startupURL + "\\Icon\\revenue-icon-blue .png");
+            btnDepot.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
+            btnPayment.Image = Image.FromFile(startupURL + "\\Icon\\pay-icon.png");
+            btnHome.Image = Image.FromFile(startupURL + "\\Icon\\home-icon1.png");
             //
             btnSetting.ForeColor = System.Drawing.Color.DimGray;
             btnHelp.ForeColor = System.Drawing.Color.DimGray;
@@ -241,13 +242,13 @@ namespace TelevisionsStoreManagement.GUI
             PanelColorSetting.Show();
             PanelColorHelp.Hide();
             //
-            btnProduct.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\menu-icon-gray.png");
-            btnHelp.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\help-icon-grey.png");
-            btnSetting.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\setting-icon-blue.png");
-            btnReven.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\revenue-icon-gray.png");
-            btnDepot.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\box-icon-gray.png");
-            btnPayment.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\pay-icon.png");
-            btnHome.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\\home-icon1.png");
+            btnProduct.Image = Image.FromFile(startupURL + "\\Icon\\menu-icon-gray.png");
+            btnHelp.Image = Image.FromFile(startupURL + "\\Icon\\help-icon-grey.png");
+            btnSetting.Image = Image.FromFile(startupURL + "\\Icon\\setting-icon-blue.png");
+            btnReven.Image = Image.FromFile(startupURL + "\\Icon\\revenue-icon-gray.png");
+            btnDepot.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
+            btnPayment.Image = Image.FromFile(startupURL + "\\Icon\\pay-icon.png");
+            btnHome.Image = Image.FromFile(startupURL + "\\Icon\\home-icon1.png");
             //
             btnProduct.ForeColor = System.Drawing.Color.DimGray;
             btnHelp.ForeColor = System.Drawing.Color.DimGray;
@@ -277,13 +278,13 @@ namespace TelevisionsStoreManagement.GUI
             PanelColorSetting.Hide();
             PanelColorHelp.Show();
             //
-            btnProduct.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\menu-icon-gray.png");
-            btnHelp.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\help-icon-blue.png");
-            btnSetting.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\setting-icon-gray.png");
-            btnReven.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\revenue-icon-gray.png");
-            btnDepot.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\box-icon-gray.png");
-            btnPayment.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\pay-icon.png");
-            btnHome.Image = Image.FromFile(@"C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Icon\\home-icon1.png");
+            btnProduct.Image = Image.FromFile(startupURL + "\\Icon\\menu-icon-gray.png");
+            btnHelp.Image = Image.FromFile(startupURL + "\\Icon\\help-icon-blue.png");
+            btnSetting.Image = Image.FromFile(startupURL + "\\Icon\\setting-icon-gray.png");
+            btnReven.Image = Image.FromFile(startupURL + "\\Icon\\revenue-icon-gray.png");
+            btnDepot.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
+            btnPayment.Image = Image.FromFile(startupURL + "\\Icon\\pay-icon.png");
+            btnHome.Image = Image.FromFile(startupURL + "\\Icon\\home-icon1.png");
             //
             btnProduct.ForeColor = System.Drawing.Color.DimGray;
             btnSetting.ForeColor = System.Drawing.Color.DimGray;
