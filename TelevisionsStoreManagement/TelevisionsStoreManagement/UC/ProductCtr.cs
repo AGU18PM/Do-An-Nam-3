@@ -20,6 +20,18 @@ namespace TelevisionsStoreManagement.UC
             listProduct = new Products();
             listProduct.load_Data();
             showData();
+            //Button a = new Button()
+            //{
+            //    Location = new Point(20, 40)
+            //};
+
+            //Button b = new Button()
+            //{
+            //    Location = new Point(80, 100)
+            //};
+
+            //panelProduct.Controls.Add(a);
+            //panelProduct.Controls.Add(b);
         }
 
         void showData()
@@ -31,9 +43,16 @@ namespace TelevisionsStoreManagement.UC
             {
                 Point tg = oldproduct.getLocation();
 
-                Products.Instance.List[i].setLocation(tg.X, tg.Y);
-                panelProduct.Controls.Add(Products.Instance.List[i].add());
-                oldproduct = Products.Instance.List[i];
+                //listProduct.List[i].setLocation(tg.X, tg.Y);
+                //panelProduct.Controls.Add(listProduct.List[i].add());
+                //oldproduct = listProduct.List[i];
+                //oldproduct.setLocation(tg.X + 10, tg.Y + 10);
+                listProduct.List[i].ProductPanel1 = new Panel()
+                {
+                    Location = new Point(tg.X + oldproduct.getWidth(), tg.Y)
+                };
+                oldproduct = listProduct.List[i];
+            panelProduct.Controls.Add(listProduct.List[i].add());
             }
         }
 

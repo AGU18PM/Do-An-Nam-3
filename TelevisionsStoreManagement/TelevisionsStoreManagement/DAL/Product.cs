@@ -25,7 +25,7 @@ namespace TelevisionsStoreManagement.DAL
             ProductName1 = "";
             Price1 = 0;
             Picture = "";
-            ProductPanel = new Panel();
+            ProductPanel1 = new Panel();
         }
 
         public int ProductId1 { get => ProductId; set => ProductId = value; }
@@ -33,50 +33,51 @@ namespace TelevisionsStoreManagement.DAL
         public double Price1 { get => Price; set => Price = value; }
         public string Picture { get => picture; set => picture = value; }
         internal Category Category { get => category; set => category = value; }
+        public Panel ProductPanel1 { get => ProductPanel; set => ProductPanel = value; }
 
         public void setWidthHeight(int a, int b)
         {
-            ProductPanel.Width = a;
-            ProductPanel.Height = b;
+            ProductPanel1.Width = a;
+            ProductPanel1.Height = b;
         }
 
         public void setLocation(int x, int y)
         {
-            ProductPanel.Location = new Point(x, y);
+            ProductPanel1.Location = new Point(x, y);
         }
 
         public int getWidth()
         {
-            return (ProductPanel.Width);
+            return (ProductPanel1.Width);
         }
 
         public int getHeight()
         {
-            return (ProductPanel.Height);
+            return (ProductPanel1.Height);
         }
 
         public Point getLocation()
         {
-            return ProductPanel.Location;
+            return ProductPanel1.Location;
         }
 
         public Panel add()
         {
-            ProductPanel.Width = 150;
-            ProductPanel.Height = 200;
+            ProductPanel1.Width = 150;
+            ProductPanel1.Height = 200;
             //  PProduct.BackColor = Color.FromName("HotTrack");
             PictureBox picture = new PictureBox();
             picture.Width = 100;
             picture.Height = 100;
             picture.Location = new Point(25, 25);
-            picture.Image = Image.FromFile(Picture);
+            picture.Image = Image.FromFile(@"C:\Users\Num\Desktop\1.jpg");
             picture.SizeMode = PictureBoxSizeMode.StretchImage;
             Label name = new Label();
             name.Text = ProductName;
             name.Location = new Point(40, 130);
-            ProductPanel.Controls.Add(picture);
-            ProductPanel.Controls.Add(name);
-            return ProductPanel;
+            ProductPanel1.Controls.Add(picture);
+            ProductPanel1.Controls.Add(name);
+            return ProductPanel1;
         }
     }
 }

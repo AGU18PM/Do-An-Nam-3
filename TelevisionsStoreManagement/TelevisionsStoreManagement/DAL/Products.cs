@@ -25,11 +25,11 @@ namespace TelevisionsStoreManagement.DAL
         {
             string query = "Select count(*) from TIVI";
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
-            Instance.Count = Convert.ToInt32(result.Rows[0][0]);
-            Instance.List = new Product[Instance.Count];
-            for(int i = 0; i < Instance.Count; i++)
+            Count = Convert.ToInt32(result.Rows[0][0]);
+            List = new Product[Count];
+            for(int i = 0; i < Count; i++)
             {
-                Instance.List[i] = new Product();
+                List[i] = new Product();
             }
         }
 
@@ -37,12 +37,12 @@ namespace TelevisionsStoreManagement.DAL
         {
             string query = "Select * from TIVI";
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
-            for(int i = 0; i < Instance.Count; i++)
+            for(int i = 0; i < Count; i++)
             {
-                Instance.List[i].ProductId1 = Convert.ToInt32(result.Rows[i][0]);
-                Instance.List[i].ProductName1 = result.Rows[i][1].ToString();
-                Instance.List[i].Price1 = Convert.ToDouble(result.Rows[i][3]);
-                Instance.List[i].Picture = result.Rows[i][4].ToString();
+                List[i].ProductId1 = Convert.ToInt32(result.Rows[i][0]);
+                List[i].ProductName1 = result.Rows[i][1].ToString();
+                List[i].Price1 = Convert.ToDouble(result.Rows[i][3]);
+                List[i].Picture = result.Rows[i][4].ToString();
             }
         }
 
