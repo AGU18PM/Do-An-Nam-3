@@ -1,6 +1,6 @@
 ﻿namespace TelevisionsStoreManagement.UC
 {
-    partial class TabPage
+    partial class HomePageCtr
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,12 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // TabPage
+            // UserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "TabPage";
-            this.Size = new System.Drawing.Size(1011, 437);
+            this.Name = "UserControl1";
+            this.Size = new System.Drawing.Size(1056, 504);
             this.ResumeLayout(false);
 
         }

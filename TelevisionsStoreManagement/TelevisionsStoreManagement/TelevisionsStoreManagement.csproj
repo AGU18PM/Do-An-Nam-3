@@ -46,8 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\Category.cs" />
     <Compile Include="DAL\DataProvider.cs" />
     <Compile Include="DAL\Account.cs" />
+    <Compile Include="DAL\Product.cs" />
+    <Compile Include="DAL\Products.cs" />
     <Compile Include="GUI\fLoading.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,11 +71,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UC\TabPage.cs">
+    <Compile Include="UC\HomePageCtr.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC\TabPage.Designer.cs">
-      <DependentUpon>TabPage.cs</DependentUpon>
+    <Compile Include="UC\HomePageCtr.Designer.cs">
+      <DependentUpon>HomePageCtr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ProductCtr.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\ProductCtr.Designer.cs">
+      <DependentUpon>ProductCtr.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="GUI\fLoading.resx">
       <DependentUpon>fLoading.cs</DependentUpon>
@@ -92,8 +101,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UC\TabPage.resx">
-      <DependentUpon>TabPage.cs</DependentUpon>
+    <EmbeddedResource Include="UC\HomePageCtr.resx">
+      <DependentUpon>HomePageCtr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\ProductCtr.resx">
+      <DependentUpon>ProductCtr.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -109,7 +121,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DTO\" />
+    <Folder Include="DTO\Control\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

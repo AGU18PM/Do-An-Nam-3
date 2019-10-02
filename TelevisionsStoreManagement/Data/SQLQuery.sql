@@ -34,6 +34,7 @@ CREATE TABLE TIVI
 	NAME NVARCHAR(100) NOT NULL,
 	IDCATEGORY INT NOT NULL,
 	PRICE FLOAT NOT NULL DEFAULT 0,
+	picture_url VARCHAR(50),
 	FOREIGN KEY (IDCATEGORY) REFERENCES TIVICATEGORY(ID)
 )
 GO
@@ -52,7 +53,6 @@ CREATE TABLE BILL
 (
 	ID INT IDENTITY PRIMARY KEY,
 	DATECHECKIN DATE NOT NULL,
-	DATECHECKOUT DATE,
 	IDCUSTOMMER INT NOT NULL,
 	STATUS INT NOT NULL DEFAULT 0 -- 1: DA THANH TOAN && 0 CHUA THANH TOAN
 	FOREIGN KEY (IDCUSTOMMER) REFERENCES CUSTOMMER(ID)
@@ -94,4 +94,21 @@ BEGIN
 END
 GO
 
-SELECT * FROM dbo.ACCOUNT
+insert into TIVICATEGORY(Name) values (N'samsung')
+
+INSERT INTO dbo.TIVI
+        ( NAME, IDCATEGORY, PRICE, picture_url)
+VALUES  ( N'S10', -- NAME - nvarchar(100)
+          1, -- IDCATEGORY - int
+          10000000.0,  -- PRICE - float
+		  'C:\\Users\\pntn0\\OneDrive\\Desktop'
+          )
+
+		  SELECT * FROM dbo.TIVI
+		  INSERT INTO dbo.TIVI
+		          ( NAME, IDCATEGORY, PRICE,picture_url)
+		  VALUES  ( N'S8', -- NAME - nvarchar(100)
+		            1, -- IDCATEGORY - int
+		            8000000.0,  -- PRICE - float
+		            'C:\\Users\\pntn0\\OneDrive\\Desktop'
+					)
