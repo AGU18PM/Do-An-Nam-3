@@ -63,8 +63,9 @@ namespace TelevisionsStoreManagement.DAL
 
         public Panel add()
         {
+            ProductPanel.BackColor = Color.Blue;
             ProductPanel1.Width = 150;
-            ProductPanel1.Height = 200;
+            ProductPanel1.Height = 260;
             //  PProduct.BackColor = Color.FromName("HotTrack");
             PictureBox picture = new PictureBox();
             picture.Width = 100;
@@ -75,8 +76,14 @@ namespace TelevisionsStoreManagement.DAL
             Label name = new Label();
             name.Text = ProductName;
             name.Location = new Point(40, 130);
+            Button btnAdd = new Button();
+            btnAdd.Width = btnAdd.Height = 50;
+            btnAdd.Location = new Point(50, 150);
+            btnAdd.Text = "Thêm";
             ProductPanel1.Controls.Add(picture);
             ProductPanel1.Controls.Add(name);
+            ProductPanel1.Controls.Add(btnAdd);
+            
             return ProductPanel1;
         }
     }

@@ -38,8 +38,8 @@ namespace TelevisionsStoreManagement.UC
         {
             Product oldproduct = new Product();
             oldproduct.setLocation(0, 0);
-            oldproduct.setWidthHeight(0, 0); 
-            for (int i = 0; i< Products.Instance.Count; i++)
+            oldproduct.setWidthHeight(0, 0);
+            for (int i = 0; i < Products.Instance.Count; i++)
             {
                 Point tg = oldproduct.getLocation();
 
@@ -52,8 +52,13 @@ namespace TelevisionsStoreManagement.UC
                     Location = new Point(tg.X + oldproduct.getWidth(), tg.Y)
                 };
                 oldproduct = listProduct.List[i];
-            panelProduct.Controls.Add(listProduct.List[i].add());
+                panelProduct.Controls.Add(listProduct.List[i].add());
             }
+        }
+
+        private void control()
+        {
+            
         }
 
         private void CbPriceDown_CheckedChanged(object sender, EventArgs e)

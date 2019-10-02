@@ -17,11 +17,11 @@ namespace TelevisionsStoreManagement
         {
             InitializeComponent();
             lbError.Hide();
-            InitializeComponent();
+           
 
-            Hide();
-            fMain main = new fMain();
-            main.ShowDialog();
+            //Hide();
+            //fMain main = new fMain();
+            //main.ShowDialog();
 
         }
         

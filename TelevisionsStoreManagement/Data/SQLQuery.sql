@@ -112,3 +112,5 @@ VALUES  ( N'S10', -- NAME - nvarchar(100)
 		            8000000.0,  -- PRICE - float
 		            'C:\\Users\\pntn0\\OneDrive\\Desktop'
 					)
+
+select * from TIVICATEGORY

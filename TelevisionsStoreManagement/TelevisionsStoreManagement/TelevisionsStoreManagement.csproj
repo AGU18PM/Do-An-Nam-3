@@ -46,11 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Categorys.cs" />
     <Compile Include="DAL\Category.cs" />
     <Compile Include="DAL\DataProvider.cs" />
     <Compile Include="DAL\Account.cs" />
     <Compile Include="DAL\Product.cs" />
     <Compile Include="DAL\Products.cs" />
+    <Compile Include="Datatable.cs" />
     <Compile Include="GUI\fLoading.cs">
       <SubType>Form</SubType>
     </Compile>

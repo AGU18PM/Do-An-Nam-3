@@ -11,9 +11,13 @@ namespace TelevisionsStoreManagement.DAL
         int ID;
         string Name;
 
-        public void loadData()
+        public Category()
         {
-
+            ID1 = 0;
+            Name1 = "";
         }
+
+        public string Name1 { get => Name; set => Name = value; }
+        public int ID1 { get => ID; set => ID = value; }
     }
 }
