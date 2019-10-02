@@ -19,12 +19,7 @@ namespace TelevisionsStoreManagement.GUI
             InitializeComponent();
             Color_Button();
 <<<<<<< HEAD
-<<<<<<< HEAD
             mode = 0;
-=======
-            HomePageCtr uc = new HomePageCtr();
-            addControl(uc);
->>>>>>> 75846c88bf7f718114924b216fc072cf08e3300d
 =======
             HomePageCtr uc = new HomePageCtr();
             addControl(uc);
@@ -114,12 +109,7 @@ namespace TelevisionsStoreManagement.GUI
             btnProduct.ForeColor = System.Drawing.Color.DimGray;
             btnHome.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
 <<<<<<< HEAD
-<<<<<<< HEAD
             closeSubMenu();
-=======
-            HomePageCtr uc = new HomePageCtr();
-            addControl(uc);
->>>>>>> 75846c88bf7f718114924b216fc072cf08e3300d
 =======
             HomePageCtr uc = new HomePageCtr();
             addControl(uc);
@@ -160,15 +150,9 @@ namespace TelevisionsStoreManagement.GUI
             btnHome.ForeColor = System.Drawing.Color.DimGray;
             btnProduct.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
 <<<<<<< HEAD
-<<<<<<< HEAD
             //
             ChangeMenuMode();
                 
-=======
-
-            ProductCtr uc = new ProductCtr();
-            addControl(uc);
->>>>>>> 75846c88bf7f718114924b216fc072cf08e3300d
 =======
 
             ProductCtr uc = new ProductCtr();
