@@ -64,6 +64,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.tabPage1 = new TelevisionsStoreManagement.UC.TabPage();
             this.PanelMenuSlide = new System.Windows.Forms.Panel();
             this.PanelSubMenu = new System.Windows.Forms.Panel();
@@ -71,6 +72,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+=======
+            this.MainPanel = new System.Windows.Forms.Panel();
+>>>>>>> 75846c88bf7f718114924b216fc072cf08e3300d
 =======
             this.MainPanel = new System.Windows.Forms.Panel();
 >>>>>>> 75846c88bf7f718114924b216fc072cf08e3300d
@@ -314,6 +318,7 @@
             this.PanelColorDepot.TabIndex = 3;
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             // btnDepot
             // 
             this.btnDepot.BackColor = System.Drawing.SystemColors.Control;
@@ -331,6 +336,8 @@
             this.btnDepot.UseVisualStyleBackColor = false;
             this.btnDepot.Click += new System.EventHandler(this.btnDepot_Click);
 =======
+=======
+>>>>>>> 75846c88bf7f718114924b216fc072cf08e3300d
             // btnWareHouse
             // 
             this.btnWareHouse.BackColor = System.Drawing.SystemColors.Control;
@@ -347,6 +354,9 @@
             this.btnWareHouse.Text = "Kho";
             this.btnWareHouse.UseVisualStyleBackColor = false;
             this.btnWareHouse.Click += new System.EventHandler(this.btnDepot_Click);
+<<<<<<< HEAD
+>>>>>>> 75846c88bf7f718114924b216fc072cf08e3300d
+=======
 >>>>>>> 75846c88bf7f718114924b216fc072cf08e3300d
             // 
             // PanelColorPayment
@@ -536,15 +546,19 @@
             // MainPanel
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.tabPage1.Location = new System.Drawing.Point(429, 206);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Size = new System.Drawing.Size(1011, 437);
             this.tabPage1.TabIndex = 4;
 =======
+=======
+>>>>>>> 75846c88bf7f718114924b216fc072cf08e3300d
             this.MainPanel.Location = new System.Drawing.Point(205, 185);
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(1056, 504);
             this.MainPanel.TabIndex = 5;
+<<<<<<< HEAD
 >>>>>>> 75846c88bf7f718114924b216fc072cf08e3300d
             // 
             // PanelMenuSlide
@@ -639,6 +653,8 @@
             this.button4.Text = "Tivi Thường";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = false;
+=======
+>>>>>>> 75846c88bf7f718114924b216fc072cf08e3300d
             // 
             // fMain
             // 
@@ -712,6 +728,7 @@
         private System.Windows.Forms.Button btnRestoreDown;
         private System.Windows.Forms.Panel PanelForm;
 <<<<<<< HEAD
+<<<<<<< HEAD
         private UC.TabPage tabPage1;
         private System.Windows.Forms.Panel PanelMenuSlide;
         private System.Windows.Forms.Panel PanelSubMenu;
@@ -719,6 +736,10 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+=======
+     //   private UC.TabPage tabPage1;
+        private System.Windows.Forms.Panel MainPanel;
+>>>>>>> 75846c88bf7f718114924b216fc072cf08e3300d
 =======
      //   private UC.TabPage tabPage1;
         private System.Windows.Forms.Panel MainPanel;
