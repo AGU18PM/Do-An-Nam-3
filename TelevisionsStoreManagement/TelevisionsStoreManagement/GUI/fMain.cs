@@ -18,10 +18,15 @@ namespace TelevisionsStoreManagement.GUI
         {
             InitializeComponent();
             Color_Button();
+<<<<<<< HEAD
+            mode = 0;
+=======
             HomePageCtr uc = new HomePageCtr();
             addControl(uc);
+>>>>>>> 75846c88bf7f718114924b216fc072cf08e3300d
         }
 
+        int mode;
         string startupURL = Application.StartupPath;
         private void Color_Button()
         {
@@ -41,7 +46,33 @@ namespace TelevisionsStoreManagement.GUI
             PanelColorRevenue.Hide();
             PanelColorSetting.Hide();
             PanelColorHelp.Hide();
-            btnHome.Image = Image.FromFile(startupURL+"\\Icon\\button_home_blue.png"); 
+            btnHome.Image = Image.FromFile(startupURL+"\\Icon\\button_home_blue.png");
+            //
+            PanelSubMenu.Hide();
+        }
+
+        void ChangeMenuMode()
+        {
+            if (mode == 0)
+            {
+
+                PanelMenuSlide.Location = new Point(0, 397);
+                PanelSubMenu.Show();
+                mode = 1;
+            }
+            else
+            {
+                PanelMenuSlide.Location = new Point(0, 278);
+                PanelSubMenu.Hide();
+                mode = 0;
+            }
+        }
+
+        void closeSubMenu()
+        {
+            PanelMenuSlide.Location = new Point(0, 278);
+            PanelSubMenu.Hide();
+            mode = 0;
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -77,8 +108,12 @@ namespace TelevisionsStoreManagement.GUI
             btnPayment.ForeColor = System.Drawing.Color.DimGray;
             btnProduct.ForeColor = System.Drawing.Color.DimGray;
             btnHome.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
+<<<<<<< HEAD
+            closeSubMenu();
+=======
             HomePageCtr uc = new HomePageCtr();
             addControl(uc);
+>>>>>>> 75846c88bf7f718114924b216fc072cf08e3300d
         }
 
         private void btnProduct_Click(object sender, EventArgs e)
@@ -114,13 +149,21 @@ namespace TelevisionsStoreManagement.GUI
             btnPayment.ForeColor = System.Drawing.Color.DimGray;
             btnHome.ForeColor = System.Drawing.Color.DimGray;
             btnProduct.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
+<<<<<<< HEAD
+            //
+            ChangeMenuMode();
+                
+=======
 
             ProductCtr uc = new ProductCtr();
             addControl(uc);
+>>>>>>> 75846c88bf7f718114924b216fc072cf08e3300d
         }
+
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
+            closeSubMenu();
             TriangleCorner1.Hide();
             TriangleCorner2.Hide();
             TriangleCorner3.Show();
@@ -156,6 +199,7 @@ namespace TelevisionsStoreManagement.GUI
 
         private void btnDepot_Click(object sender, EventArgs e)
         {
+            closeSubMenu();
             TriangleCorner1.Hide();
             TriangleCorner2.Hide();
             TriangleCorner3.Hide();
@@ -192,6 +236,7 @@ namespace TelevisionsStoreManagement.GUI
 
         private void btnReven_Click(object sender, EventArgs e)
         {
+            closeSubMenu();
             TriangleCorner1.Hide();
             TriangleCorner2.Hide();
             TriangleCorner3.Hide();
@@ -233,6 +278,7 @@ namespace TelevisionsStoreManagement.GUI
 
         private void btnSetting_Click(object sender, EventArgs e)
         {
+            closeSubMenu();
             TriangleCorner1.Hide();
             TriangleCorner2.Hide();
             TriangleCorner3.Hide();
@@ -269,6 +315,7 @@ namespace TelevisionsStoreManagement.GUI
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
+            closeSubMenu();
             TriangleCorner1.Hide();
             TriangleCorner2.Hide();
             TriangleCorner3.Hide();

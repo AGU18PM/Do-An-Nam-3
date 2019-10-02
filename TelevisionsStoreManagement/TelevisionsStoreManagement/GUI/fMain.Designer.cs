@@ -63,7 +63,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+<<<<<<< HEAD
+            this.tabPage1 = new TelevisionsStoreManagement.UC.TabPage();
+            this.PanelMenuSlide = new System.Windows.Forms.Panel();
+            this.PanelSubMenu = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+=======
             this.MainPanel = new System.Windows.Forms.Panel();
+>>>>>>> 75846c88bf7f718114924b216fc072cf08e3300d
             this.PanelMenuMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner6)).BeginInit();
@@ -76,32 +86,29 @@
             this.PanelForm.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.PanelMenuSlide.SuspendLayout();
+            this.PanelSubMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelMenuMain
             // 
             this.PanelMenuMain.BackColor = System.Drawing.SystemColors.Control;
+            this.PanelMenuMain.Controls.Add(this.PanelSubMenu);
+            this.PanelMenuMain.Controls.Add(this.PanelMenuSlide);
             this.PanelMenuMain.Controls.Add(this.labelAdmin);
             this.PanelMenuMain.Controls.Add(this.lbelUsername);
             this.PanelMenuMain.Controls.Add(this.btnAdmin);
-            this.PanelMenuMain.Controls.Add(this.PanelColorHelp);
-            this.PanelMenuMain.Controls.Add(this.TriangleCorner7);
-            this.PanelMenuMain.Controls.Add(this.PanelColorSetting);
-            this.PanelMenuMain.Controls.Add(this.btnHelp);
-            this.PanelMenuMain.Controls.Add(this.TriangleCorner6);
-            this.PanelMenuMain.Controls.Add(this.btnSetting);
-            this.PanelMenuMain.Controls.Add(this.TriangleCorner5);
-            this.PanelMenuMain.Controls.Add(this.TriangleCorner4);
-            this.PanelMenuMain.Controls.Add(this.TriangleCorner3);
             this.PanelMenuMain.Controls.Add(this.TriangleCorner2);
             this.PanelMenuMain.Controls.Add(this.TriangleCorner1);
+<<<<<<< HEAD
+=======
             this.PanelMenuMain.Controls.Add(this.PanelColorRevenue);
             this.PanelMenuMain.Controls.Add(this.btnReven);
             this.PanelMenuMain.Controls.Add(this.PanelColorDepot);
             this.PanelMenuMain.Controls.Add(this.btnWareHouse);
             this.PanelMenuMain.Controls.Add(this.PanelColorPayment);
+>>>>>>> 75846c88bf7f718114924b216fc072cf08e3300d
             this.PanelMenuMain.Controls.Add(this.PanelColorProduct);
-            this.PanelMenuMain.Controls.Add(this.btnPayment);
             this.PanelMenuMain.Controls.Add(this.btnProduct);
             this.PanelMenuMain.Controls.Add(this.PanelColorMain);
             this.PanelMenuMain.Controls.Add(this.btnHome);
@@ -149,7 +156,7 @@
             // PanelColorHelp
             // 
             this.PanelColorHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(197)))), ((int)(((byte)(250)))));
-            this.PanelColorHelp.Location = new System.Drawing.Point(0, 505);
+            this.PanelColorHelp.Location = new System.Drawing.Point(0, 219);
             this.PanelColorHelp.Name = "PanelColorHelp";
             this.PanelColorHelp.Size = new System.Drawing.Size(190, 5);
             this.PanelColorHelp.TabIndex = 4;
@@ -158,7 +165,7 @@
             // 
             this.TriangleCorner7.BackColor = System.Drawing.Color.Transparent;
             this.TriangleCorner7.Image = ((System.Drawing.Image)(resources.GetObject("TriangleCorner7.Image")));
-            this.TriangleCorner7.Location = new System.Drawing.Point(173, 464);
+            this.TriangleCorner7.Location = new System.Drawing.Point(173, 178);
             this.TriangleCorner7.Name = "TriangleCorner7";
             this.TriangleCorner7.Size = new System.Drawing.Size(17, 14);
             this.TriangleCorner7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -168,7 +175,7 @@
             // PanelColorSetting
             // 
             this.PanelColorSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(197)))), ((int)(((byte)(250)))));
-            this.PanelColorSetting.Location = new System.Drawing.Point(0, 459);
+            this.PanelColorSetting.Location = new System.Drawing.Point(0, 173);
             this.PanelColorSetting.Name = "PanelColorSetting";
             this.PanelColorSetting.Size = new System.Drawing.Size(190, 5);
             this.PanelColorSetting.TabIndex = 4;
@@ -182,7 +189,7 @@
             this.btnHelp.ForeColor = System.Drawing.Color.DimGray;
             this.btnHelp.Image = ((System.Drawing.Image)(resources.GetObject("btnHelp.Image")));
             this.btnHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHelp.Location = new System.Drawing.Point(0, 464);
+            this.btnHelp.Location = new System.Drawing.Point(0, 178);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(190, 46);
             this.btnHelp.TabIndex = 9;
@@ -194,7 +201,7 @@
             // 
             this.TriangleCorner6.BackColor = System.Drawing.Color.Transparent;
             this.TriangleCorner6.Image = ((System.Drawing.Image)(resources.GetObject("TriangleCorner6.Image")));
-            this.TriangleCorner6.Location = new System.Drawing.Point(173, 418);
+            this.TriangleCorner6.Location = new System.Drawing.Point(173, 132);
             this.TriangleCorner6.Name = "TriangleCorner6";
             this.TriangleCorner6.Size = new System.Drawing.Size(17, 14);
             this.TriangleCorner6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -210,7 +217,7 @@
             this.btnSetting.ForeColor = System.Drawing.Color.DimGray;
             this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
             this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetting.Location = new System.Drawing.Point(0, 418);
+            this.btnSetting.Location = new System.Drawing.Point(0, 132);
             this.btnSetting.Name = "btnSetting";
             this.btnSetting.Size = new System.Drawing.Size(190, 46);
             this.btnSetting.TabIndex = 7;
@@ -222,7 +229,7 @@
             // 
             this.TriangleCorner5.BackColor = System.Drawing.Color.Transparent;
             this.TriangleCorner5.Image = ((System.Drawing.Image)(resources.GetObject("TriangleCorner5.Image")));
-            this.TriangleCorner5.Location = new System.Drawing.Point(173, 372);
+            this.TriangleCorner5.Location = new System.Drawing.Point(173, 88);
             this.TriangleCorner5.Name = "TriangleCorner5";
             this.TriangleCorner5.Size = new System.Drawing.Size(17, 14);
             this.TriangleCorner5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -233,7 +240,7 @@
             // 
             this.TriangleCorner4.BackColor = System.Drawing.Color.Transparent;
             this.TriangleCorner4.Image = ((System.Drawing.Image)(resources.GetObject("TriangleCorner4.Image")));
-            this.TriangleCorner4.Location = new System.Drawing.Point(173, 325);
+            this.TriangleCorner4.Location = new System.Drawing.Point(173, 44);
             this.TriangleCorner4.Name = "TriangleCorner4";
             this.TriangleCorner4.Size = new System.Drawing.Size(17, 14);
             this.TriangleCorner4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -244,7 +251,7 @@
             // 
             this.TriangleCorner3.BackColor = System.Drawing.Color.Transparent;
             this.TriangleCorner3.Image = ((System.Drawing.Image)(resources.GetObject("TriangleCorner3.Image")));
-            this.TriangleCorner3.Location = new System.Drawing.Point(173, 278);
+            this.TriangleCorner3.Location = new System.Drawing.Point(173, 0);
             this.TriangleCorner3.Name = "TriangleCorner3";
             this.TriangleCorner3.Size = new System.Drawing.Size(17, 14);
             this.TriangleCorner3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -276,7 +283,7 @@
             // PanelColorRevenue
             // 
             this.PanelColorRevenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(197)))), ((int)(((byte)(250)))));
-            this.PanelColorRevenue.Location = new System.Drawing.Point(0, 413);
+            this.PanelColorRevenue.Location = new System.Drawing.Point(0, 129);
             this.PanelColorRevenue.Name = "PanelColorRevenue";
             this.PanelColorRevenue.Size = new System.Drawing.Size(190, 5);
             this.PanelColorRevenue.TabIndex = 3;
@@ -290,7 +297,7 @@
             this.btnReven.ForeColor = System.Drawing.Color.DimGray;
             this.btnReven.Image = ((System.Drawing.Image)(resources.GetObject("btnReven.Image")));
             this.btnReven.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReven.Location = new System.Drawing.Point(0, 372);
+            this.btnReven.Location = new System.Drawing.Point(0, 88);
             this.btnReven.Name = "btnReven";
             this.btnReven.Size = new System.Drawing.Size(190, 46);
             this.btnReven.TabIndex = 5;
@@ -301,11 +308,29 @@
             // PanelColorDepot
             // 
             this.PanelColorDepot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(197)))), ((int)(((byte)(250)))));
-            this.PanelColorDepot.Location = new System.Drawing.Point(0, 366);
+            this.PanelColorDepot.Location = new System.Drawing.Point(0, 85);
             this.PanelColorDepot.Name = "PanelColorDepot";
             this.PanelColorDepot.Size = new System.Drawing.Size(190, 5);
             this.PanelColorDepot.TabIndex = 3;
             // 
+<<<<<<< HEAD
+            // btnDepot
+            // 
+            this.btnDepot.BackColor = System.Drawing.SystemColors.Control;
+            this.btnDepot.FlatAppearance.BorderSize = 0;
+            this.btnDepot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDepot.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDepot.ForeColor = System.Drawing.Color.DimGray;
+            this.btnDepot.Image = ((System.Drawing.Image)(resources.GetObject("btnDepot.Image")));
+            this.btnDepot.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDepot.Location = new System.Drawing.Point(0, 44);
+            this.btnDepot.Name = "btnDepot";
+            this.btnDepot.Size = new System.Drawing.Size(190, 46);
+            this.btnDepot.TabIndex = 4;
+            this.btnDepot.Text = "Kho";
+            this.btnDepot.UseVisualStyleBackColor = false;
+            this.btnDepot.Click += new System.EventHandler(this.btnDepot_Click);
+=======
             // btnWareHouse
             // 
             this.btnWareHouse.BackColor = System.Drawing.SystemColors.Control;
@@ -322,11 +347,12 @@
             this.btnWareHouse.Text = "Kho";
             this.btnWareHouse.UseVisualStyleBackColor = false;
             this.btnWareHouse.Click += new System.EventHandler(this.btnDepot_Click);
+>>>>>>> 75846c88bf7f718114924b216fc072cf08e3300d
             // 
             // PanelColorPayment
             // 
             this.PanelColorPayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(197)))), ((int)(((byte)(250)))));
-            this.PanelColorPayment.Location = new System.Drawing.Point(0, 319);
+            this.PanelColorPayment.Location = new System.Drawing.Point(0, 41);
             this.PanelColorPayment.Name = "PanelColorPayment";
             this.PanelColorPayment.Size = new System.Drawing.Size(190, 5);
             this.PanelColorPayment.TabIndex = 2;
@@ -348,7 +374,7 @@
             this.btnPayment.ForeColor = System.Drawing.Color.DimGray;
             this.btnPayment.Image = ((System.Drawing.Image)(resources.GetObject("btnPayment.Image")));
             this.btnPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPayment.Location = new System.Drawing.Point(0, 278);
+            this.btnPayment.Location = new System.Drawing.Point(0, 0);
             this.btnPayment.Name = "btnPayment";
             this.btnPayment.Size = new System.Drawing.Size(190, 46);
             this.btnPayment.TabIndex = 3;
@@ -509,10 +535,110 @@
             // 
             // MainPanel
             // 
+<<<<<<< HEAD
+            this.tabPage1.Location = new System.Drawing.Point(429, 206);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(1011, 437);
+            this.tabPage1.TabIndex = 4;
+=======
             this.MainPanel.Location = new System.Drawing.Point(205, 185);
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(1056, 504);
             this.MainPanel.TabIndex = 5;
+>>>>>>> 75846c88bf7f718114924b216fc072cf08e3300d
+            // 
+            // PanelMenuSlide
+            // 
+            this.PanelMenuSlide.Controls.Add(this.TriangleCorner3);
+            this.PanelMenuSlide.Controls.Add(this.PanelColorPayment);
+            this.PanelMenuSlide.Controls.Add(this.btnPayment);
+            this.PanelMenuSlide.Controls.Add(this.PanelColorHelp);
+            this.PanelMenuSlide.Controls.Add(this.TriangleCorner4);
+            this.PanelMenuSlide.Controls.Add(this.TriangleCorner7);
+            this.PanelMenuSlide.Controls.Add(this.PanelColorDepot);
+            this.PanelMenuSlide.Controls.Add(this.PanelColorSetting);
+            this.PanelMenuSlide.Controls.Add(this.btnDepot);
+            this.PanelMenuSlide.Controls.Add(this.btnHelp);
+            this.PanelMenuSlide.Controls.Add(this.TriangleCorner5);
+            this.PanelMenuSlide.Controls.Add(this.TriangleCorner6);
+            this.PanelMenuSlide.Controls.Add(this.PanelColorRevenue);
+            this.PanelMenuSlide.Controls.Add(this.btnSetting);
+            this.PanelMenuSlide.Controls.Add(this.btnReven);
+            this.PanelMenuSlide.Location = new System.Drawing.Point(0, 278);
+            this.PanelMenuSlide.Name = "PanelMenuSlide";
+            this.PanelMenuSlide.Size = new System.Drawing.Size(190, 244);
+            this.PanelMenuSlide.TabIndex = 5;
+            // 
+            // PanelSubMenu
+            // 
+            this.PanelSubMenu.Controls.Add(this.button4);
+            this.PanelSubMenu.Controls.Add(this.button3);
+            this.PanelSubMenu.Controls.Add(this.button2);
+            this.PanelSubMenu.Controls.Add(this.button1);
+            this.PanelSubMenu.Location = new System.Drawing.Point(39, 280);
+            this.PanelSubMenu.Name = "PanelSubMenu";
+            this.PanelSubMenu.Size = new System.Drawing.Size(151, 116);
+            this.PanelSubMenu.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.DimGray;
+            this.button1.Location = new System.Drawing.Point(0, -3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(151, 30);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Smart Tivi";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.Control;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.DimGray;
+            this.button2.Location = new System.Drawing.Point(0, 27);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(151, 30);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "Internet Tivi";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.Control;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.DimGray;
+            this.button3.Location = new System.Drawing.Point(0, 54);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(151, 30);
+            this.button3.TabIndex = 15;
+            this.button3.Text = "Tivi Cong";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.Control;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.DimGray;
+            this.button4.Location = new System.Drawing.Point(0, 84);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(151, 30);
+            this.button4.TabIndex = 16;
+            this.button4.Text = "Tivi Thường";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // fMain
             // 
@@ -543,6 +669,8 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.PanelMenuSlide.ResumeLayout(false);
+            this.PanelSubMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -583,7 +711,17 @@
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnRestoreDown;
         private System.Windows.Forms.Panel PanelForm;
+<<<<<<< HEAD
+        private UC.TabPage tabPage1;
+        private System.Windows.Forms.Panel PanelMenuSlide;
+        private System.Windows.Forms.Panel PanelSubMenu;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+=======
      //   private UC.TabPage tabPage1;
         private System.Windows.Forms.Panel MainPanel;
+>>>>>>> 75846c88bf7f718114924b216fc072cf08e3300d
     }
 }
