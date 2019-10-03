@@ -13,13 +13,14 @@ namespace TelevisionsStoreManagement.UC
 {
     public partial class ProductCtr : UserControl
     {
-        Products listProduct;
+        Products listproduct;
+        int SSMode, LGMode, SonyMode, PMode;
         public ProductCtr()
         {
             InitializeComponent();
-            listProduct = new Products();
-            listProduct.load_Data();
-            showData();
+            listproduct = new Products();
+            listproduct.load_Data();
+            firstShowData();
             //Button a = new Button()
             //{
             //    Location = new Point(20, 40)
@@ -34,26 +35,121 @@ namespace TelevisionsStoreManagement.UC
             //panelProduct.Controls.Add(b);
         }
 
+        void firstShowData()
+        {
+
+            ColumnHeader CategoryHeader = new ColumnHeader();
+            CategoryHeader.Text = "Hãng";
+            CategoryHeader.Width = 75;
+
+            ColumnHeader IDProductHeader = new ColumnHeader();
+            IDProductHeader.Text = "ID";
+            IDProductHeader.Width = 75;
+
+            ColumnHeader NameProductHeader = new ColumnHeader();
+            NameProductHeader.Text = "Tên";
+            NameProductHeader.Width = 150;
+
+
+
+            ColumnHeader PriceProductHeader = new ColumnHeader();
+            PriceProductHeader.Text = "Giá";
+            PriceProductHeader.Width = 100;
+            ProductListview.Columns.Add(CategoryHeader);
+            ProductListview.Columns.Add(IDProductHeader);
+            ProductListview.Columns.Add(NameProductHeader);
+            ProductListview.Columns.Add(PriceProductHeader);
+            ListViewItem[] ListItem = new ListViewItem[listproduct.Count];
+            for(int i = 0; i < listproduct.Count; i++)
+            {
+                ListItem[i] = new ListViewItem();
+                ListItem[i].Text = listproduct.List[i].Category.Name1;
+                ListItem[i].SubItems.Add(new ListViewItem.ListViewSubItem() { Text = listproduct.List[i].ProductId1.ToString() });
+                ListItem[i].SubItems.Add(new ListViewItem.ListViewSubItem() { Text = listproduct.List[i].ProductName1 });
+                ListItem[i].SubItems.Add(new ListViewItem.ListViewSubItem() { Text = listproduct.List[i].Price1.ToString() });
+                ProductListview.Items.Add(ListItem[i]);
+            }
+            ProductListview.View = View.Details;
+        }
         void showData()
         {
-            Product oldproduct = new Product();
-            oldproduct.setLocation(0, 0);
-            oldproduct.setWidthHeight(0, 0);
-            for (int i = 0; i < Products.Instance.Count; i++)
-            {
-                Point tg = oldproduct.getLocation();
+            if (btnSamsung.Checked)
+                SSMode = 1;
+            else
+                SSMode = 0;
+            if (btnSony.Checked)
+                SonyMode = 1;
+            else
+                SonyMode = 0;
+            if (btnLG.Checked)
+                LGMode = 1;
+            else
+                LGMode = 0;
+            //Products.Instance.load_Data();
+            ColumnHeader CategoryHeader = new ColumnHeader();
+            CategoryHeader.Text = "Hãng";
+            CategoryHeader.Width = 75;
+            
+            ColumnHeader IDProductHeader = new ColumnHeader();
+            IDProductHeader.Text = "ID";
+            IDProductHeader.Width = 75;
 
-                //listProduct.List[i].setLocation(tg.X, tg.Y);
-                //panelProduct.Controls.Add(listProduct.List[i].add());
-                //oldproduct = listProduct.List[i];
-                //oldproduct.setLocation(tg.X + 10, tg.Y + 10);
-                listProduct.List[i].ProductPanel1 = new Panel()
+            ColumnHeader NameProductHeader = new ColumnHeader();
+            NameProductHeader.Text = "Tên";
+            NameProductHeader.Width = 150;
+            
+
+
+            ColumnHeader PriceProductHeader = new ColumnHeader();
+            PriceProductHeader.Text = "Giá";
+            PriceProductHeader.Width = 100;
+            ProductListview.Columns.Add(CategoryHeader);
+            ProductListview.Columns.Add(IDProductHeader);
+            ProductListview.Columns.Add(NameProductHeader);
+            ProductListview.Columns.Add(PriceProductHeader);
+            ListViewItem[] ListItem = new ListViewItem[listproduct.Count];
+            int j = 0;
+            for(int i = 0; i < listproduct.Count; i++)
+            {
+                ListItem[i] = new ListViewItem();
+                if (SSMode == 1)
                 {
-                    Location = new Point(tg.X + oldproduct.getWidth(), tg.Y)
-                };
-                oldproduct = listProduct.List[i];
-                panelProduct.Controls.Add(listProduct.List[i].add());
+                    if (listproduct.List[i].Category.Name1 == "samsung")
+                    {
+                        ListItem[j].Text = listproduct.List[i].Category.Name1;
+                        ListItem[j].SubItems.Add(new ListViewItem.ListViewSubItem() { Text = listproduct.List[i].ProductId1.ToString() });
+                        ListItem[j].SubItems.Add(new ListViewItem.ListViewSubItem() { Text = listproduct.List[i].ProductName1 });
+                        ListItem[j].SubItems.Add(new ListViewItem.ListViewSubItem() { Text = listproduct.List[i].Price1.ToString() });
+                        ProductListview.Items.Add(ListItem[j]);
+                        j++;
+                    }
+                }
+
+                if (SonyMode == 1)
+                {
+                    if(listproduct.List[i].Category.Name1 == "Sony")
+                    {
+                        ListItem[j].Text = listproduct.List[i].Category.Name1;
+                        ListItem[j].SubItems.Add(new ListViewItem.ListViewSubItem() { Text = listproduct.List[i].ProductId1.ToString() });
+                        ListItem[j].SubItems.Add(new ListViewItem.ListViewSubItem() { Text = listproduct.List[i].ProductName1 });
+                        ListItem[j].SubItems.Add(new ListViewItem.ListViewSubItem() { Text = listproduct.List[i].Price1.ToString() });
+                        ProductListview.Items.Add(ListItem[j]);
+                        j++;
+                    }
+                }
+
+                if (LGMode == 1)
+                {
+                    if (listproduct.List[i].Category.Name1 == "LG") ;
+                    ListItem[j].Text = listproduct.List[i].Category.Name1;
+                    ListItem[j].SubItems.Add(new ListViewItem.ListViewSubItem() { Text = listproduct.List[i].ProductId1.ToString() });
+                    ListItem[j].SubItems.Add(new ListViewItem.ListViewSubItem() { Text = listproduct.List[i].ProductName1 });
+                    ListItem[j].SubItems.Add(new ListViewItem.ListViewSubItem() { Text = listproduct.List[i].Price1.ToString() });
+                    ProductListview.Items.Add(ListItem[j]);
+                    j++;
+                }
             }
+            ProductListview.View = View.Details;
         }
 
         private void control()
@@ -67,10 +163,26 @@ namespace TelevisionsStoreManagement.UC
                 cbPriceUp.Checked = false;
         }
 
+        private void btnSony_CheckedChanged(object sender, EventArgs e)
+        {
+            ProductListview.Clear();
+            showData();
+        }
+
         private void CbPriceUp_CheckedChanged(object sender, EventArgs e)
         {
             if (cbPriceUp.Checked)
                 cbPriceDown.Checked = false;
+        }
+
+        private void btnSamsung_CheckedChanged(object sender, EventArgs e)
+        {
+            ProductListview.Clear();
+            showData();
+        }
+        private void ProductListview_DrawItem(object sender, DrawListViewItemEventArgs e)
+        {
+            e.DrawDefault = true;
         }
     }
 }

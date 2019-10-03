@@ -14,12 +14,12 @@ namespace TelevisionsStoreManagement.DAL
         int count;
 
 
-        private static Products instance;
-        public static Products Instance
-        {
-            get { if (instance == null) instance = new Products(); return instance; }
-            private set { instance = value; }
-        }
+        //private static Products instance;
+        //public static Products Instance
+        //{
+        //    get { if (instance == null) instance = new Products(); return instance; }
+        //    private set { instance = value; }
+        //}
 
         public  Products()
         {
@@ -35,13 +35,15 @@ namespace TelevisionsStoreManagement.DAL
 
         public void load_Data()
         {
-            string query = "Select * from TIVI";
+            string query = "select * from TIVI,TIVICATEGORY where Tivi.IDCATEGORY = TIVICATEGORY.ID";
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
             for(int i = 0; i < Count; i++)
             {
                 List[i].ProductId1 = Convert.ToInt32(result.Rows[i][0]);
                 List[i].ProductName1 = result.Rows[i][1].ToString();
                 List[i].Price1 = Convert.ToDouble(result.Rows[i][3]);
+                list[i].Category.ID1 = Convert.ToInt32(result.Rows[i][2]);
+                list[i].Category.Name1 = result.Rows[i][6].ToString();
                 List[i].Picture = result.Rows[i][4].ToString();
             }
         }

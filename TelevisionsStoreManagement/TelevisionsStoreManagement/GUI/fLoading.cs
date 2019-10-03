@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TelevisionsStoreManagement.DAL;
 
 namespace TelevisionsStoreManagement
 {
@@ -18,6 +19,8 @@ namespace TelevisionsStoreManagement
             Hide();
             fLogin login = new fLogin();
             login.ShowDialog();
+            CategoryList.Instance.loadCategoryList();
+           // Products.Instance.load_Data();
         }
     }
 }
