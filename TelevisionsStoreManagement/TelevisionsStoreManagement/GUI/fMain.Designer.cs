@@ -37,22 +37,23 @@
             this.button1 = new System.Windows.Forms.Button();
             this.labelAdmin = new System.Windows.Forms.Label();
             this.lbelUsername = new System.Windows.Forms.Label();
-            this.btnAdmin = new System.Windows.Forms.Button();
             this.PanelMenuSlide = new System.Windows.Forms.Panel();
+            this.PanelColorPayment = new System.Windows.Forms.Panel();
             this.TriangleCorner3 = new System.Windows.Forms.PictureBox();
             this.PanelColorHelp = new System.Windows.Forms.Panel();
             this.TriangleCorner4 = new System.Windows.Forms.PictureBox();
             this.btnPayment = new System.Windows.Forms.Button();
-            this.TriangleCorner7 = new System.Windows.Forms.PictureBox();
+            this.PanelColorDepot = new System.Windows.Forms.Panel();
             this.btnWareHouse = new System.Windows.Forms.Button();
+            this.TriangleCorner7 = new System.Windows.Forms.PictureBox();
             this.TriangleCorner5 = new System.Windows.Forms.PictureBox();
             this.PanelColorSetting = new System.Windows.Forms.Panel();
             this.btnHelp = new System.Windows.Forms.Button();
             this.TriangleCorner6 = new System.Windows.Forms.PictureBox();
-            this.PanelColorDepot = new System.Windows.Forms.Panel();
             this.PanelColorRevenue = new System.Windows.Forms.Panel();
             this.btnSetting = new System.Windows.Forms.Button();
             this.btnReven = new System.Windows.Forms.Button();
+            this.btnAdmin = new System.Windows.Forms.Button();
             this.TriangleCorner2 = new System.Windows.Forms.PictureBox();
             this.TriangleCorner1 = new System.Windows.Forms.PictureBox();
             this.PanelColorProduct = new System.Windows.Forms.Panel();
@@ -68,7 +69,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.PanelColorPayment = new System.Windows.Forms.Panel();
+            this.panelMain = new System.Windows.Forms.Panel();
             this.PanelMenuMain.SuspendLayout();
             this.PanelSubMenu.SuspendLayout();
             this.PanelMenuSlide.SuspendLayout();
@@ -199,18 +200,6 @@
             this.lbelUsername.Text = "Thái Trường An";
             this.lbelUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnAdmin
-            // 
-            this.btnAdmin.BackColor = System.Drawing.SystemColors.Control;
-            this.btnAdmin.FlatAppearance.BorderSize = 0;
-            this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmin.Image = ((System.Drawing.Image)(resources.GetObject("btnAdmin.Image")));
-            this.btnAdmin.Location = new System.Drawing.Point(49, 23);
-            this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(96, 96);
-            this.btnAdmin.TabIndex = 11;
-            this.btnAdmin.UseVisualStyleBackColor = false;
-            // 
             // PanelMenuSlide
             // 
             this.PanelMenuSlide.Controls.Add(this.PanelColorPayment);
@@ -232,6 +221,14 @@
             this.PanelMenuSlide.Name = "PanelMenuSlide";
             this.PanelMenuSlide.Size = new System.Drawing.Size(190, 245);
             this.PanelMenuSlide.TabIndex = 5;
+            // 
+            // PanelColorPayment
+            // 
+            this.PanelColorPayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(197)))), ((int)(((byte)(250)))));
+            this.PanelColorPayment.Location = new System.Drawing.Point(0, 41);
+            this.PanelColorPayment.Name = "PanelColorPayment";
+            this.PanelColorPayment.Size = new System.Drawing.Size(190, 5);
+            this.PanelColorPayment.TabIndex = 3;
             // 
             // TriangleCorner3
             // 
@@ -280,16 +277,13 @@
             this.btnPayment.UseVisualStyleBackColor = false;
             this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
-            // TriangleCorner7
+            // PanelColorDepot
             // 
-            this.TriangleCorner7.BackColor = System.Drawing.Color.Transparent;
-            this.TriangleCorner7.Image = ((System.Drawing.Image)(resources.GetObject("TriangleCorner7.Image")));
-            this.TriangleCorner7.Location = new System.Drawing.Point(173, 177);
-            this.TriangleCorner7.Name = "TriangleCorner7";
-            this.TriangleCorner7.Size = new System.Drawing.Size(17, 14);
-            this.TriangleCorner7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.TriangleCorner7.TabIndex = 10;
-            this.TriangleCorner7.TabStop = false;
+            this.PanelColorDepot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(197)))), ((int)(((byte)(250)))));
+            this.PanelColorDepot.Location = new System.Drawing.Point(0, 84);
+            this.PanelColorDepot.Name = "PanelColorDepot";
+            this.PanelColorDepot.Size = new System.Drawing.Size(190, 5);
+            this.PanelColorDepot.TabIndex = 3;
             // 
             // btnWareHouse
             // 
@@ -307,6 +301,17 @@
             this.btnWareHouse.Text = "Kho";
             this.btnWareHouse.UseVisualStyleBackColor = false;
             this.btnWareHouse.Click += new System.EventHandler(this.btnDepot_Click);
+            // 
+            // TriangleCorner7
+            // 
+            this.TriangleCorner7.BackColor = System.Drawing.Color.Transparent;
+            this.TriangleCorner7.Image = ((System.Drawing.Image)(resources.GetObject("TriangleCorner7.Image")));
+            this.TriangleCorner7.Location = new System.Drawing.Point(173, 177);
+            this.TriangleCorner7.Name = "TriangleCorner7";
+            this.TriangleCorner7.Size = new System.Drawing.Size(17, 14);
+            this.TriangleCorner7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.TriangleCorner7.TabIndex = 10;
+            this.TriangleCorner7.TabStop = false;
             // 
             // TriangleCorner5
             // 
@@ -355,14 +360,6 @@
             this.TriangleCorner6.TabIndex = 8;
             this.TriangleCorner6.TabStop = false;
             // 
-            // PanelColorDepot
-            // 
-            this.PanelColorDepot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(197)))), ((int)(((byte)(250)))));
-            this.PanelColorDepot.Location = new System.Drawing.Point(0, 84);
-            this.PanelColorDepot.Name = "PanelColorDepot";
-            this.PanelColorDepot.Size = new System.Drawing.Size(190, 5);
-            this.PanelColorDepot.TabIndex = 3;
-            // 
             // PanelColorRevenue
             // 
             this.PanelColorRevenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(197)))), ((int)(((byte)(250)))));
@@ -404,6 +401,18 @@
             this.btnReven.Text = "Doanh thu";
             this.btnReven.UseVisualStyleBackColor = false;
             this.btnReven.Click += new System.EventHandler(this.btnReven_Click);
+            // 
+            // btnAdmin
+            // 
+            this.btnAdmin.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAdmin.FlatAppearance.BorderSize = 0;
+            this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdmin.Image = ((System.Drawing.Image)(resources.GetObject("btnAdmin.Image")));
+            this.btnAdmin.Location = new System.Drawing.Point(49, 23);
+            this.btnAdmin.Name = "btnAdmin";
+            this.btnAdmin.Size = new System.Drawing.Size(96, 96);
+            this.btnAdmin.TabIndex = 11;
+            this.btnAdmin.UseVisualStyleBackColor = false;
             // 
             // TriangleCorner2
             // 
@@ -501,7 +510,7 @@
             this.btnExit.BackColor = System.Drawing.SystemColors.Control;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.DimGray;
             this.btnExit.Location = new System.Drawing.Point(108, 0);
             this.btnExit.Name = "btnExit";
@@ -516,7 +525,7 @@
             this.btnRestoreDown.BackColor = System.Drawing.SystemColors.Control;
             this.btnRestoreDown.FlatAppearance.BorderSize = 0;
             this.btnRestoreDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRestoreDown.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestoreDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRestoreDown.ForeColor = System.Drawing.Color.DimGray;
             this.btnRestoreDown.Image = ((System.Drawing.Image)(resources.GetObject("btnRestoreDown.Image")));
             this.btnRestoreDown.Location = new System.Drawing.Point(54, 0);
@@ -531,7 +540,7 @@
             this.btnMinimize.BackColor = System.Drawing.SystemColors.Control;
             this.btnMinimize.FlatAppearance.BorderSize = 0;
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimize.ForeColor = System.Drawing.Color.DimGray;
             this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
             this.btnMinimize.Location = new System.Drawing.Point(0, 0);
@@ -586,13 +595,12 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // PanelColorPayment
+            // panelMain
             // 
-            this.PanelColorPayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(197)))), ((int)(((byte)(250)))));
-            this.PanelColorPayment.Location = new System.Drawing.Point(0, 41);
-            this.PanelColorPayment.Name = "PanelColorPayment";
-            this.PanelColorPayment.Size = new System.Drawing.Size(190, 5);
-            this.PanelColorPayment.TabIndex = 3;
+            this.panelMain.Location = new System.Drawing.Point(190, 185);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(1151, 521);
+            this.panelMain.TabIndex = 13;
             // 
             // fMain
             // 
@@ -600,6 +608,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1370, 730);
+            this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.PanelMenuMain);
@@ -608,6 +617,7 @@
             this.Name = "fMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fMain";
+            this.Load += new System.EventHandler(this.fMain_Load);
             this.PanelMenuMain.ResumeLayout(false);
             this.PanelMenuMain.PerformLayout();
             this.PanelSubMenu.ResumeLayout(false);
@@ -675,5 +685,6 @@
      //   private UC.TabPage tabPage1;
         private System.Windows.Forms.Panel MainPanel;
         private System.Windows.Forms.Panel PanelColorPayment;
+        private System.Windows.Forms.Panel panelMain;
     }
 }

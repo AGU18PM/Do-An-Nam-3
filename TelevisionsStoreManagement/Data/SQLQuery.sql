@@ -95,6 +95,9 @@ END
 GO
 
 insert into TIVICATEGORY(Name) values (N'samsung')
+insert into TIVICATEGORY(Name) values (N'Sony')
+
+update TIVICATEGORY set NAME = 'Samsung' where ID = 1
 
 INSERT INTO dbo.TIVI
         ( NAME, IDCATEGORY, PRICE, picture_url)
@@ -107,10 +110,13 @@ VALUES  ( N'S10', -- NAME - nvarchar(100)
 		  SELECT * FROM dbo.TIVI
 		  INSERT INTO dbo.TIVI
 		          ( NAME, IDCATEGORY, PRICE,picture_url)
-		  VALUES  ( N'S8', -- NAME - nvarchar(100)
-		            1, -- IDCATEGORY - int
-		            8000000.0,  -- PRICE - float
+		  VALUES  ( N'Smart Tivi 49 inch', -- NAME - nvarchar(100)
+		            2, -- IDCATEGORY - int
+		            18000000.0,  -- PRICE - float
 		            'C:\\Users\\pntn0\\OneDrive\\Desktop'
 					)
 
-select * from TIVICATEGORY
+select * from TIVI
+update TIVI set NAME= N'Smart Tivi Cong Samsung 4K 55 inch UA55NU7500' where ID = 1;
+
+select * from TIVI,TIVICATEGORY where Tivi.IDCATEGORY = TIVICATEGORY.ID

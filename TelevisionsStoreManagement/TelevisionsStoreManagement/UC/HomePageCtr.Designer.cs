@@ -30,11 +30,11 @@
         {
             this.SuspendLayout();
             // 
-            // UserControl1
+            // HomePageCtr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "UserControl1";
+            this.Name = "HomePageCtr";
             this.Size = new System.Drawing.Size(1056, 504);
             this.ResumeLayout(false);
 
