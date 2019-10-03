@@ -18,12 +18,7 @@ namespace TelevisionsStoreManagement.GUI
         {
             InitializeComponent();
             Color_Button();
-<<<<<<< HEAD
-            mode = 0;
-=======
-            HomePageCtr uc = new HomePageCtr();
-            addControl(uc);
->>>>>>> 75846c88bf7f718114924b216fc072cf08e3300d
+            mode = 0;     
         }
 
         int mode;
@@ -108,12 +103,11 @@ namespace TelevisionsStoreManagement.GUI
             btnPayment.ForeColor = System.Drawing.Color.DimGray;
             btnProduct.ForeColor = System.Drawing.Color.DimGray;
             btnHome.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
-<<<<<<< HEAD
+
             closeSubMenu();
-=======
-            HomePageCtr uc = new HomePageCtr();
-            addControl(uc);
->>>>>>> 75846c88bf7f718114924b216fc072cf08e3300d
+
+            
+
         }
 
         private void btnProduct_Click(object sender, EventArgs e)
@@ -149,15 +143,14 @@ namespace TelevisionsStoreManagement.GUI
             btnPayment.ForeColor = System.Drawing.Color.DimGray;
             btnHome.ForeColor = System.Drawing.Color.DimGray;
             btnProduct.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
-<<<<<<< HEAD
+
             //
             ChangeMenuMode();
                 
-=======
 
-            ProductCtr uc = new ProductCtr();
-            addControl(uc);
->>>>>>> 75846c88bf7f718114924b216fc072cf08e3300d
+
+            
+
         }
 
 
@@ -374,16 +367,9 @@ namespace TelevisionsStoreManagement.GUI
 
         private void btnMinimize_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            WindowState = FormWindowState.Minimized;
         }
 
-        private void addControl(Control control)
-        {
-            control.Dock = DockStyle.Fill;
-            MainPanel.Controls.Clear();
-            MainPanel.Controls.Add(control);
-        }
-        
-        
+
     }
 }
