@@ -17,10 +17,9 @@ namespace TelevisionsStoreManagement.DAL
             get { if (instance == null) instance = new DataProvider(); return DataProvider.instance; }
             private set { DataProvider.instance = value; }
         }
-
         private DataProvider() { }
 
-        private string connectionSTR = @"Data Source=DESKTOP-V5FECEI;Initial Catalog=QUANLYTIVI;Integrated Security=True";
+        private string connectionSTR = @"Data Source=DESKTOP-NGCOBG4;Initial Catalog=QUANLYTIVI;Integrated Security=True";
 
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {

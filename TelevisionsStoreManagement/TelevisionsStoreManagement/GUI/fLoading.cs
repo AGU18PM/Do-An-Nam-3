@@ -19,7 +19,7 @@ namespace TelevisionsStoreManagement
             Hide();
             fLogin login = new fLogin();
             login.ShowDialog();
-            CategoryList.Instance.loadCategoryList();
+            //CategoryList.Instance.loadCategoryList();
            // Products.Instance.load_Data();
         }
     }

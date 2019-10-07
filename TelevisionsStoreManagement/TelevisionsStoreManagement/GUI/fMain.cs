@@ -19,9 +19,7 @@ namespace TelevisionsStoreManagement.GUI
         {
             InitializeComponent();
             Color_Button();
-            mode = 0;
-            
-            
+            mode = 0;    
         }
 
         int mode;

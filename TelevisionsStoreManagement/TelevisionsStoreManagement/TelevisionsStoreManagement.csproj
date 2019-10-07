@@ -54,11 +54,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL\Category.cs" />
+    <Compile Include="BUS\AccountBUS.cs" />
+    <Compile Include="DAL\AccountDAL.cs" />
+    <Compile Include="DAL\CategoryDAL.cs" />
+    <Compile Include="DTO\CategoryDTO.cs" />
     <Compile Include="DAL\CategoryList.cs" />
     <Compile Include="DAL\DataProvider.cs" />
-    <Compile Include="DAL\Account.cs" />
-    <Compile Include="DAL\Product.cs" />
+    <Compile Include="DTO\AccountDTO.cs" />
+    <Compile Include="DTO\ProductDTO.cs" />
     <Compile Include="DAL\Products.cs" />
     <Compile Include="Datatable.cs" />
     <Compile Include="GUI\fLoading.cs">
@@ -131,8 +134,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DTO\Control\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

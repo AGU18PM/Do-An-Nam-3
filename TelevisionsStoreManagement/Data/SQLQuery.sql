@@ -1,4 +1,4 @@
-CREATE DATABASE QUANLYTIVI
+﻿CREATE DATABASE QUANLYTIVI
 GO
 USE QUANLYTIVI
 GO
@@ -77,7 +77,7 @@ INSERT INTO dbo.ACCOUNT
           ROLE ,
           STATUS
         )
-VALUES  ( N'Nam B�o' , -- NAME - nvarchar(100)
+VALUES  ( N'Nam Béo' , -- NAME - nvarchar(100)
           'pntn0705' , -- USERNAME - varchar(100)
           'Cccc1254' , -- PASSWORD - varchar(1000)
           1 , -- ROLE - int
@@ -96,14 +96,16 @@ GO
 
 insert into TIVICATEGORY(Name) values (N'samsung')
 insert into TIVICATEGORY(Name) values (N'Sony')
+insert into TIVICATEGORY(Name) values (N'LG')
+insert into TIVICATEGORY(Name) values (N'Panasonic')
 
 update TIVICATEGORY set NAME = 'Samsung' where ID = 1
 
 INSERT INTO dbo.TIVI
         ( NAME, IDCATEGORY, PRICE, picture_url)
-VALUES  ( N'S10', -- NAME - nvarchar(100)
-          1, -- IDCATEGORY - int
-          10000000.0,  -- PRICE - float
+VALUES  ( N'Sony to bự', -- NAME - nvarchar(100)
+          2, -- IDCATEGORY - int
+          18000000.0,  -- PRICE - float
 		  'C:\\Users\\pntn0\\OneDrive\\Desktop'
           )
 
@@ -120,3 +122,11 @@ select * from TIVI
 update TIVI set NAME= N'Smart Tivi Cong Samsung 4K 55 inch UA55NU7500' where ID = 1;
 
 select * from TIVI,TIVICATEGORY where Tivi.IDCATEGORY = TIVICATEGORY.ID
+
+SELECT * FROM ACCOUNT
+
+INSERT INTO ACCOUNT(NAME, USERNAME, PASSWORD, ROLE, STATUS) VALUES('Thai Truong An' , 'tta' , '1' , '1' , '1')
+
+DELETE FROM ACCOUNT WHERE USERNAME = 'tta'
+
+UPDATE ACCOUNT SET NAME = 'Nam' , PASSWORD = '1' , ROLE = 1 , STATUS = 1 WHERE USERNAME = 'pntn0705'

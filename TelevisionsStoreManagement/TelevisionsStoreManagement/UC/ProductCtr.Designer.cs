@@ -32,7 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.tbNameProduct = new System.Windows.Forms.TextBox();
-            this.checkButton3 = new DevExpress.XtraEditors.CheckButton();
+            this.btnPanasonic = new DevExpress.XtraEditors.CheckButton();
             this.btnLG = new DevExpress.XtraEditors.CheckButton();
             this.btnSony = new DevExpress.XtraEditors.CheckButton();
             this.groupPrice = new DevExpress.XtraEditors.GroupControl();
@@ -51,7 +51,7 @@
             // 
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.tbNameProduct);
-            this.panel1.Controls.Add(this.checkButton3);
+            this.panel1.Controls.Add(this.btnPanasonic);
             this.panel1.Controls.Add(this.btnLG);
             this.panel1.Controls.Add(this.btnSony);
             this.panel1.Controls.Add(this.groupPrice);
@@ -78,14 +78,15 @@
             this.tbNameProduct.Size = new System.Drawing.Size(126, 20);
             this.tbNameProduct.TabIndex = 6;
             // 
-            // checkButton3
+            // btnPanasonic
             // 
-            this.checkButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("checkButton3.ImageOptions.Image")));
-            this.checkButton3.Location = new System.Drawing.Point(378, 7);
-            this.checkButton3.Name = "checkButton3";
-            this.checkButton3.Size = new System.Drawing.Size(120, 36);
-            this.checkButton3.TabIndex = 11;
-            this.checkButton3.Text = "Panasonic";
+            this.btnPanasonic.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("checkButton3.ImageOptions.Image")));
+            this.btnPanasonic.Location = new System.Drawing.Point(378, 7);
+            this.btnPanasonic.Name = "btnPanasonic";
+            this.btnPanasonic.Size = new System.Drawing.Size(120, 36);
+            this.btnPanasonic.TabIndex = 11;
+            this.btnPanasonic.Text = "Panasonic";
+            this.btnPanasonic.CheckedChanged += new System.EventHandler(this.btnPanasonic_CheckedChanged);
             // 
             // btnLG
             // 
@@ -95,6 +96,7 @@
             this.btnLG.Name = "btnLG";
             this.btnLG.Size = new System.Drawing.Size(120, 36);
             this.btnLG.TabIndex = 10;
+            this.btnLG.CheckedChanged += new System.EventHandler(this.btnLG_CheckedChanged);
             // 
             // btnSony
             // 
@@ -171,7 +173,6 @@
             this.ProductListview.TabIndex = 0;
             this.ProductListview.UseCompatibleStateImageBehavior = false;
             this.ProductListview.DrawItem += new System.Windows.Forms.DrawListViewItemEventHandler(this.ProductListview_DrawItem);
-            
             // 
             // ProductCtr
             // 
@@ -201,7 +202,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbNameProduct;
         private DevExpress.XtraEditors.GroupControl groupPrice;
-        private DevExpress.XtraEditors.CheckButton checkButton3;
+        private DevExpress.XtraEditors.CheckButton btnPanasonic;
         private DevExpress.XtraEditors.CheckButton btnLG;
         private DevExpress.XtraEditors.CheckButton btnSony;
         private System.Windows.Forms.ListView ProductListview;
