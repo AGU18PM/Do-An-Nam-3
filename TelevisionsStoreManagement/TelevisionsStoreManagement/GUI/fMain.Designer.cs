@@ -34,7 +34,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSmartTV = new System.Windows.Forms.Button();
             this.labelAdmin = new System.Windows.Forms.Label();
             this.lbelUsername = new System.Windows.Forms.Label();
             this.PanelMenuSlide = new System.Windows.Forms.Panel();
@@ -110,7 +110,7 @@
             this.PanelSubMenu.Controls.Add(this.button4);
             this.PanelSubMenu.Controls.Add(this.button3);
             this.PanelSubMenu.Controls.Add(this.button2);
-            this.PanelSubMenu.Controls.Add(this.button1);
+            this.PanelSubMenu.Controls.Add(this.btnSmartTV);
             this.PanelSubMenu.Location = new System.Drawing.Point(39, 280);
             this.PanelSubMenu.Name = "PanelSubMenu";
             this.PanelSubMenu.Size = new System.Drawing.Size(151, 116);
@@ -130,6 +130,7 @@
             this.button4.Text = "Tivi Thường";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -145,6 +146,7 @@
             this.button3.Text = "Tivi Cong";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -160,21 +162,23 @@
             this.button2.Text = "Internet Tivi";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btnSmartTV
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.DimGray;
-            this.button1.Location = new System.Drawing.Point(0, -3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 30);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Smart Tivi";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSmartTV.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSmartTV.FlatAppearance.BorderSize = 0;
+            this.btnSmartTV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSmartTV.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSmartTV.ForeColor = System.Drawing.Color.DimGray;
+            this.btnSmartTV.Location = new System.Drawing.Point(0, -3);
+            this.btnSmartTV.Name = "btnSmartTV";
+            this.btnSmartTV.Size = new System.Drawing.Size(151, 30);
+            this.btnSmartTV.TabIndex = 13;
+            this.btnSmartTV.Text = "Smart Tivi";
+            this.btnSmartTV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSmartTV.UseVisualStyleBackColor = false;
+            this.btnSmartTV.Click += new System.EventHandler(this.btnSmartTV_Click);
             // 
             // labelAdmin
             // 
@@ -680,10 +684,10 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSmartTV;
 
      //   private UC.TabPage tabPage1;
-        private System.Windows.Forms.Panel MainPanel;
+        
         private System.Windows.Forms.Panel PanelColorPayment;
         private System.Windows.Forms.Panel panelMain;
     }

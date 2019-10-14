@@ -8,10 +8,10 @@ namespace TelevisionsStoreManagement.DTO
 {
     class CategoryDTO
     {
-        int iD;
         string name;
+        string changeName;
 
-        public int ID { get => iD; set => iD = value; }
         public string Name { get => name; set => name = value; }
+        public string ChangeName { get => changeName; set => changeName = value; }
     }
 }

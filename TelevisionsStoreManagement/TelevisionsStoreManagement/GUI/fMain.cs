@@ -410,5 +410,33 @@ namespace TelevisionsStoreManagement.GUI
         {
             
         }
+
+        private void btnSmartTV_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            ProductCtr productControl = new ProductCtr("1");
+            panelMain.Controls.Add(productControl);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            ProductCtr productControl = new ProductCtr("2");
+            panelMain.Controls.Add(productControl);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            ProductCtr productControl = new ProductCtr("3");
+            panelMain.Controls.Add(productControl);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            ProductCtr productControl = new ProductCtr("4");
+            panelMain.Controls.Add(productControl);
+        }
     }
 }

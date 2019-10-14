@@ -55,12 +55,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\AccountBUS.cs" />
+    <Compile Include="BUS\CategoryBUS.cs" />
+    <Compile Include="BUS\ProductBUS.cs" />
     <Compile Include="DAL\AccountDAL.cs" />
     <Compile Include="DAL\CategoryDAL.cs" />
+    <Compile Include="DAL\ProductDAL.cs" />
     <Compile Include="DTO\CategoryDTO.cs" />
     <Compile Include="DAL\CategoryList.cs" />
     <Compile Include="DAL\DataProvider.cs" />
     <Compile Include="DTO\AccountDTO.cs" />
+    <Compile Include="DTO\Payment.cs" />
     <Compile Include="DTO\ProductDTO.cs" />
     <Compile Include="DAL\Products.cs" />
     <Compile Include="Datatable.cs" />

@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TelevisionsStoreManagement.DAL;
+using TelevisionsStoreManagement.BUS;
+using TelevisionsStoreManagement.DTO;
 
 namespace TelevisionsStoreManagement.UC
 {
@@ -15,14 +17,24 @@ namespace TelevisionsStoreManagement.UC
     {
         //Products listproduct;
         int SSMode, LGMode, SonyMode, PMode;
+        ProductBUS productBUS = new ProductBUS();
+        ProductDTO productDTO = new ProductDTO();
+        Payment listProduct = new Payment();
+        string typeInput = "";
+        string payment = "";
         public ProductCtr()
         {
             InitializeComponent();
-           // listproduct = new Products();
-          //  listproduct.load_Data();
             firstShowData();
+            productBUS.ShowProductData(dGVProduct, txbID, txbCategory, txbName, txbType, txbSize, txbPrice, typeInput);
         }
 
+        public ProductCtr(string type)
+        {
+            InitializeComponent();
+            typeInput = type;
+            productBUS.ShowProductData(dGVProduct, txbID, txbCategory, txbName, txbType, txbSize, txbPrice, typeInput);
+        }
 
         //Load đầy đủ data
         void firstShowData()
@@ -167,44 +179,128 @@ namespace TelevisionsStoreManagement.UC
 
 
 
-        private void CbPriceDown_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbPriceDown.Checked)
-                cbPriceUp.Checked = false;
-        }
 
         private void btnSony_CheckedChanged(object sender, EventArgs e)
         {
-            ProductListview.Clear();
-            showData();
+            Sort();
         }
 
         private void btnLG_CheckedChanged(object sender, EventArgs e)
         {
-            ProductListview.Clear();
-            showData();
+            Sort();
         }
 
         private void btnPanasonic_CheckedChanged(object sender, EventArgs e)
         {
-            ProductListview.Clear();
-            showData();
+            Sort();
         }
 
-        private void CbPriceUp_CheckedChanged(object sender, EventArgs e)
+        private void nUDCount_ValueChanged(object sender, EventArgs e)
         {
-            if (cbPriceUp.Checked)
-                cbPriceDown.Checked = false;
+            int price = Convert.ToInt32(txbPrice.Text);
+            int totalPrice = price * (Convert.ToInt32(nUDCount.Value));
+            txbTotalPrice.Text = totalPrice.ToString();
         }
+
+        private void btnPayment_Click(object sender, EventArgs e)
+        {
+            double totalPricee = 0;
+            if (listProduct.Count != 0)
+            {
+                for (int i = 0; i < listProduct.Count; i++)
+                {
+                    totalPricee += listProduct.Price[i];
+                }
+                MessageBox.Show("Tong tien: " + totalPricee.ToString());
+            }
+            else
+            {
+                MessageBox.Show("Chua co san pham duoc chon");
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            listProduct.ID[listProduct.Count] = txbID.Text;
+            listProduct.CountByList[listProduct.Count] = Convert.ToInt32(nUDCount.Value);
+            listProduct.Price[listProduct.Count] = Convert.ToDouble(txbPrice.Text) * Convert.ToDouble(nUDCount.Value);
+            listProduct.Count++;
+            payment = "Da them " + txbCategory.Text + " " + txbName.Text + " so luong " + nUDCount.Value.ToString();
+            lbPayment.Items.Add(payment);
+        }
+
+        private void ProductCtr_Load(object sender, EventArgs e)
+        {
+
+        }
+
 
         private void btnSamsung_CheckedChanged(object sender, EventArgs e)
         {
-            ProductListview.Clear();
-            showData();
+            Sort();
         }
-        private void ProductListview_DrawItem(object sender, DrawListViewItemEventArgs e)
+
+
+        private void Sort()
         {
-            e.DrawDefault = true;
+            string result = "";
+            if (btnSamsung.Checked)
+            {
+                if (result == "")
+                {
+                    result += "CATEGORY_NAME = 'Samsung'";
+                }
+                else
+                {
+                    result += " OR CATEGORY_NAME = 'Samsung'";
+                }
+            }
+            if (btnSony.Checked)
+            {
+                if (result == "")
+                {
+                    result += "CATEGORY_NAME = 'Sony'";
+                }
+                else
+                {
+                    result += " OR CATEGORY_NAME = 'Sony'";
+                }
+            }
+            if (btnLG.Checked)
+            {
+                if (result == "")
+                {
+                    result += "CATEGORY_NAME = 'LG'";
+                }
+                else
+                {
+                    result += " OR CATEGORY_NAME = 'LG'";
+                }
+            }
+            if (btnPanasonic.Checked)
+            {
+                if (result == "")
+                {
+                    result += "CATEGORY_NAME = 'Panasonic'";
+                }
+                else
+                {
+                    result += " OR CATEGORY_NAME = 'Panasonic'";
+                }
+            }
+            if (result != "")
+            {
+                dGVProduct.DataSource = "";
+                //dGVProduct.Rows.Clear();
+                productBUS.ShowProductDataByCategory(dGVProduct, result, txbID, txbCategory, txbName, txbType, txbSize, txbPrice, typeInput);
+            }
+            else
+            {
+                dGVProduct.DataSource = "";
+                productBUS.ShowProductData(dGVProduct, txbID, txbCategory, txbName, txbType, txbSize, txbPrice, typeInput);
+            }
         }
+
+
     }
 }
