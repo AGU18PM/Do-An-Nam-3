@@ -117,6 +117,10 @@ END
 
 GETTVBYCATEGORY 'samsung'
 
-select * from tivi where CATEGORY_NAME = 'Samsung' --or CATEGORY_NAME = 'Sony'
+select * from TIVI where CATEGORY_NAME = 'Samsung' --or CATEGORY_NAME = 'Sony'
 
 delete from tivi where name = 'cùi bắp'
+
+select * from WAREHOUSE
+
+select * form 
