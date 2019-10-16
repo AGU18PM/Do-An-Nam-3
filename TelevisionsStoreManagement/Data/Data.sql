@@ -120,3 +120,8 @@ GETTVBYCATEGORY 'samsung'
 select * from tivi where CATEGORY_NAME = 'Samsung' --or CATEGORY_NAME = 'Sony'
 
 delete from tivi where name = 'cùi bắp'
+
+
+select * from tivi
+
+select ID , CATEGORY_NAME , NAME , TYPE , SIZE , PRICE_OUT from tivi WHERE TYPE = '3'
