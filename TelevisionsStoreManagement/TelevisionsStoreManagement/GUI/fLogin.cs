@@ -33,8 +33,15 @@ namespace TelevisionsStoreManagement
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
+            login();
+        }
+
+        private void login()
+        {
+
             accountDTO.Username = txbUsername.Text;
             accountDTO.Password = txbPassword.Text;
+            
             if (accountBus.Login(accountDTO))
             {
                 Hide();
@@ -42,7 +49,47 @@ namespace TelevisionsStoreManagement
                 f.ShowDialog();
             }
             else
+            {
                 lbError.Show();
+                txbPassword.Clear();
+                txbUsername.Clear();
+                txbUsername.Focus();
+            }
+        }
+
+        private void txbPassword_TextChanged(object sender, EventArgs e)
+        {
+            txbPassword.UseSystemPasswordChar = false;
+        }
+
+        private void txbPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                login();
+            }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void fLogin_Load(object sender, EventArgs e)
+        {
+            txbUsername.TabIndex = 1;
+            txbPassword.TabIndex = 2;
+            btnLogin.Enabled = false;
+        }
+
+        private void txbUsername_TextChanged(object sender, EventArgs e)
+        {
+            if (txbUsername.Text == "" || txbUsername.Text == "Username" || txbPassword.Text == "" || txbPassword.Text == "Password")
+            {
+                btnLogin.Enabled = false;
+            }
+            else
+                btnLogin.Enabled = true;
         }
     }
 }

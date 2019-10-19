@@ -25,7 +25,7 @@ namespace TelevisionsStoreManagement.UC
         public ProductCtr()
         {
             InitializeComponent();
-            firstShowData();
+            //firstShowData();
             productBUS.ShowProductData(dGVProduct, txbID, txbCategory, txbName, txbType, txbSize, txbPrice, typeInput);
         }
 

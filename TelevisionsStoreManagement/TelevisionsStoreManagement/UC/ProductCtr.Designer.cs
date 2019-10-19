@@ -35,6 +35,8 @@
             this.btnSony = new DevExpress.XtraEditors.CheckButton();
             this.btnSamsung = new DevExpress.XtraEditors.CheckButton();
             this.panelProduct = new System.Windows.Forms.Panel();
+            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
+            this.lbPayment = new System.Windows.Forms.ListBox();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.btnPayment = new DevExpress.XtraEditors.SimpleButton();
             this.label9 = new System.Windows.Forms.Label();
@@ -61,8 +63,6 @@
             this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.size = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceOut = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lbPayment = new System.Windows.Forms.ListBox();
-            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
             this.panelProduct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nUDCount)).BeginInit();
@@ -149,6 +149,22 @@
             this.panelProduct.Size = new System.Drawing.Size(1050, 418);
             this.panelProduct.TabIndex = 1;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(941, 359);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(94, 51);
+            this.btnCancel.TabIndex = 21;
+            this.btnCancel.Text = "Huy";
+            // 
+            // lbPayment
+            // 
+            this.lbPayment.FormattingEnabled = true;
+            this.lbPayment.Location = new System.Drawing.Point(0, 222);
+            this.lbPayment.Name = "lbPayment";
+            this.lbPayment.Size = new System.Drawing.Size(681, 186);
+            this.lbPayment.TabIndex = 20;
+            // 
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(691, 359);
@@ -199,9 +215,19 @@
             // nUDCount
             // 
             this.nUDCount.Location = new System.Drawing.Point(996, 240);
+            this.nUDCount.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nUDCount.Name = "nUDCount";
             this.nUDCount.Size = new System.Drawing.Size(47, 20);
             this.nUDCount.TabIndex = 14;
+            this.nUDCount.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nUDCount.ValueChanged += new System.EventHandler(this.nUDCount_ValueChanged);
             // 
             // label7
@@ -391,22 +417,6 @@
             this.priceOut.FillWeight = 99.75531F;
             this.priceOut.HeaderText = "Giá";
             this.priceOut.Name = "priceOut";
-            // 
-            // lbPayment
-            // 
-            this.lbPayment.FormattingEnabled = true;
-            this.lbPayment.Location = new System.Drawing.Point(0, 222);
-            this.lbPayment.Name = "lbPayment";
-            this.lbPayment.Size = new System.Drawing.Size(681, 186);
-            this.lbPayment.TabIndex = 20;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(941, 359);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(94, 51);
-            this.btnCancel.TabIndex = 21;
-            this.btnCancel.Text = "Huy";
             // 
             // ProductCtr
             // 
