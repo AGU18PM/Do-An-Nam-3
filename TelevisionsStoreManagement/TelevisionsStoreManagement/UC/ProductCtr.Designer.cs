@@ -125,6 +125,7 @@
             // 
             // panelProduct
             // 
+            this.panelProduct.BackColor = System.Drawing.SystemColors.Control;
             this.panelProduct.Controls.Add(this.txbCustomerPhonenumber);
             this.panelProduct.Controls.Add(this.label11);
             this.panelProduct.Controls.Add(this.label10);
@@ -152,11 +153,13 @@
             this.panelProduct.Controls.Add(this.dGVProduct);
             this.panelProduct.Location = new System.Drawing.Point(3, 60);
             this.panelProduct.Name = "panelProduct";
-            this.panelProduct.Size = new System.Drawing.Size(1050, 418);
+            this.panelProduct.Size = new System.Drawing.Size(1177, 485);
             this.panelProduct.TabIndex = 1;
             // 
             // txbCustomerPhonenumber
             // 
+            this.txbCustomerPhonenumber.BackColor = System.Drawing.SystemColors.Control;
+            this.txbCustomerPhonenumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbCustomerPhonenumber.Location = new System.Drawing.Point(833, 295);
             this.txbCustomerPhonenumber.Multiline = true;
             this.txbCustomerPhonenumber.Name = "txbCustomerPhonenumber";
@@ -229,6 +232,8 @@
             // 
             // txbTotalPrice
             // 
+            this.txbTotalPrice.BackColor = System.Drawing.SystemColors.Control;
+            this.txbTotalPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbTotalPrice.Enabled = false;
             this.txbTotalPrice.Location = new System.Drawing.Point(833, 258);
             this.txbTotalPrice.Multiline = true;
@@ -267,6 +272,8 @@
             // 
             // txbPrice
             // 
+            this.txbPrice.BackColor = System.Drawing.SystemColors.Control;
+            this.txbPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbPrice.Enabled = false;
             this.txbPrice.Location = new System.Drawing.Point(833, 216);
             this.txbPrice.Multiline = true;
@@ -286,6 +293,8 @@
             // 
             // txbSize
             // 
+            this.txbSize.BackColor = System.Drawing.SystemColors.Control;
+            this.txbSize.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbSize.Enabled = false;
             this.txbSize.Location = new System.Drawing.Point(833, 180);
             this.txbSize.Multiline = true;
@@ -305,6 +314,8 @@
             // 
             // txbType
             // 
+            this.txbType.BackColor = System.Drawing.SystemColors.Control;
+            this.txbType.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbType.Enabled = false;
             this.txbType.Location = new System.Drawing.Point(833, 146);
             this.txbType.Multiline = true;
@@ -324,6 +335,8 @@
             // 
             // txbName
             // 
+            this.txbName.BackColor = System.Drawing.SystemColors.Control;
+            this.txbName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbName.Enabled = false;
             this.txbName.Location = new System.Drawing.Point(833, 115);
             this.txbName.Multiline = true;
@@ -343,6 +356,8 @@
             // 
             // txbCategory
             // 
+            this.txbCategory.BackColor = System.Drawing.SystemColors.Control;
+            this.txbCategory.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbCategory.Enabled = false;
             this.txbCategory.Location = new System.Drawing.Point(833, 77);
             this.txbCategory.Multiline = true;
@@ -372,6 +387,8 @@
             // 
             // txbID
             // 
+            this.txbID.BackColor = System.Drawing.SystemColors.Control;
+            this.txbID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbID.Enabled = false;
             this.txbID.Location = new System.Drawing.Point(833, 44);
             this.txbID.Multiline = true;
@@ -458,7 +475,7 @@
             this.Controls.Add(this.panelProduct);
             this.Controls.Add(this.panel1);
             this.Name = "ProductCtr";
-            this.Size = new System.Drawing.Size(1056, 504);
+            this.Size = new System.Drawing.Size(1180, 545);
             this.Load += new System.EventHandler(this.ProductCtr_Load);
             this.panel1.ResumeLayout(false);
             this.panelProduct.ResumeLayout(false);

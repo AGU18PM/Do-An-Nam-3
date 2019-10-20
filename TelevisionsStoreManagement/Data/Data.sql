@@ -122,6 +122,9 @@ select * from tivi where CATEGORY_NAME = 'Samsung' --or CATEGORY_NAME = 'Sony'
 delete from tivi where name = 'cùi bắp'
 
 
-select * from tivi
+select * from WAREHOUSE
 
 select ID , CATEGORY_NAME , NAME , TYPE , SIZE , PRICE_OUT from tivi WHERE TYPE = '3'
+
+insert into WAREHOUSE(ID_TV,COUNT) values (1,20)
+insert into CUSTOMER(NAME,PHONE_NUMBER,CMND,TYPE,PAYCOUNT) values (N'Thái Trường An','0914518169','352448973',1,0)

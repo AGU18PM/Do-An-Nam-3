@@ -408,7 +408,7 @@ namespace TelevisionsStoreManagement.GUI
 
         private void fMain_Load(object sender, EventArgs e)
         {
-            
+            ProductCtr productCtr = new ProductCtr();
         }
 
         private void btnSmartTV_Click(object sender, EventArgs e)

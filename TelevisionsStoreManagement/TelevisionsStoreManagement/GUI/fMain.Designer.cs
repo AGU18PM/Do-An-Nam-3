@@ -603,7 +603,7 @@
             // 
             this.panelMain.Location = new System.Drawing.Point(190, 185);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1151, 521);
+            this.panelMain.Size = new System.Drawing.Size(1180, 545);
             this.panelMain.TabIndex = 13;
             // 
             // fMain

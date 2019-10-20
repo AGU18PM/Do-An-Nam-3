@@ -21,7 +21,7 @@ namespace TelevisionsStoreManagement
         public fLogin()
         {
             InitializeComponent();
-            lbError.Hide();
+            
 
            
             //Hide();
@@ -50,7 +50,7 @@ namespace TelevisionsStoreManagement
             }
             else
             {
-                lbError.Show();
+                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!!!");
                 txbPassword.Clear();
                 txbUsername.Clear();
                 txbUsername.Focus();
@@ -90,6 +90,40 @@ namespace TelevisionsStoreManagement
             }
             else
                 btnLogin.Enabled = true;
+        }
+
+        private void txbUsername_Enter(object sender, EventArgs e)
+        {
+            if (txbUsername.Text.Equals(@"Username"))
+            {
+                txbUsername.Clear();
+
+            }
+        }
+
+        private void txbUsername_Leave(object sender, EventArgs e)
+        {
+            if (txbUsername.Text.Equals(@""))
+            {
+                txbUsername.Text = "Username";
+            }
+        }
+
+        private void txbPassword_Enter(object sender, EventArgs e)
+        {
+            if (txbPassword.Text.Equals(@"Password"))
+            {
+                txbPassword.Clear();
+                txbPassword.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void txbPassword_Leave(object sender, EventArgs e)
+        {
+            if (txbPassword.Text.Equals(""))
+            {
+                txbPassword.Text = "Password";
+            }
         }
     }
 }
