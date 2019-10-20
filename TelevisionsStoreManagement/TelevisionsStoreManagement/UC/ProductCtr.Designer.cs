@@ -409,6 +409,8 @@
             this.dGVProduct.AllowUserToAddRows = false;
             this.dGVProduct.AllowUserToDeleteRows = false;
             this.dGVProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dGVProduct.BackgroundColor = System.Drawing.Color.White;
+            this.dGVProduct.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dGVProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -433,6 +435,7 @@
             this.ID.Frozen = true;
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             this.ID.Width = 30;
             // 
             // Category
@@ -442,6 +445,7 @@
             this.Category.FillWeight = 99.75531F;
             this.Category.HeaderText = "Hãng";
             this.Category.Name = "Category";
+            this.Category.ReadOnly = true;
             this.Category.Width = 150;
             // 
             // productNam
@@ -450,6 +454,7 @@
             this.productNam.FillWeight = 99.75531F;
             this.productNam.HeaderText = "Tên sản phẩm";
             this.productNam.Name = "productNam";
+            this.productNam.ReadOnly = true;
             // 
             // type
             // 
@@ -458,6 +463,7 @@
             this.type.FillWeight = 50F;
             this.type.HeaderText = "Loại";
             this.type.Name = "type";
+            this.type.ReadOnly = true;
             this.type.Width = 50;
             // 
             // size
@@ -467,6 +473,7 @@
             this.size.FillWeight = 170.5219F;
             this.size.HeaderText = "Kích cỡ";
             this.size.Name = "size";
+            this.size.ReadOnly = true;
             this.size.Width = 80;
             // 
             // priceOut
@@ -475,6 +482,7 @@
             this.priceOut.FillWeight = 99.75531F;
             this.priceOut.HeaderText = "Giá";
             this.priceOut.Name = "priceOut";
+            this.priceOut.ReadOnly = true;
             // 
             // ProductCtr
             // 
@@ -522,16 +530,16 @@
         private DevExpress.XtraEditors.SimpleButton btnPayment;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txbTotalPrice;
+        private System.Windows.Forms.ListBox lbPayment;
+        private DevExpress.XtraEditors.SimpleButton btnCancel;
+        private System.Windows.Forms.TextBox txbCustomerPhonenumber;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Category;
         private System.Windows.Forms.DataGridViewTextBoxColumn productNam;
         private System.Windows.Forms.DataGridViewTextBoxColumn type;
         private System.Windows.Forms.DataGridViewTextBoxColumn size;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceOut;
-        private System.Windows.Forms.ListBox lbPayment;
-        private DevExpress.XtraEditors.SimpleButton btnCancel;
-        private System.Windows.Forms.TextBox txbCustomerPhonenumber;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
     }
 }
