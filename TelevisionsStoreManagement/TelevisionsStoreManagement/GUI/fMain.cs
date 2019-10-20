@@ -29,7 +29,7 @@ namespace TelevisionsStoreManagement.GUI
             //
             TriangleCorner1.Show();
             TriangleCorner2.Hide();
-            TriangleCorner3.Hide();
+            
             TriangleCorner4.Hide();
             TriangleCorner5.Hide();
             TriangleCorner6.Hide();
@@ -37,7 +37,7 @@ namespace TelevisionsStoreManagement.GUI
             //
             PanelColorMain.Show();
             PanelColorProduct.Hide();
-            PanelColorPayment.Hide();
+            
             PanelColorDepot.Hide();
             PanelColorRevenue.Hide();
             PanelColorSetting.Hide();
@@ -101,7 +101,7 @@ namespace TelevisionsStoreManagement.GUI
             panelMain.Controls.Add(home);
             TriangleCorner1.Show();
             TriangleCorner2.Hide();
-            TriangleCorner3.Hide();
+           
             TriangleCorner4.Hide();
             TriangleCorner5.Hide();
             TriangleCorner6.Hide();
@@ -109,7 +109,7 @@ namespace TelevisionsStoreManagement.GUI
             //
             PanelColorMain.Show();
             PanelColorProduct.Hide();
-            PanelColorPayment.Hide();
+            
             PanelColorDepot.Hide();
             PanelColorRevenue.Hide();
             PanelColorSetting.Hide();
@@ -120,14 +120,14 @@ namespace TelevisionsStoreManagement.GUI
             btnSetting.Image = Image.FromFile(startupURL + "\\Icon\\setting-icon-gray.png");
             btnReven.Image = Image.FromFile(startupURL + "\\Icon\\revenue-icon-gray.png");
             btnWareHouse.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
-            btnPayment.Image = Image.FromFile(startupURL + "\\Icon\\pay-icon.png");
+            
             btnHome.Image = Image.FromFile(startupURL + "\\Icon\\button_home_blue.png");
             //
             btnSetting.ForeColor = System.Drawing.Color.DimGray;
             btnHelp.ForeColor = System.Drawing.Color.DimGray;
             btnReven.ForeColor = System.Drawing.Color.DimGray;
             btnWareHouse.ForeColor = System.Drawing.Color.DimGray;
-            btnPayment.ForeColor = System.Drawing.Color.DimGray;
+            
             btnProduct.ForeColor = System.Drawing.Color.DimGray;
             btnHome.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
 
@@ -141,7 +141,7 @@ namespace TelevisionsStoreManagement.GUI
         {
             TriangleCorner1.Hide();
             TriangleCorner2.Show();
-            TriangleCorner3.Hide();
+            
             TriangleCorner4.Hide();
             TriangleCorner5.Hide();
             TriangleCorner6.Hide();
@@ -149,7 +149,7 @@ namespace TelevisionsStoreManagement.GUI
             //
             PanelColorProduct.Show();
             PanelColorMain.Hide();
-            PanelColorPayment.Hide();
+            
             PanelColorDepot.Hide();
             PanelColorRevenue.Hide();
             PanelColorSetting.Hide();
@@ -160,14 +160,14 @@ namespace TelevisionsStoreManagement.GUI
             btnSetting.Image = Image.FromFile(startupURL + "\\Icon\\setting-icon-gray.png");
             btnReven.Image = Image.FromFile(startupURL + "\\Icon\\revenue-icon-gray.png");
             btnWareHouse.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
-            btnPayment.Image = Image.FromFile(startupURL + "\\Icon\\pay-icon.png");
+            
             btnHome.Image = Image.FromFile(startupURL + "\\Icon\\home-icon1.png");
             //
             btnSetting.ForeColor = System.Drawing.Color.DimGray;
             btnHelp.ForeColor = System.Drawing.Color.DimGray;
             btnReven.ForeColor = System.Drawing.Color.DimGray;
             btnWareHouse.ForeColor = System.Drawing.Color.DimGray;
-            btnPayment.ForeColor = System.Drawing.Color.DimGray;
+            
             btnHome.ForeColor = System.Drawing.Color.DimGray;
             btnProduct.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
 
@@ -190,13 +190,13 @@ namespace TelevisionsStoreManagement.GUI
             closeSubMenu();
             TriangleCorner1.Hide();
             TriangleCorner2.Hide();
-            TriangleCorner3.Show();
+            
             TriangleCorner4.Hide();
             TriangleCorner5.Hide();
             TriangleCorner6.Hide();
             TriangleCorner7.Hide();
             //
-            PanelColorPayment.Show();
+            
             PanelColorMain.Hide();
             PanelColorProduct.Hide();
             PanelColorDepot.Hide();
@@ -209,7 +209,7 @@ namespace TelevisionsStoreManagement.GUI
             btnSetting.Image = Image.FromFile(startupURL + "\\Icon\\setting-icon-gray.png");
             btnReven.Image = Image.FromFile(startupURL + "\\Icon\\revenue-icon-gray.png");
             btnWareHouse.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
-            btnPayment.Image = Image.FromFile(startupURL + "\\Icon\\pay-icon-blue.png");
+            
             btnHome.Image = Image.FromFile(startupURL + "\\Icon\\home-icon1.png");
             //
             btnSetting.ForeColor = System.Drawing.Color.DimGray;
@@ -218,7 +218,7 @@ namespace TelevisionsStoreManagement.GUI
             btnWareHouse.ForeColor = System.Drawing.Color.DimGray;
             btnProduct.ForeColor = System.Drawing.Color.DimGray;
             btnHome.ForeColor = System.Drawing.Color.DimGray;
-            btnPayment.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
+            
         }
 
         private void btnDepot_Click(object sender, EventArgs e)
@@ -226,7 +226,7 @@ namespace TelevisionsStoreManagement.GUI
             closeSubMenu();
             TriangleCorner1.Hide();
             TriangleCorner2.Hide();
-            TriangleCorner3.Hide();
+            
             TriangleCorner4.Show();
             TriangleCorner5.Hide();
             TriangleCorner6.Hide();
@@ -235,7 +235,7 @@ namespace TelevisionsStoreManagement.GUI
             PanelColorDepot.Show();
             PanelColorMain.Hide();
             PanelColorProduct.Hide();
-            PanelColorPayment.Hide();
+            
             PanelColorRevenue.Hide();
             PanelColorSetting.Hide();
             PanelColorHelp.Hide();
@@ -245,7 +245,7 @@ namespace TelevisionsStoreManagement.GUI
             btnSetting.Image = Image.FromFile(startupURL + "\\Icon\\setting-icon-gray.png");
             btnReven.Image = Image.FromFile(startupURL + "\\Icon\\revenue-icon-gray.png");
             btnWareHouse.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-blue.png");
-            btnPayment.Image = Image.FromFile(startupURL + "\\Icon\\pay-icon.png");
+            
             btnHome.Image = Image.FromFile(startupURL + "\\Icon\\home-icon1.png");
             //
             btnSetting.ForeColor = System.Drawing.Color.DimGray;
@@ -253,7 +253,7 @@ namespace TelevisionsStoreManagement.GUI
             btnReven.ForeColor = System.Drawing.Color.DimGray;
             btnWareHouse.ForeColor = System.Drawing.Color.DimGray;
             btnProduct.ForeColor = System.Drawing.Color.DimGray;
-            btnPayment.ForeColor = System.Drawing.Color.DimGray;
+            
             btnHome.ForeColor = System.Drawing.Color.DimGray;
             btnWareHouse.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
             //       
@@ -268,7 +268,7 @@ namespace TelevisionsStoreManagement.GUI
             closeSubMenu();
             TriangleCorner1.Hide();
             TriangleCorner2.Hide();
-            TriangleCorner3.Hide();
+            
             TriangleCorner4.Hide();
             TriangleCorner5.Show();
             TriangleCorner6.Hide();
@@ -277,7 +277,7 @@ namespace TelevisionsStoreManagement.GUI
             PanelColorRevenue.Show();
             PanelColorMain.Hide();
             PanelColorProduct.Hide();
-            PanelColorPayment.Hide();
+            
             PanelColorDepot.Hide();
             PanelColorSetting.Hide();
             PanelColorHelp.Hide();
@@ -287,7 +287,7 @@ namespace TelevisionsStoreManagement.GUI
             btnSetting.Image = Image.FromFile(startupURL + "\\Icon\\setting-icon-gray.png");
             btnReven.Image = Image.FromFile(startupURL + "\\Icon\\revenue-icon-blue .png");
             btnWareHouse.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
-            btnPayment.Image = Image.FromFile(startupURL + "\\Icon\\pay-icon.png");
+            
             btnHome.Image = Image.FromFile(startupURL + "\\Icon\\home-icon1.png");
             //
             btnSetting.ForeColor = System.Drawing.Color.DimGray;
@@ -295,7 +295,7 @@ namespace TelevisionsStoreManagement.GUI
             btnReven.ForeColor = System.Drawing.Color.DimGray;
             btnWareHouse.ForeColor = System.Drawing.Color.DimGray;
             btnProduct.ForeColor = System.Drawing.Color.DimGray;
-            btnPayment.ForeColor = System.Drawing.Color.DimGray;
+            
             btnHome.ForeColor = System.Drawing.Color.DimGray;
             btnReven.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
         }
@@ -310,7 +310,7 @@ namespace TelevisionsStoreManagement.GUI
             closeSubMenu();
             TriangleCorner1.Hide();
             TriangleCorner2.Hide();
-            TriangleCorner3.Hide();
+            
             TriangleCorner4.Hide();
             TriangleCorner5.Hide();
             TriangleCorner6.Show();
@@ -318,7 +318,7 @@ namespace TelevisionsStoreManagement.GUI
             //
             PanelColorProduct.Hide();
             PanelColorMain.Hide();
-            PanelColorPayment.Hide();
+            
             PanelColorDepot.Hide();
             PanelColorRevenue.Hide();
             PanelColorSetting.Show();
@@ -329,14 +329,14 @@ namespace TelevisionsStoreManagement.GUI
             btnSetting.Image = Image.FromFile(startupURL + "\\Icon\\setting-icon-blue.png");
             btnReven.Image = Image.FromFile(startupURL + "\\Icon\\revenue-icon-gray.png");
             btnWareHouse.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
-            btnPayment.Image = Image.FromFile(startupURL + "\\Icon\\pay-icon.png");
+            
             btnHome.Image = Image.FromFile(startupURL + "\\Icon\\home-icon1.png");
             //
             btnProduct.ForeColor = System.Drawing.Color.DimGray;
             btnHelp.ForeColor = System.Drawing.Color.DimGray;
             btnReven.ForeColor = System.Drawing.Color.DimGray;
             btnWareHouse.ForeColor = System.Drawing.Color.DimGray;
-            btnPayment.ForeColor = System.Drawing.Color.DimGray;
+            
             btnHome.ForeColor = System.Drawing.Color.DimGray;
             btnSetting.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
 
@@ -347,7 +347,7 @@ namespace TelevisionsStoreManagement.GUI
             closeSubMenu();
             TriangleCorner1.Hide();
             TriangleCorner2.Hide();
-            TriangleCorner3.Hide();
+            
             TriangleCorner4.Hide();
             TriangleCorner5.Hide();
             TriangleCorner6.Hide();
@@ -355,7 +355,7 @@ namespace TelevisionsStoreManagement.GUI
             //
             PanelColorProduct.Hide();
             PanelColorMain.Hide();
-            PanelColorPayment.Hide();
+            
             PanelColorDepot.Hide();
             PanelColorRevenue.Hide();
             PanelColorSetting.Hide();
@@ -366,14 +366,14 @@ namespace TelevisionsStoreManagement.GUI
             btnSetting.Image = Image.FromFile(startupURL + "\\Icon\\setting-icon-gray.png");
             btnReven.Image = Image.FromFile(startupURL + "\\Icon\\revenue-icon-gray.png");
             btnWareHouse.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
-            btnPayment.Image = Image.FromFile(startupURL + "\\Icon\\pay-icon.png");
+            
             btnHome.Image = Image.FromFile(startupURL + "\\Icon\\home-icon1.png");
             //
             btnProduct.ForeColor = System.Drawing.Color.DimGray;
             btnSetting.ForeColor = System.Drawing.Color.DimGray;
             btnReven.ForeColor = System.Drawing.Color.DimGray;
             btnWareHouse.ForeColor = System.Drawing.Color.DimGray;
-            btnPayment.ForeColor = System.Drawing.Color.DimGray;
+            
             btnHome.ForeColor = System.Drawing.Color.DimGray;
             btnHelp.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
 

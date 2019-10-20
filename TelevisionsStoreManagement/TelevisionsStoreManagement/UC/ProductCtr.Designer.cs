@@ -125,7 +125,7 @@
             // 
             // panelProduct
             // 
-            this.panelProduct.BackColor = System.Drawing.SystemColors.Control;
+            this.panelProduct.BackColor = System.Drawing.Color.White;
             this.panelProduct.Controls.Add(this.txbCustomerPhonenumber);
             this.panelProduct.Controls.Add(this.label11);
             this.panelProduct.Controls.Add(this.label10);
@@ -151,16 +151,17 @@
             this.panelProduct.Controls.Add(this.label1);
             this.panelProduct.Controls.Add(this.txbID);
             this.panelProduct.Controls.Add(this.dGVProduct);
-            this.panelProduct.Location = new System.Drawing.Point(3, 60);
+            this.panelProduct.Location = new System.Drawing.Point(0, 60);
             this.panelProduct.Name = "panelProduct";
-            this.panelProduct.Size = new System.Drawing.Size(1177, 485);
+            this.panelProduct.Size = new System.Drawing.Size(1180, 485);
             this.panelProduct.TabIndex = 1;
             // 
             // txbCustomerPhonenumber
             // 
-            this.txbCustomerPhonenumber.BackColor = System.Drawing.SystemColors.Control;
+            this.txbCustomerPhonenumber.BackColor = System.Drawing.Color.White;
             this.txbCustomerPhonenumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbCustomerPhonenumber.Location = new System.Drawing.Point(833, 295);
+            this.txbCustomerPhonenumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbCustomerPhonenumber.Location = new System.Drawing.Point(833, 301);
             this.txbCustomerPhonenumber.Multiline = true;
             this.txbCustomerPhonenumber.Name = "txbCustomerPhonenumber";
             this.txbCustomerPhonenumber.Size = new System.Drawing.Size(214, 25);
@@ -199,7 +200,7 @@
             this.lbPayment.FormattingEnabled = true;
             this.lbPayment.Location = new System.Drawing.Point(0, 222);
             this.lbPayment.Name = "lbPayment";
-            this.lbPayment.Size = new System.Drawing.Size(681, 186);
+            this.lbPayment.Size = new System.Drawing.Size(684, 186);
             this.lbPayment.TabIndex = 20;
             // 
             // btnAdd
@@ -232,10 +233,11 @@
             // 
             // txbTotalPrice
             // 
-            this.txbTotalPrice.BackColor = System.Drawing.SystemColors.Control;
+            this.txbTotalPrice.BackColor = System.Drawing.Color.White;
             this.txbTotalPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbTotalPrice.Enabled = false;
-            this.txbTotalPrice.Location = new System.Drawing.Point(833, 258);
+            this.txbTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbTotalPrice.Location = new System.Drawing.Point(814, 264);
             this.txbTotalPrice.Multiline = true;
             this.txbTotalPrice.Name = "txbTotalPrice";
             this.txbTotalPrice.Size = new System.Drawing.Size(214, 25);
@@ -272,10 +274,11 @@
             // 
             // txbPrice
             // 
-            this.txbPrice.BackColor = System.Drawing.SystemColors.Control;
+            this.txbPrice.BackColor = System.Drawing.Color.White;
             this.txbPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbPrice.Enabled = false;
-            this.txbPrice.Location = new System.Drawing.Point(833, 216);
+            this.txbPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbPrice.Location = new System.Drawing.Point(814, 222);
             this.txbPrice.Multiline = true;
             this.txbPrice.Name = "txbPrice";
             this.txbPrice.Size = new System.Drawing.Size(214, 25);
@@ -293,10 +296,11 @@
             // 
             // txbSize
             // 
-            this.txbSize.BackColor = System.Drawing.SystemColors.Control;
+            this.txbSize.BackColor = System.Drawing.Color.White;
             this.txbSize.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbSize.Enabled = false;
-            this.txbSize.Location = new System.Drawing.Point(833, 180);
+            this.txbSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbSize.Location = new System.Drawing.Point(814, 187);
             this.txbSize.Multiline = true;
             this.txbSize.Name = "txbSize";
             this.txbSize.Size = new System.Drawing.Size(64, 25);
@@ -314,10 +318,11 @@
             // 
             // txbType
             // 
-            this.txbType.BackColor = System.Drawing.SystemColors.Control;
+            this.txbType.BackColor = System.Drawing.Color.White;
             this.txbType.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbType.Enabled = false;
-            this.txbType.Location = new System.Drawing.Point(833, 146);
+            this.txbType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbType.Location = new System.Drawing.Point(814, 154);
             this.txbType.Multiline = true;
             this.txbType.Name = "txbType";
             this.txbType.Size = new System.Drawing.Size(214, 25);
@@ -335,10 +340,11 @@
             // 
             // txbName
             // 
-            this.txbName.BackColor = System.Drawing.SystemColors.Control;
+            this.txbName.BackColor = System.Drawing.Color.White;
             this.txbName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbName.Enabled = false;
-            this.txbName.Location = new System.Drawing.Point(833, 115);
+            this.txbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbName.Location = new System.Drawing.Point(814, 121);
             this.txbName.Multiline = true;
             this.txbName.Name = "txbName";
             this.txbName.Size = new System.Drawing.Size(214, 25);
@@ -356,10 +362,11 @@
             // 
             // txbCategory
             // 
-            this.txbCategory.BackColor = System.Drawing.SystemColors.Control;
+            this.txbCategory.BackColor = System.Drawing.Color.White;
             this.txbCategory.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbCategory.Enabled = false;
-            this.txbCategory.Location = new System.Drawing.Point(833, 77);
+            this.txbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbCategory.Location = new System.Drawing.Point(814, 83);
             this.txbCategory.Multiline = true;
             this.txbCategory.Name = "txbCategory";
             this.txbCategory.Size = new System.Drawing.Size(214, 25);
@@ -387,10 +394,11 @@
             // 
             // txbID
             // 
-            this.txbID.BackColor = System.Drawing.SystemColors.Control;
+            this.txbID.BackColor = System.Drawing.Color.White;
             this.txbID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbID.Enabled = false;
-            this.txbID.Location = new System.Drawing.Point(833, 44);
+            this.txbID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbID.Location = new System.Drawing.Point(814, 52);
             this.txbID.Multiline = true;
             this.txbID.Name = "txbID";
             this.txbID.Size = new System.Drawing.Size(214, 25);
@@ -412,7 +420,7 @@
             this.dGVProduct.Location = new System.Drawing.Point(0, 0);
             this.dGVProduct.Name = "dGVProduct";
             this.dGVProduct.RowHeadersVisible = false;
-            this.dGVProduct.Size = new System.Drawing.Size(681, 216);
+            this.dGVProduct.Size = new System.Drawing.Size(684, 216);
             this.dGVProduct.TabIndex = 0;
             this.dGVProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVProduct_CellContentClick);
             this.dGVProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVProduct_CellContentClick);
