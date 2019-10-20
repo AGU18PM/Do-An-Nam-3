@@ -18,10 +18,21 @@ namespace TelevisionsStoreManagement.UC
         //Products listproduct;
         int SSMode, LGMode, SonyMode, PMode;
         ProductBUS productBUS = new ProductBUS();
-        ProductDTO productDTO = new ProductDTO();
+        BILLInfoBUS billInfoBus = new BILLInfoBUS();
+        BillBUS billBUS = new BillBUS();
+        WareHouseBUS wareHouseBus = new WareHouseBUS();
+        BillDTO billDTO = new BillDTO();
+        CustomerDTO customerVL = new CustomerDTO();
+        // ProductDTO productDTO = new ProductDTO();
+        // BillInfoDTO[] billInfo = new BillInfoDTO[100];
+        //  BillDTO bill = new BillDTO();
         Payment listProduct = new Payment();
+        int isCreateBill = 0;
         string typeInput = "";
         string payment = "";
+        int soLuong = 0;
+        int flag = 0;
+
         public ProductCtr()
         {
             InitializeComponent();
@@ -204,29 +215,108 @@ namespace TelevisionsStoreManagement.UC
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
-            double totalPricee = 0;
-            if (listProduct.Count != 0)
+            #region comment
+            //double totalPricee = 0;
+            //if (listProduct.Count != 0)
+            //{
+            //    for (int i = 0; i < listProduct.Count; i++)
+            //    {
+            //        totalPricee += listProduct.Price[i];
+            //    }
+            //    MessageBox.Show("Tong tien: " + totalPricee.ToString());
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Chua co san pham duoc chon");
+            //}
+            #endregion
+            if (lbPayment.Items.Count == 0)
             {
-                for (int i = 0; i < listProduct.Count; i++)
-                {
-                    totalPricee += listProduct.Price[i];
-                }
-                MessageBox.Show("Tong tien: " + totalPricee.ToString());
+                MessageBox.Show("Vui long them san pham truoc khi thanh toan");
             }
             else
             {
-                MessageBox.Show("Chua co san pham duoc chon");
+                billDTO.Status = 1;
+                if (wareHouseBus.Update(billDTO))
+                {
+                    billBUS.submitOrCancelPayment(billDTO, txbCustomerPhonenumber.Text);
+                    MessageBox.Show("Tong gia la: " + billDTO.TotalPrice.ToString());
+                    lbPayment.Items.Clear();
+                    isCreateBill = 0;
+                    updateCount();
+                }
+                else
+                {
+                    lbPayment.Items.Clear();
+                }
             }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            listProduct.ID[listProduct.Count] = txbID.Text;
-            listProduct.CountByList[listProduct.Count] = Convert.ToInt32(nUDCount.Value);
-            listProduct.Price[listProduct.Count] = Convert.ToDouble(txbPrice.Text) * Convert.ToDouble(nUDCount.Value);
-            listProduct.Count++;
-            payment = "Da them " + txbCategory.Text + " " + txbName.Text + " so luong " + nUDCount.Value.ToString();
-            lbPayment.Items.Add(payment);
+            #region comment
+            //listProduct.ID[listProduct.Count] = txbID.Text;
+            //listProduct.CountByList[listProduct.Count] = Convert.ToInt32(nUDCount.Value);
+            //listProduct.Price[listProduct.Count] = Convert.ToDouble(txbPrice.Text) * Convert.ToDouble(nUDCount.Value);
+            //listProduct.Count++;
+            //payment = "Da them " + txbCategory.Text + " " + txbName.Text + " so luong " + nUDCount.Value.ToString();
+            //lbPayment.Items.Add(payment);
+            #endregion
+            if (nUDCount.Value == 0)
+            {
+                MessageBox.Show("Vui long nhap so luong lon hon 0");
+            }
+            else
+            {
+
+                if (isCreateBill == 0)
+                {
+                    customerVL.ID = 1;
+                    billDTO = billBUS.createBill(customerVL);
+                    isCreateBill = 1;
+
+                }
+
+                //if (wareHouseBus.CheckCount(txbID.Text, Convert.ToInt32(nUDCount.Value), billDTO))
+                //{
+
+                int price = Convert.ToInt32(txbPrice.Text);
+                int totalPrice = price * (Convert.ToInt32(nUDCount.Value));
+                billInfoBus.createBillInfo(billDTO, txbID.Text, nUDCount, totalPrice.ToString());
+                billDTO = billInfoBus.getTotalPriceByIDBill(billDTO);
+                string payment = "Ban da them " + txbName.Text + " hang " + txbCategory.Text + " so luong " + nUDCount.Value.ToString() + " tong gia = " + totalPrice.ToString();
+                lbPayment.Items.Add(payment);
+                //}
+                //else
+                //{
+                //    MessageBox.Show("So luong san pham con lai khong du");
+                //}
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            billDTO.Status = 0;
+            billBUS.submitOrCancelPayment(billDTO, txbCustomerPhonenumber.Text);
+            lbPayment.Items.Clear();
+            isCreateBill = 0;
+        }
+
+        private void dGVProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            updateCount();
+        }
+
+        public void updateCount()
+        {
+            nUDCount.Value = nUDCount.Minimum;
+            DataTable result = wareHouseBus.getCountByIDTV(txbID.Text);
+            if (result.Rows.Count == 0)
+            {
+                nUDCount.Maximum = 0;
+            }
+            else
+                nUDCount.Maximum = Convert.ToInt32(result.Rows[0][0]);
         }
 
         private void ProductCtr_Load(object sender, EventArgs e)

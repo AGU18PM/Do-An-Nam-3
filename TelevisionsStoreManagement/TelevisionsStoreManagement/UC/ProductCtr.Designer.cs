@@ -35,6 +35,9 @@
             this.btnSony = new DevExpress.XtraEditors.CheckButton();
             this.btnSamsung = new DevExpress.XtraEditors.CheckButton();
             this.panelProduct = new System.Windows.Forms.Panel();
+            this.txbCustomerPhonenumber = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.lbPayment = new System.Windows.Forms.ListBox();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
@@ -122,6 +125,9 @@
             // 
             // panelProduct
             // 
+            this.panelProduct.Controls.Add(this.txbCustomerPhonenumber);
+            this.panelProduct.Controls.Add(this.label11);
+            this.panelProduct.Controls.Add(this.label10);
             this.panelProduct.Controls.Add(this.btnCancel);
             this.panelProduct.Controls.Add(this.lbPayment);
             this.panelProduct.Controls.Add(this.btnAdd);
@@ -149,6 +155,33 @@
             this.panelProduct.Size = new System.Drawing.Size(1050, 418);
             this.panelProduct.TabIndex = 1;
             // 
+            // txbCustomerPhonenumber
+            // 
+            this.txbCustomerPhonenumber.Location = new System.Drawing.Point(833, 295);
+            this.txbCustomerPhonenumber.Multiline = true;
+            this.txbCustomerPhonenumber.Name = "txbCustomerPhonenumber";
+            this.txbCustomerPhonenumber.Size = new System.Drawing.Size(214, 25);
+            this.txbCustomerPhonenumber.TabIndex = 24;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(687, 301);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(144, 19);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "SDT khach hang:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(687, 301);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(0, 19);
+            this.label10.TabIndex = 22;
+            // 
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(941, 359);
@@ -156,6 +189,7 @@
             this.btnCancel.Size = new System.Drawing.Size(94, 51);
             this.btnCancel.TabIndex = 21;
             this.btnCancel.Text = "Huy";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lbPayment
             // 
@@ -167,7 +201,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(691, 359);
+            this.btnAdd.Location = new System.Drawing.Point(691, 357);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(94, 51);
             this.btnAdd.TabIndex = 19;
@@ -186,147 +220,143 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(687, 331);
+            this.label9.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(687, 264);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(90, 22);
+            this.label9.Size = new System.Drawing.Size(90, 19);
             this.label9.TabIndex = 17;
-            this.label9.Text = "Tổng giá";
+            this.label9.Text = "Tổng giá:";
             // 
             // txbTotalPrice
             // 
-            this.txbTotalPrice.Location = new System.Drawing.Point(833, 323);
+            this.txbTotalPrice.Enabled = false;
+            this.txbTotalPrice.Location = new System.Drawing.Point(833, 258);
             this.txbTotalPrice.Multiline = true;
             this.txbTotalPrice.Name = "txbTotalPrice";
-            this.txbTotalPrice.Size = new System.Drawing.Size(214, 30);
+            this.txbTotalPrice.Size = new System.Drawing.Size(214, 25);
             this.txbTotalPrice.TabIndex = 16;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(903, 236);
+            this.label8.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(900, 186);
             this.label8.Margin = new System.Windows.Forms.Padding(0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(90, 22);
+            this.label8.Size = new System.Drawing.Size(81, 19);
             this.label8.TabIndex = 15;
             this.label8.Text = "S.Lượng:";
             // 
             // nUDCount
             // 
-            this.nUDCount.Location = new System.Drawing.Point(996, 240);
-            this.nUDCount.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.nUDCount.Location = new System.Drawing.Point(988, 185);
             this.nUDCount.Name = "nUDCount";
             this.nUDCount.Size = new System.Drawing.Size(47, 20);
             this.nUDCount.TabIndex = 14;
-            this.nUDCount.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.nUDCount.ValueChanged += new System.EventHandler(this.nUDCount_ValueChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(687, 285);
+            this.label7.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(687, 222);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 22);
+            this.label7.Size = new System.Drawing.Size(81, 19);
             this.label7.TabIndex = 13;
             this.label7.Text = "Đơn giá:";
             // 
             // txbPrice
             // 
-            this.txbPrice.Location = new System.Drawing.Point(833, 277);
+            this.txbPrice.Enabled = false;
+            this.txbPrice.Location = new System.Drawing.Point(833, 216);
             this.txbPrice.Multiline = true;
             this.txbPrice.Name = "txbPrice";
-            this.txbPrice.Size = new System.Drawing.Size(214, 30);
+            this.txbPrice.Size = new System.Drawing.Size(214, 25);
             this.txbPrice.TabIndex = 12;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(687, 240);
+            this.label6.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(687, 186);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 22);
+            this.label6.Size = new System.Drawing.Size(81, 19);
             this.label6.TabIndex = 11;
             this.label6.Text = "Kích cỡ:";
             // 
             // txbSize
             // 
-            this.txbSize.Location = new System.Drawing.Point(833, 230);
+            this.txbSize.Enabled = false;
+            this.txbSize.Location = new System.Drawing.Point(833, 180);
             this.txbSize.Multiline = true;
             this.txbSize.Name = "txbSize";
-            this.txbSize.Size = new System.Drawing.Size(64, 30);
+            this.txbSize.Size = new System.Drawing.Size(64, 25);
             this.txbSize.TabIndex = 10;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(687, 194);
+            this.label5.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(687, 152);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 22);
+            this.label5.Size = new System.Drawing.Size(54, 19);
             this.label5.TabIndex = 9;
             this.label5.Text = "Loại:";
             // 
             // txbType
             // 
-            this.txbType.Location = new System.Drawing.Point(833, 186);
+            this.txbType.Enabled = false;
+            this.txbType.Location = new System.Drawing.Point(833, 146);
             this.txbType.Multiline = true;
             this.txbType.Name = "txbType";
-            this.txbType.Size = new System.Drawing.Size(214, 30);
+            this.txbType.Size = new System.Drawing.Size(214, 25);
             this.txbType.TabIndex = 8;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(687, 147);
+            this.label4.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(687, 121);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(140, 22);
+            this.label4.Size = new System.Drawing.Size(126, 19);
             this.label4.TabIndex = 7;
             this.label4.Text = "Tên sản phẩm:";
             // 
             // txbName
             // 
-            this.txbName.Location = new System.Drawing.Point(833, 141);
+            this.txbName.Enabled = false;
+            this.txbName.Location = new System.Drawing.Point(833, 115);
             this.txbName.Multiline = true;
             this.txbName.Name = "txbName";
-            this.txbName.Size = new System.Drawing.Size(214, 30);
+            this.txbName.Size = new System.Drawing.Size(214, 25);
             this.txbName.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(687, 99);
+            this.label3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(687, 83);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 22);
+            this.label3.Size = new System.Drawing.Size(54, 19);
             this.label3.TabIndex = 5;
             this.label3.Text = "Hãng:";
             // 
             // txbCategory
             // 
-            this.txbCategory.Location = new System.Drawing.Point(833, 93);
+            this.txbCategory.Enabled = false;
+            this.txbCategory.Location = new System.Drawing.Point(833, 77);
             this.txbCategory.Multiline = true;
             this.txbCategory.Name = "txbCategory";
-            this.txbCategory.Size = new System.Drawing.Size(214, 30);
+            this.txbCategory.Size = new System.Drawing.Size(214, 25);
             this.txbCategory.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(687, 50);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 22);
+            this.label2.Size = new System.Drawing.Size(36, 19);
             this.label2.TabIndex = 3;
             this.label2.Text = "ID:";
             // 
@@ -342,10 +372,11 @@
             // 
             // txbID
             // 
+            this.txbID.Enabled = false;
             this.txbID.Location = new System.Drawing.Point(833, 44);
             this.txbID.Multiline = true;
             this.txbID.Name = "txbID";
-            this.txbID.Size = new System.Drawing.Size(214, 30);
+            this.txbID.Size = new System.Drawing.Size(214, 25);
             this.txbID.TabIndex = 1;
             // 
             // dGVProduct
@@ -366,6 +397,8 @@
             this.dGVProduct.RowHeadersVisible = false;
             this.dGVProduct.Size = new System.Drawing.Size(681, 216);
             this.dGVProduct.TabIndex = 0;
+            this.dGVProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVProduct_CellContentClick);
+            this.dGVProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVProduct_CellContentClick);
             // 
             // ID
             // 
@@ -472,5 +505,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn priceOut;
         private System.Windows.Forms.ListBox lbPayment;
         private DevExpress.XtraEditors.SimpleButton btnCancel;
+        private System.Windows.Forms.TextBox txbCustomerPhonenumber;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
     }
 }

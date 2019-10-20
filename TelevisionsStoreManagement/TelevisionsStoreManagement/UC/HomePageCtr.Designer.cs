@@ -37,6 +37,7 @@
             this.Name = "HomePageCtr";
             this.Size = new System.Drawing.Size(1056, 504);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
