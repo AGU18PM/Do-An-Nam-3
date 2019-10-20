@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,6 +32,8 @@ namespace TelevisionsStoreManagement.BUS
             price.DataBindings.Clear();
             price.DataBindings.Add("Text", bS, "PRICE_OUT", false, DataSourceUpdateMode.Never);
             addHeaderText(dGV);
+
+
         }
 
         //public DataTable getAllProduct()
@@ -82,11 +85,27 @@ namespace TelevisionsStoreManagement.BUS
             dGV.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             dGV.Columns[2].Width = 184;
             dGV.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dGV.Columns[3].Width = 50;
+            dGV.Columns[3].Width = 94;
             dGV.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dGV.Columns[4].Width = 80;
+            dGV.Columns[4].Width = 120;
             dGV.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dGV.Columns[5].Width = 184;
+            dGV.Columns[5].Width = 100;
+
+            dGV.EnableHeadersVisualStyles = false;
+            dGV.Columns[0].HeaderCell.Style.BackColor = Color.Silver;
+            dGV.Columns[1].HeaderCell.Style.BackColor = Color.Silver;
+            dGV.Columns[2].HeaderCell.Style.BackColor = Color.Silver;
+            dGV.Columns[3].HeaderCell.Style.BackColor = Color.Silver;
+            dGV.Columns[4].HeaderCell.Style.BackColor = Color.Silver;
+            dGV.Columns[5].HeaderCell.Style.BackColor = Color.Silver;
+
+            dGV.Columns[0].HeaderCell.Style.Font = new Font("Calibri", 12, FontStyle.Regular);
+            dGV.Columns[1].HeaderCell.Style.Font = new Font("Calibri", 12, FontStyle.Regular);
+            dGV.Columns[2].HeaderCell.Style.Font = new Font("Calibri", 12, FontStyle.Regular);
+            dGV.Columns[3].HeaderCell.Style.Font = new Font("Calibri", 12, FontStyle.Regular);
+            dGV.Columns[4].HeaderCell.Style.Font = new Font("Calibri", 12, FontStyle.Regular);
+            dGV.Columns[5].HeaderCell.Style.Font = new Font("Calibri", 12, FontStyle.Regular);
+            dGV.Columns[0].HeaderCell.Style.Font = new Font("Calibri", 12, FontStyle.Regular);
         }
     }
 }
