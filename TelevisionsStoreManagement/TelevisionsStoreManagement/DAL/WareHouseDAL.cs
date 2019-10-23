@@ -82,5 +82,34 @@ namespace TelevisionsStoreManagement.DAL
                 DataProvider.Instance.ExecuteNonQuery(sql);
             }
         }
+
+        public DataTable ListProduct()
+        {
+            string sql = "SELECT * FROM TIVI T , WAREHOUSE W WHERE T.ID = W.ID_TV";
+            DataTable result = DataProvider.Instance.ExecuteQuery(sql);
+
+            for (int i = 0; i < result.Rows.Count; i++)
+            {
+                result.Rows[i][4] += " inch";
+                if (Convert.ToInt32(result.Rows[i][3]) == 1)
+                {
+                    result.Rows[i][3] = "Smart";
+                }
+                else if (Convert.ToInt32(result.Rows[i][3]) == 2)
+                {
+                    result.Rows[i][3] = "Internet";
+                }
+                else if (Convert.ToInt32(result.Rows[i][3]) == 3)
+                {
+                    result.Rows[i][3] = "Cong";
+                }
+                else if (Convert.ToInt32(result.Rows[i][3]) == 4)
+                {
+                    result.Rows[i][3] = "Thuong";
+                }
+            }
+            return result;
+
+        }
     }
 }

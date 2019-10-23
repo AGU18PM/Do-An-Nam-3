@@ -10,16 +10,30 @@ using System.Windows.Forms;
 using System.IO;
 using System.Threading;
 using TelevisionsStoreManagement.UC;
+using TelevisionsStoreManagement.DTO;
 
 namespace TelevisionsStoreManagement.GUI
 {
     public partial class fMain : Form
     {
+
         public fMain()
         {
             InitializeComponent();
+        }
+        public fMain(string displayName, int role)
+        {
+            InitializeComponent();
             Color_Button();
-            mode = 0;    
+            mode = 0;
+            txbDisplayName.Text = displayName;
+            if (role == 1)
+            {
+                txbRole.Text = "Administrator";
+            }
+            else
+                txbRole.Text = "Staff";
+
         }
 
         int mode;
@@ -185,42 +199,6 @@ namespace TelevisionsStoreManagement.GUI
         }
 
 
-        private void btnPayment_Click(object sender, EventArgs e)
-        {
-            closeSubMenu();
-            TriangleCorner1.Hide();
-            TriangleCorner2.Hide();
-            
-            TriangleCorner4.Hide();
-            TriangleCorner5.Hide();
-            TriangleCorner6.Hide();
-            TriangleCorner7.Hide();
-            //
-            
-            PanelColorMain.Hide();
-            PanelColorProduct.Hide();
-            PanelColorDepot.Hide();
-            PanelColorRevenue.Hide();
-            PanelColorSetting.Hide();
-            PanelColorHelp.Hide();
-            //
-            btnProduct.Image = Image.FromFile(startupURL + "\\Icon\\menu-icon-gray.png");
-            btnHelp.Image = Image.FromFile(startupURL + "\\Icon\\help-icon-grey.png");
-            btnSetting.Image = Image.FromFile(startupURL + "\\Icon\\setting-icon-gray.png");
-            btnReven.Image = Image.FromFile(startupURL + "\\Icon\\revenue-icon-gray.png");
-            btnWareHouse.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
-            
-            btnHome.Image = Image.FromFile(startupURL + "\\Icon\\home-icon1.png");
-            //
-            btnSetting.ForeColor = System.Drawing.Color.DimGray;
-            btnHelp.ForeColor = System.Drawing.Color.DimGray;
-            btnReven.ForeColor = System.Drawing.Color.DimGray;
-            btnWareHouse.ForeColor = System.Drawing.Color.DimGray;
-            btnProduct.ForeColor = System.Drawing.Color.DimGray;
-            btnHome.ForeColor = System.Drawing.Color.DimGray;
-            
-        }
-
         private void btnDepot_Click(object sender, EventArgs e)
         {
             closeSubMenu();
@@ -257,7 +235,9 @@ namespace TelevisionsStoreManagement.GUI
             btnHome.ForeColor = System.Drawing.Color.DimGray;
             btnWareHouse.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
             //       
-            
+            panelMain.Controls.Clear();
+            WareHouseCtr w = new WareHouseCtr();
+            panelMain.Controls.Add(w);
             
             
 

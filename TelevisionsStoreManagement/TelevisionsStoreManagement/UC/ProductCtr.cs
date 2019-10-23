@@ -321,7 +321,7 @@ namespace TelevisionsStoreManagement.UC
 
         private void ProductCtr_Load(object sender, EventArgs e)
         {
-
+            updateCount();
         }
 
 

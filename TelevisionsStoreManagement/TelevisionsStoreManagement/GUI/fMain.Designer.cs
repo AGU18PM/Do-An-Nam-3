@@ -30,13 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMain));
             this.PanelMenuMain = new System.Windows.Forms.Panel();
-            this.PanelSubMenu = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnSmartTV = new System.Windows.Forms.Button();
-            this.labelAdmin = new System.Windows.Forms.Label();
-            this.lbelUsername = new System.Windows.Forms.Label();
             this.PanelMenuSlide = new System.Windows.Forms.Panel();
             this.PanelColorHelp = new System.Windows.Forms.Panel();
             this.TriangleCorner4 = new System.Windows.Forms.PictureBox();
@@ -50,6 +43,11 @@
             this.PanelColorRevenue = new System.Windows.Forms.Panel();
             this.btnSetting = new System.Windows.Forms.Button();
             this.btnReven = new System.Windows.Forms.Button();
+            this.PanelSubMenu = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnSmartTV = new System.Windows.Forms.Button();
             this.btnAdmin = new System.Windows.Forms.Button();
             this.TriangleCorner2 = new System.Windows.Forms.PictureBox();
             this.TriangleCorner1 = new System.Windows.Forms.PictureBox();
@@ -67,13 +65,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.txbDisplayName = new System.Windows.Forms.TextBox();
+            this.txbRole = new System.Windows.Forms.TextBox();
             this.PanelMenuMain.SuspendLayout();
-            this.PanelSubMenu.SuspendLayout();
             this.PanelMenuSlide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner6)).BeginInit();
+            this.PanelSubMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -85,10 +85,10 @@
             // PanelMenuMain
             // 
             this.PanelMenuMain.BackColor = System.Drawing.SystemColors.Control;
+            this.PanelMenuMain.Controls.Add(this.txbRole);
+            this.PanelMenuMain.Controls.Add(this.txbDisplayName);
             this.PanelMenuMain.Controls.Add(this.PanelMenuSlide);
             this.PanelMenuMain.Controls.Add(this.PanelSubMenu);
-            this.PanelMenuMain.Controls.Add(this.labelAdmin);
-            this.PanelMenuMain.Controls.Add(this.lbelUsername);
             this.PanelMenuMain.Controls.Add(this.btnAdmin);
             this.PanelMenuMain.Controls.Add(this.TriangleCorner2);
             this.PanelMenuMain.Controls.Add(this.TriangleCorner1);
@@ -100,105 +100,6 @@
             this.PanelMenuMain.Name = "PanelMenuMain";
             this.PanelMenuMain.Size = new System.Drawing.Size(190, 730);
             this.PanelMenuMain.TabIndex = 0;
-            // 
-            // PanelSubMenu
-            // 
-            this.PanelSubMenu.Controls.Add(this.button4);
-            this.PanelSubMenu.Controls.Add(this.button3);
-            this.PanelSubMenu.Controls.Add(this.button2);
-            this.PanelSubMenu.Controls.Add(this.btnSmartTV);
-            this.PanelSubMenu.Location = new System.Drawing.Point(39, 280);
-            this.PanelSubMenu.Name = "PanelSubMenu";
-            this.PanelSubMenu.Size = new System.Drawing.Size(151, 116);
-            this.PanelSubMenu.TabIndex = 5;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.SystemColors.Control;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.DimGray;
-            this.button4.Location = new System.Drawing.Point(0, 84);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(151, 30);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "+ Tivi Thường";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.Control;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.DimGray;
-            this.button3.Location = new System.Drawing.Point(0, 54);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(151, 30);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "+ Tivi Cong";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.Control;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.DimGray;
-            this.button2.Location = new System.Drawing.Point(0, 27);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(151, 30);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "+ Internet Tivi";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btnSmartTV
-            // 
-            this.btnSmartTV.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSmartTV.FlatAppearance.BorderSize = 0;
-            this.btnSmartTV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSmartTV.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSmartTV.ForeColor = System.Drawing.Color.DimGray;
-            this.btnSmartTV.Location = new System.Drawing.Point(0, -3);
-            this.btnSmartTV.Name = "btnSmartTV";
-            this.btnSmartTV.Size = new System.Drawing.Size(151, 30);
-            this.btnSmartTV.TabIndex = 13;
-            this.btnSmartTV.Text = "+ Smart Tivi";
-            this.btnSmartTV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSmartTV.UseVisualStyleBackColor = false;
-            this.btnSmartTV.Click += new System.EventHandler(this.btnSmartTV_Click);
-            // 
-            // labelAdmin
-            // 
-            this.labelAdmin.AutoSize = true;
-            this.labelAdmin.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAdmin.ForeColor = System.Drawing.Color.DimGray;
-            this.labelAdmin.Location = new System.Drawing.Point(59, 145);
-            this.labelAdmin.Name = "labelAdmin";
-            this.labelAdmin.Size = new System.Drawing.Size(82, 14);
-            this.labelAdmin.TabIndex = 7;
-            this.labelAdmin.Text = "Administrator";
-            this.labelAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbelUsername
-            // 
-            this.lbelUsername.AutoSize = true;
-            this.lbelUsername.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbelUsername.ForeColor = System.Drawing.Color.DimGray;
-            this.lbelUsername.Location = new System.Drawing.Point(45, 122);
-            this.lbelUsername.Name = "lbelUsername";
-            this.lbelUsername.Size = new System.Drawing.Size(109, 19);
-            this.lbelUsername.TabIndex = 12;
-            this.lbelUsername.Text = "Thái Trường An";
-            this.lbelUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PanelMenuSlide
             // 
@@ -363,6 +264,81 @@
             this.btnReven.UseVisualStyleBackColor = false;
             this.btnReven.Click += new System.EventHandler(this.btnReven_Click);
             // 
+            // PanelSubMenu
+            // 
+            this.PanelSubMenu.Controls.Add(this.button4);
+            this.PanelSubMenu.Controls.Add(this.button3);
+            this.PanelSubMenu.Controls.Add(this.button2);
+            this.PanelSubMenu.Controls.Add(this.btnSmartTV);
+            this.PanelSubMenu.Location = new System.Drawing.Point(39, 280);
+            this.PanelSubMenu.Name = "PanelSubMenu";
+            this.PanelSubMenu.Size = new System.Drawing.Size(151, 116);
+            this.PanelSubMenu.TabIndex = 5;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.Control;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.DimGray;
+            this.button4.Location = new System.Drawing.Point(0, 84);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(151, 30);
+            this.button4.TabIndex = 16;
+            this.button4.Text = "+ Tivi Thường";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.Control;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.DimGray;
+            this.button3.Location = new System.Drawing.Point(0, 54);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(151, 30);
+            this.button3.TabIndex = 15;
+            this.button3.Text = "+ Tivi Cong";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.Control;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.DimGray;
+            this.button2.Location = new System.Drawing.Point(0, 27);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(151, 30);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "+ Internet Tivi";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnSmartTV
+            // 
+            this.btnSmartTV.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSmartTV.FlatAppearance.BorderSize = 0;
+            this.btnSmartTV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSmartTV.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSmartTV.ForeColor = System.Drawing.Color.DimGray;
+            this.btnSmartTV.Location = new System.Drawing.Point(0, -3);
+            this.btnSmartTV.Name = "btnSmartTV";
+            this.btnSmartTV.Size = new System.Drawing.Size(151, 30);
+            this.btnSmartTV.TabIndex = 13;
+            this.btnSmartTV.Text = "+ Smart Tivi";
+            this.btnSmartTV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSmartTV.UseVisualStyleBackColor = false;
+            this.btnSmartTV.Click += new System.EventHandler(this.btnSmartTV_Click);
+            // 
             // btnAdmin
             // 
             this.btnAdmin.BackColor = System.Drawing.SystemColors.Control;
@@ -455,6 +431,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1180, 30);
             this.panel2.TabIndex = 2;
+            this.panel2.DoubleClick += new System.EventHandler(this.btnRestoreDown_Click);
             // 
             // PanelForm
             // 
@@ -517,7 +494,7 @@
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Location = new System.Drawing.Point(266, 10);
+            this.panel3.Location = new System.Drawing.Point(255, 15);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(105, 139);
             this.panel3.TabIndex = 3;
@@ -563,15 +540,41 @@
             this.panelMain.Size = new System.Drawing.Size(1180, 545);
             this.panelMain.TabIndex = 13;
             // 
+            // txbDisplayName
+            // 
+            this.txbDisplayName.BackColor = System.Drawing.SystemColors.Control;
+            this.txbDisplayName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbDisplayName.Enabled = false;
+            this.txbDisplayName.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbDisplayName.Location = new System.Drawing.Point(6, 125);
+            this.txbDisplayName.Multiline = true;
+            this.txbDisplayName.Name = "txbDisplayName";
+            this.txbDisplayName.Size = new System.Drawing.Size(181, 27);
+            this.txbDisplayName.TabIndex = 11;
+            this.txbDisplayName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txbRole
+            // 
+            this.txbRole.BackColor = System.Drawing.SystemColors.Control;
+            this.txbRole.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbRole.Enabled = false;
+            this.txbRole.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbRole.Location = new System.Drawing.Point(3, 152);
+            this.txbRole.Multiline = true;
+            this.txbRole.Name = "txbRole";
+            this.txbRole.Size = new System.Drawing.Size(184, 27);
+            this.txbRole.TabIndex = 12;
+            this.txbRole.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1370, 730);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.PanelMenuMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -581,12 +584,12 @@
             this.Load += new System.EventHandler(this.fMain_Load);
             this.PanelMenuMain.ResumeLayout(false);
             this.PanelMenuMain.PerformLayout();
-            this.PanelSubMenu.ResumeLayout(false);
             this.PanelMenuSlide.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner6)).EndInit();
+            this.PanelSubMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner1)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -626,8 +629,6 @@
         private System.Windows.Forms.PictureBox TriangleCorner6;
         private System.Windows.Forms.Button btnSetting;
         private System.Windows.Forms.Button btnAdmin;
-        private System.Windows.Forms.Label labelAdmin;
-        private System.Windows.Forms.Label lbelUsername;
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnRestoreDown;
         private System.Windows.Forms.Panel PanelForm;
@@ -642,5 +643,7 @@
 
      //   private UC.TabPage tabPage1;
         private System.Windows.Forms.Panel panelMain;
+        private System.Windows.Forms.TextBox txbRole;
+        private System.Windows.Forms.TextBox txbDisplayName;
     }
 }

@@ -34,5 +34,14 @@ namespace TelevisionsStoreManagement.DAL
             string sql = "UPDATE ACCOUNT SET NAME = '" + account.Displayname + "' , PASSWORD = '" + account.Password + "' , ROLE = " + account.Role + " , STATUS = 1 WHERE USERNAME = '" + account.Username + "'";
             DataProvider.Instance.ExecuteNonQuery(sql);
         }
+
+        public AccountDTO getAccountInfo(AccountDTO account)
+        {
+            string sql = "SELECT * FROM ACCOUNT WHERE USERNAME = " + account.Username;
+            DataTable result = DataProvider.Instance.ExecuteQuery(sql);
+            account.Displayname = result.Rows[0][2].ToString();
+            account.Role = Convert.ToInt32(result.Rows[0][3]);
+            return account;
+        }
     }
 }

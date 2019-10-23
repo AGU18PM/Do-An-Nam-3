@@ -128,3 +128,10 @@ select ID , CATEGORY_NAME , NAME , TYPE , SIZE , PRICE_OUT from tivi WHERE TYPE 
 
 insert into WAREHOUSE(ID_TV,COUNT) values (1,20)
 insert into CUSTOMER(NAME,PHONE_NUMBER,CMND,TYPE,PAYCOUNT) values (N'Thái Trường An','0914518169','352448973',1,0)
+
+
+SELECT * FROM TIVI T , WAREHOUSE W WHERE T.ID = W.ID_TV 
+
+select * from account where USERNAME = 'pntn0705'
+
+USP_LOGIN 'pntn0705' , '1'

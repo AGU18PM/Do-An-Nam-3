@@ -19,7 +19,7 @@ namespace TelevisionsStoreManagement.BUS
             DataTable result = data.getAccountByUserNameNPassword(account);
             if (result.Rows.Count > 0)
             {
-                account.Displayname = result.Rows[0][0].ToString();
+                account.Displayname = result.Rows[0][2].ToString();
                 account.Role = Convert.ToInt32(result.Rows[0][3]);
             }
             return result.Rows.Count > 0;

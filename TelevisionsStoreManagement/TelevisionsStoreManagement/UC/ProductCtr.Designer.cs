@@ -448,7 +448,6 @@
             this.Category.HeaderText = "Hãng";
             this.Category.Name = "Category";
             this.Category.ReadOnly = true;
-            this.Category.Width = 58;
             // 
             // productNam
             // 
@@ -458,6 +457,7 @@
             this.productNam.HeaderText = "Tên sản phẩm";
             this.productNam.Name = "productNam";
             this.productNam.ReadOnly = true;
+            this.productNam.Width = 200;
             // 
             // type
             // 
@@ -467,7 +467,7 @@
             this.type.HeaderText = "Loại";
             this.type.Name = "type";
             this.type.ReadOnly = true;
-            this.type.Width = 50;
+            this.type.Width = 150;
             // 
             // size
             // 
@@ -477,7 +477,6 @@
             this.size.HeaderText = "Kích cỡ";
             this.size.Name = "size";
             this.size.ReadOnly = true;
-            this.size.Width = 80;
             // 
             // priceOut
             // 

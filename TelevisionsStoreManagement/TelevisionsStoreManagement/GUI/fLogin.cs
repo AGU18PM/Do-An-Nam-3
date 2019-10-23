@@ -21,15 +21,15 @@ namespace TelevisionsStoreManagement
         public fLogin()
         {
             InitializeComponent();
-            
 
-           
+
+
             //Hide();
             //fMain main = new fMain();
             //main.ShowDialog();
 
         }
-        
+
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
@@ -41,11 +41,11 @@ namespace TelevisionsStoreManagement
 
             accountDTO.Username = txbUsername.Text;
             accountDTO.Password = txbPassword.Text;
-            
+
             if (accountBus.Login(accountDTO))
             {
                 Hide();
-                fMain f = new fMain();
+                fMain f = new fMain(accountDTO.Displayname, accountDTO.Role);
                 f.ShowDialog();
             }
             else
@@ -64,7 +64,7 @@ namespace TelevisionsStoreManagement
 
         private void txbPassword_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 login();
             }

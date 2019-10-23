@@ -27,7 +27,6 @@ C:\Users\Num\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Televisions
 C:\Users\Num\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\bin\Debug\TelevisionsStoreManagement.exe
 C:\Users\Num\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\bin\Debug\TelevisionsStoreManagement.pdb
 C:\Users\Num\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.csprojAssemblyReference.cache
-C:\Users\Num\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.fLoading.resources
 C:\Users\Num\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.fLogin.resources
 C:\Users\Num\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.GUI.fMain.resources
 C:\Users\Num\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.Properties.Resources.resources
@@ -528,3 +527,4 @@ C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Televisio
 C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\bin\Debug\ru\DevExpress.Diagram.v19.1.Core.resources.dll
 C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.UC.WareHouseCtr.resources
 C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.GUI.fLoading.resources
+C:\Users\Num\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.GUI.fLoading.resources
