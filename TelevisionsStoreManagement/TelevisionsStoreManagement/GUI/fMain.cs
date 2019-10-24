@@ -68,6 +68,7 @@ namespace TelevisionsStoreManagement.GUI
             PanelSubMenu.Hide();
             
             
+            
         }
 
         void ChangeMenuMode()
@@ -396,8 +397,8 @@ namespace TelevisionsStoreManagement.GUI
 
         private void fMain_Load(object sender, EventArgs e)
         {
-            //ProductCtr productCtr = new ProductCtr();
-            //WareHouseCtr warehouseCtr = new WareHouseCtr();
+            HomePageCtr home = new HomePageCtr();
+            panelMain.Controls.Add(home);
         }
 
         private void btnSmartTV_Click(object sender, EventArgs e)
@@ -451,6 +452,16 @@ namespace TelevisionsStoreManagement.GUI
         private void panel2_MouseUp(object sender, MouseEventArgs e)
         {
             mov = 0;
+        }
+
+        private void btnDown_Click(object sender, EventArgs e)
+        {
+            if (PanelUser.Visible == false)
+            {
+                PanelUser.Visible = true;
+            }
+            else
+                PanelUser.Visible = false;
         }
     }
 }

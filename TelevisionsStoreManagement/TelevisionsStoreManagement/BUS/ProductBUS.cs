@@ -96,12 +96,19 @@ namespace TelevisionsStoreManagement.BUS
             dGV.Columns[5].Width = 100;
 
             dGV.EnableHeadersVisualStyles = false;
-            dGV.Columns[0].HeaderCell.Style.BackColor = Color.Silver;
-            dGV.Columns[1].HeaderCell.Style.BackColor = Color.Silver;
-            dGV.Columns[2].HeaderCell.Style.BackColor = Color.Silver;
-            dGV.Columns[3].HeaderCell.Style.BackColor = Color.Silver;
-            dGV.Columns[4].HeaderCell.Style.BackColor = Color.Silver;
-            dGV.Columns[5].HeaderCell.Style.BackColor = Color.Silver;
+            dGV.Columns[0].HeaderCell.Style.BackColor = Color.FromArgb(86, 197, 250);
+            dGV.Columns[1].HeaderCell.Style.BackColor = Color.FromArgb(86, 197, 250);
+            dGV.Columns[2].HeaderCell.Style.BackColor = Color.FromArgb(86, 197, 250);
+            dGV.Columns[3].HeaderCell.Style.BackColor = Color.FromArgb(86, 197, 250);
+            dGV.Columns[4].HeaderCell.Style.BackColor = Color.FromArgb(86, 197, 250);
+            dGV.Columns[5].HeaderCell.Style.BackColor = Color.FromArgb(86, 197, 250);
+
+            dGV.Columns[0].HeaderCell.Style.ForeColor = Color.White;
+            dGV.Columns[1].HeaderCell.Style.ForeColor = Color.White;
+            dGV.Columns[2].HeaderCell.Style.ForeColor = Color.White;
+            dGV.Columns[3].HeaderCell.Style.ForeColor = Color.White;
+            dGV.Columns[4].HeaderCell.Style.ForeColor = Color.White;
+            dGV.Columns[5].HeaderCell.Style.ForeColor = Color.White;
 
             dGV.Columns[0].HeaderCell.Style.Font = new Font("Calibri", 12, FontStyle.Regular);
             dGV.Columns[1].HeaderCell.Style.Font = new Font("Calibri", 12, FontStyle.Regular);
@@ -143,5 +150,8 @@ namespace TelevisionsStoreManagement.BUS
         }
 
         #endregion
+
+        
+
     }
 }

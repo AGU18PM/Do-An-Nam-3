@@ -93,16 +93,19 @@ BEGIN
 END
 GO
 
-INSERT INTO ACCOUNT(USERNAME, PASSWORD, DISPLAYNAME, ROLE) VALUES('pntn0705' , '1' , 'Nam' , 1)
+INSERT INTO ACCOUNT(USERNAME, PASSWORD, DISPLAYNAME, ROLE) VALUES('truongan' , '1' , 'Truong An' , 1)
 
 INSERT INTO TIVI(CATEGORY_NAME , NAME , TYPE , SIZE , PRICE_OUT, PRICE_IN , COUNT) VALUES('Panasonic' , N'Bình thường' , '2' , 51 , 6500000 , 400000 , 20)
+INSERT INTO TIVI(CATEGORY_NAME , NAME , TYPE , SIZE , PRICE_OUT, PRICE_IN , COUNT) VALUES('Sony' , N'Bình thường' , '2' , 51 , 6500000 , 400000 , 20)
+INSERT INTO TIVI(CATEGORY_NAME , NAME , TYPE , SIZE , PRICE_OUT, PRICE_IN , COUNT) VALUES('Samsung' , N'Bình thường' , '2' , 51 , 6500000 , 400000 , 20)
+INSERT INTO TIVI(CATEGORY_NAME , NAME , TYPE , SIZE , PRICE_OUT, PRICE_IN , COUNT) VALUES('LG' , N'Bình thường' , '2' , 51 , 6500000 , 400000 , 20)
 
 select * from tivi where CATEGORY_NAME = 'Samsung' --or CATEGORY_NAME = 'Sony'
 
 delete from tivi where name = 'cùi bắp'
 
 
-select * from WAREHOUSE
+select * from Tivi
 
 select ID , CATEGORY_NAME , NAME , TYPE , SIZE , PRICE_OUT from tivi WHERE TYPE = '3'
 
@@ -110,7 +113,7 @@ insert into WAREHOUSE(ID_TV,COUNT) values (1,20)
 insert into CUSTOMER(NAME,PHONE_NUMBER,TYPE,PAYCOUNT) values (N'Thái Trường An','0914518169',1,0)
 
 
-SELECT * FROM TIVI
+SELECT * FROM ACCOUNT
 
 select * from account where USERNAME = 'pntn0705'
 

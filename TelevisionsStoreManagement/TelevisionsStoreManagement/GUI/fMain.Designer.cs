@@ -30,8 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMain));
             this.PanelMenuMain = new System.Windows.Forms.Panel();
-            this.txbRole = new System.Windows.Forms.TextBox();
-            this.txbDisplayName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.PanelMenuSlide = new System.Windows.Forms.Panel();
             this.PanelColorHelp = new System.Windows.Forms.Panel();
             this.TriangleCorner4 = new System.Windows.Forms.PictureBox();
@@ -45,28 +44,36 @@
             this.PanelColorRevenue = new System.Windows.Forms.Panel();
             this.btnSetting = new System.Windows.Forms.Button();
             this.btnReven = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.PanelSubMenu = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnSmartTV = new System.Windows.Forms.Button();
-            this.btnAdmin = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TriangleCorner2 = new System.Windows.Forms.PictureBox();
             this.TriangleCorner1 = new System.Windows.Forms.PictureBox();
             this.PanelColorProduct = new System.Windows.Forms.Panel();
             this.btnProduct = new System.Windows.Forms.Button();
             this.PanelColorMain = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.Button();
+            this.txbRole = new System.Windows.Forms.TextBox();
+            this.txbDisplayName = new System.Windows.Forms.TextBox();
+            this.btnDown = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.PanelForm = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnRestoreDown = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.btnNotification = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.picBUser = new System.Windows.Forms.PictureBox();
+            this.PanelUser = new System.Windows.Forms.Panel();
+            this.btnSignOut = new System.Windows.Forms.Button();
+            this.btnRegister = new System.Windows.Forms.Button();
+            this.btnChangePassword = new System.Windows.Forms.Button();
+            this.lbNotification = new System.Windows.Forms.ListBox();
             this.PanelMenuMain.SuspendLayout();
             this.PanelMenuSlide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner4)).BeginInit();
@@ -74,22 +81,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner6)).BeginInit();
             this.PanelSubMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner1)).BeginInit();
             this.panel2.SuspendLayout();
             this.PanelForm.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBUser)).BeginInit();
+            this.PanelUser.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelMenuMain
             // 
             this.PanelMenuMain.BackColor = System.Drawing.SystemColors.Control;
-            this.PanelMenuMain.Controls.Add(this.txbRole);
-            this.PanelMenuMain.Controls.Add(this.txbDisplayName);
+            this.PanelMenuMain.Controls.Add(this.label2);
             this.PanelMenuMain.Controls.Add(this.PanelMenuSlide);
+            this.PanelMenuMain.Controls.Add(this.label1);
             this.PanelMenuMain.Controls.Add(this.PanelSubMenu);
-            this.PanelMenuMain.Controls.Add(this.btnAdmin);
+            this.PanelMenuMain.Controls.Add(this.pictureBox1);
             this.PanelMenuMain.Controls.Add(this.TriangleCorner2);
             this.PanelMenuMain.Controls.Add(this.TriangleCorner1);
             this.PanelMenuMain.Controls.Add(this.PanelColorProduct);
@@ -101,31 +110,17 @@
             this.PanelMenuMain.Size = new System.Drawing.Size(190, 730);
             this.PanelMenuMain.TabIndex = 0;
             // 
-            // txbRole
+            // label2
             // 
-            this.txbRole.BackColor = System.Drawing.SystemColors.Control;
-            this.txbRole.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbRole.Enabled = false;
-            this.txbRole.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbRole.Location = new System.Drawing.Point(3, 152);
-            this.txbRole.Multiline = true;
-            this.txbRole.Name = "txbRole";
-            this.txbRole.Size = new System.Drawing.Size(184, 27);
-            this.txbRole.TabIndex = 12;
-            this.txbRole.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txbDisplayName
-            // 
-            this.txbDisplayName.BackColor = System.Drawing.SystemColors.Control;
-            this.txbDisplayName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbDisplayName.Enabled = false;
-            this.txbDisplayName.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbDisplayName.Location = new System.Drawing.Point(6, 125);
-            this.txbDisplayName.Multiline = true;
-            this.txbDisplayName.Name = "txbDisplayName";
-            this.txbDisplayName.Size = new System.Drawing.Size(181, 27);
-            this.txbDisplayName.TabIndex = 11;
-            this.txbDisplayName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(197)))), ((int)(((byte)(250)))));
+            this.label2.Location = new System.Drawing.Point(46, 128);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 18);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Managerment";
             // 
             // PanelMenuSlide
             // 
@@ -290,6 +285,18 @@
             this.btnReven.UseVisualStyleBackColor = false;
             this.btnReven.Click += new System.EventHandler(this.btnReven_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(197)))), ((int)(((byte)(250)))));
+            this.label1.Location = new System.Drawing.Point(20, 105);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(152, 26);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Televisions Store";
+            // 
             // PanelSubMenu
             // 
             this.PanelSubMenu.Controls.Add(this.button4);
@@ -365,17 +372,15 @@
             this.btnSmartTV.UseVisualStyleBackColor = false;
             this.btnSmartTV.Click += new System.EventHandler(this.btnSmartTV_Click);
             // 
-            // btnAdmin
+            // pictureBox1
             // 
-            this.btnAdmin.BackColor = System.Drawing.SystemColors.Control;
-            this.btnAdmin.FlatAppearance.BorderSize = 0;
-            this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmin.Image = ((System.Drawing.Image)(resources.GetObject("btnAdmin.Image")));
-            this.btnAdmin.Location = new System.Drawing.Point(49, 23);
-            this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(96, 96);
-            this.btnAdmin.TabIndex = 11;
-            this.btnAdmin.UseVisualStyleBackColor = false;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(49, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(90, 90);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // TriangleCorner2
             // 
@@ -449,6 +454,46 @@
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
+            // txbRole
+            // 
+            this.txbRole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.txbRole.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbRole.Enabled = false;
+            this.txbRole.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbRole.Location = new System.Drawing.Point(49, 24);
+            this.txbRole.Multiline = true;
+            this.txbRole.Name = "txbRole";
+            this.txbRole.Size = new System.Drawing.Size(140, 21);
+            this.txbRole.TabIndex = 12;
+            this.txbRole.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txbDisplayName
+            // 
+            this.txbDisplayName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.txbDisplayName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbDisplayName.Enabled = false;
+            this.txbDisplayName.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbDisplayName.Location = new System.Drawing.Point(49, 0);
+            this.txbDisplayName.Multiline = true;
+            this.txbDisplayName.Name = "txbDisplayName";
+            this.txbDisplayName.Size = new System.Drawing.Size(140, 27);
+            this.txbDisplayName.TabIndex = 11;
+            this.txbDisplayName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // btnDown
+            // 
+            this.btnDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.btnDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDown.FlatAppearance.BorderSize = 0;
+            this.btnDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDown.Image = ((System.Drawing.Image)(resources.GetObject("btnDown.Image")));
+            this.btnDown.Location = new System.Drawing.Point(232, 0);
+            this.btnDown.Name = "btnDown";
+            this.btnDown.Size = new System.Drawing.Size(40, 40);
+            this.btnDown.TabIndex = 11;
+            this.btnDown.UseVisualStyleBackColor = false;
+            this.btnDown.Click += new System.EventHandler(this.btnDown_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -517,51 +562,6 @@
             this.btnMinimize.UseVisualStyleBackColor = false;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Location = new System.Drawing.Point(255, 15);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(105, 139);
-            this.panel3.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label2.Location = new System.Drawing.Point(13, 108);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 19);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Store";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label1.Location = new System.Drawing.Point(13, 85);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 23);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Television";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(17, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(72, 72);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // panelMain
             // 
             this.panelMain.Location = new System.Drawing.Point(190, 185);
@@ -569,16 +569,122 @@
             this.panelMain.Size = new System.Drawing.Size(1180, 545);
             this.panelMain.TabIndex = 13;
             // 
+            // btnNotification
+            // 
+            this.btnNotification.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.btnNotification.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNotification.BackgroundImage")));
+            this.btnNotification.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNotification.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnNotification.FlatAppearance.BorderSize = 0;
+            this.btnNotification.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNotification.Location = new System.Drawing.Point(3, 0);
+            this.btnNotification.Name = "btnNotification";
+            this.btnNotification.Size = new System.Drawing.Size(40, 40);
+            this.btnNotification.TabIndex = 14;
+            this.btnNotification.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.picBUser);
+            this.panel1.Controls.Add(this.txbRole);
+            this.panel1.Controls.Add(this.btnNotification);
+            this.panel1.Controls.Add(this.btnDown);
+            this.panel1.Controls.Add(this.txbDisplayName);
+            this.panel1.Location = new System.Drawing.Point(1076, 127);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(273, 58);
+            this.panel1.TabIndex = 15;
+            // 
+            // picBUser
+            // 
+            this.picBUser.Image = ((System.Drawing.Image)(resources.GetObject("picBUser.Image")));
+            this.picBUser.Location = new System.Drawing.Point(192, 0);
+            this.picBUser.Name = "picBUser";
+            this.picBUser.Size = new System.Drawing.Size(40, 40);
+            this.picBUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBUser.TabIndex = 16;
+            this.picBUser.TabStop = false;
+            // 
+            // PanelUser
+            // 
+            this.PanelUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.PanelUser.Controls.Add(this.btnSignOut);
+            this.PanelUser.Controls.Add(this.btnRegister);
+            this.PanelUser.Controls.Add(this.btnChangePassword);
+            this.PanelUser.Location = new System.Drawing.Point(1245, 167);
+            this.PanelUser.Name = "PanelUser";
+            this.PanelUser.Size = new System.Drawing.Size(104, 139);
+            this.PanelUser.TabIndex = 17;
+            this.PanelUser.Visible = false;
+            // 
+            // btnSignOut
+            // 
+            this.btnSignOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.btnSignOut.FlatAppearance.BorderSize = 0;
+            this.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignOut.ForeColor = System.Drawing.Color.DimGray;
+            this.btnSignOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSignOut.Location = new System.Drawing.Point(0, 95);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(104, 44);
+            this.btnSignOut.TabIndex = 11;
+            this.btnSignOut.Text = "Đăng xuất";
+            this.btnSignOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSignOut.UseVisualStyleBackColor = false;
+            // 
+            // btnRegister
+            // 
+            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.btnRegister.FlatAppearance.BorderSize = 0;
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.ForeColor = System.Drawing.Color.DimGray;
+            this.btnRegister.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegister.Location = new System.Drawing.Point(1, 48);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(100, 44);
+            this.btnRegister.TabIndex = 10;
+            this.btnRegister.Text = "Đăng ký";
+            this.btnRegister.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRegister.UseVisualStyleBackColor = false;
+            // 
+            // btnChangePassword
+            // 
+            this.btnChangePassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.btnChangePassword.FlatAppearance.BorderSize = 0;
+            this.btnChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangePassword.ForeColor = System.Drawing.Color.DimGray;
+            this.btnChangePassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChangePassword.Location = new System.Drawing.Point(0, 4);
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.Size = new System.Drawing.Size(101, 44);
+            this.btnChangePassword.TabIndex = 9;
+            this.btnChangePassword.Text = "Đổi mật khẩu";
+            this.btnChangePassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnChangePassword.UseVisualStyleBackColor = false;
+            // 
+            // lbNotification
+            // 
+            this.lbNotification.FormattingEnabled = true;
+            this.lbNotification.Location = new System.Drawing.Point(804, 58);
+            this.lbNotification.Name = "lbNotification";
+            this.lbNotification.Size = new System.Drawing.Size(269, 95);
+            this.lbNotification.TabIndex = 18;
+            // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1370, 730);
+            this.Controls.Add(this.lbNotification);
+            this.Controls.Add(this.PanelUser);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelMain);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.PanelMenuMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -594,13 +700,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner6)).EndInit();
             this.PanelSubMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.PanelForm.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBUser)).EndInit();
+            this.PanelUser.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -617,7 +725,6 @@
         private System.Windows.Forms.Button btnWareHouse;
         private System.Windows.Forms.Panel PanelColorRevenue;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -632,7 +739,7 @@
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.PictureBox TriangleCorner6;
         private System.Windows.Forms.Button btnSetting;
-        private System.Windows.Forms.Button btnAdmin;
+        private System.Windows.Forms.Button btnDown;
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnRestoreDown;
         private System.Windows.Forms.Panel PanelForm;
@@ -649,5 +756,13 @@
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.TextBox txbRole;
         private System.Windows.Forms.TextBox txbDisplayName;
+        private System.Windows.Forms.Button btnNotification;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox picBUser;
+        private System.Windows.Forms.Panel PanelUser;
+        private System.Windows.Forms.Button btnSignOut;
+        private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.Button btnChangePassword;
+        private System.Windows.Forms.ListBox lbNotification;
     }
 }
