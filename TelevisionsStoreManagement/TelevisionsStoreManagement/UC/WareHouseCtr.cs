@@ -14,15 +14,17 @@ namespace TelevisionsStoreManagement.UC
     public partial class WareHouseCtr : UserControl
     {
         WareHouseBUS wareHouseBUS = new WareHouseBUS();
+        ProductBUS productBUS = new ProductBUS();
         public WareHouseCtr()
         {
             InitializeComponent();
+            dGVWareHouse.AutoGenerateColumns = false;
+            productBUS.loadDataToDGV(dGVWareHouse, txbID, cboCategory, txbName, cboType, nUDSize, nUDCount, txbPriceOut, txbPriceIn);
         }
 
         private void WareHouseCtr_Load(object sender, EventArgs e)
         {
-            dGVWareHouse.AutoGenerateColumns = false;
-            wareHouseBUS.loadDataToDGV(dGVWareHouse, txbID, cboCategory, txbName, cboType, nUDSize, nUDCount, txbPriceOut, txbPriceIn);
+            
         }
 
         

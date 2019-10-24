@@ -28,14 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraCharts.XYDiagram3D xyDiagram3D1 = new DevExpress.XtraCharts.XYDiagram3D();
-            DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.SeriesPoint seriesPoint1 = new DevExpress.XtraCharts.SeriesPoint("Nam Béo", new object[] {
-            ((object)(20D))});
-            DevExpress.XtraCharts.SeriesPoint seriesPoint2 = new DevExpress.XtraCharts.SeriesPoint("Quý rấu", new object[] {
-            ((object)(15D))});
-            DevExpress.XtraCharts.SideBySideBar3DSeriesView sideBySideBar3DSeriesView1 = new DevExpress.XtraCharts.SideBySideBar3DSeriesView();
-            DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cboCategory = new System.Windows.Forms.ComboBox();
@@ -63,16 +55,11 @@
             this.priceOut = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPriceIn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nUDCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDSize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVWareHouse)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram3D1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBar3DSeriesView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -86,7 +73,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.chartControl1);
             this.panel2.Controls.Add(this.cboCategory);
             this.panel2.Controls.Add(this.cboType);
             this.panel2.Controls.Add(this.txbPriceOut);
@@ -361,29 +347,6 @@
             this.colCount.Name = "colCount";
             this.colCount.ReadOnly = true;
             // 
-            // chartControl1
-            // 
-            xyDiagram3D1.RotationMatrixSerializable = "-0.723634408144412;0.59193662366463;0.354914464222053;0;0.657266545864621;0.43411" +
-    "2703297828;0.616073736270795;0;0.210603729873651;0.679085557496248;-0.7031990291" +
-    "25707;0;0;0;0;1";
-            this.chartControl1.Diagram = xyDiagram3D1;
-            this.chartControl1.Legend.Name = "Default Legend";
-            this.chartControl1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            this.chartControl1.Location = new System.Drawing.Point(6, 304);
-            this.chartControl1.Name = "chartControl1";
-            series1.Name = "Series 1";
-            seriesPoint1.ColorSerializable = "#E36C09";
-            series1.Points.AddRange(new DevExpress.XtraCharts.SeriesPoint[] {
-            seriesPoint1,
-            seriesPoint2});
-            series1.View = sideBySideBar3DSeriesView1;
-            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series1};
-            this.chartControl1.Size = new System.Drawing.Size(261, 184);
-            this.chartControl1.TabIndex = 31;
-            this.chartControl1.Titles.AddRange(new DevExpress.XtraCharts.ChartTitle[] {
-            chartTitle1});
-            // 
             // WareHouseCtr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -398,10 +361,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nUDCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDSize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVWareHouse)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram3D1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBar3DSeriesView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -435,6 +394,5 @@
         private System.Windows.Forms.TextBox txbName;
         private System.Windows.Forms.ComboBox cboCategory;
         private System.Windows.Forms.ComboBox cboType;
-        private DevExpress.XtraCharts.ChartControl chartControl1;
     }
 }

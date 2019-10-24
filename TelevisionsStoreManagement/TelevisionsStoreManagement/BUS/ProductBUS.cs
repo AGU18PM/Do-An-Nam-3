@@ -14,7 +14,7 @@ namespace TelevisionsStoreManagement.BUS
     class ProductBUS
     {
         ProductDAL data = new ProductDAL();
-        public void ShowProductData(DataGridView dGV, TextBox iD, TextBox category, TextBox name, TextBox type, TextBox size, TextBox price, string typeInput)
+        public void ShowProductData(DataGridView dGV, TextBox iD, TextBox category, TextBox name, TextBox type, TextBox size, TextBox price, string typeInput, NumericUpDown count)
         {
             BindingSource bS = new BindingSource();
             bS.DataSource = data.ListProduct(typeInput);
@@ -31,6 +31,8 @@ namespace TelevisionsStoreManagement.BUS
             size.DataBindings.Add("Text", bS, "SIZE", false, DataSourceUpdateMode.Never);
             price.DataBindings.Clear();
             price.DataBindings.Add("Text", bS, "PRICE_OUT", false, DataSourceUpdateMode.Never);
+            count.DataBindings.Clear();
+            count.DataBindings.Add("Maximum", bS, "COUNT", false, DataSourceUpdateMode.Never);
             addHeaderText(dGV);
 
 
@@ -42,7 +44,7 @@ namespace TelevisionsStoreManagement.BUS
         //    return reslut;
         //}
 
-        public void ShowProductDataByCategory(DataGridView dGV, string category, TextBox iD, TextBox txbcategory, TextBox name, TextBox type, TextBox size, TextBox price, string typeInput)
+        public void ShowProductDataByCategory(DataGridView dGV, string category, TextBox iD, TextBox txbcategory, TextBox name, TextBox type, TextBox size, TextBox price, string typeInput , NumericUpDown count)
         {
             BindingSource bS = new BindingSource();
             bS.DataSource = data.getListProductByCategory(category, typeInput);
@@ -59,6 +61,8 @@ namespace TelevisionsStoreManagement.BUS
             size.DataBindings.Add("Text", bS, "SIZE", false, DataSourceUpdateMode.Never);
             price.DataBindings.Clear();
             price.DataBindings.Add("Text", bS, "PRICE_OUT", false, DataSourceUpdateMode.Never);
+            count.DataBindings.Clear();
+            count.DataBindings.Add("Maximum", bS, "COUNT", false, DataSourceUpdateMode.Never);
             addHeaderText(dGV);
         }
 
@@ -107,5 +111,37 @@ namespace TelevisionsStoreManagement.BUS
             dGV.Columns[5].HeaderCell.Style.Font = new Font("Calibri", 12, FontStyle.Regular);
             dGV.Columns[0].HeaderCell.Style.Font = new Font("Calibri", 12, FontStyle.Regular);
         }
+        public bool Update(BillDTO bill)
+        {
+            BILLInfoBUS billInfo = new BILLInfoBUS();
+            return data.Update(billInfo.getListBillInfoByBillID(bill));
+        }
+
+        #region WareHouse
+        public void loadDataToDGV(DataGridView dGV, TextBox iD, ComboBox category, TextBox productName, ComboBox type, NumericUpDown size, NumericUpDown count, TextBox priceOut, TextBox priceIn)
+        {
+            BindingSource bS = new BindingSource();
+            DataTable result = data.LoadDataToWareHouseDGV();
+            dGV.DataSource = result;
+            bS.DataSource = result;
+            iD.DataBindings.Clear();
+            iD.DataBindings.Add("Text", bS, "ID", false, DataSourceUpdateMode.Never);
+            category.DataBindings.Clear();
+            category.DataBindings.Add("Text", bS, "CATEGORY_NAME", false, DataSourceUpdateMode.Never);
+            productName.DataBindings.Clear();
+            productName.DataBindings.Add("Text", bS, "NAME", false, DataSourceUpdateMode.Never);
+            type.DataBindings.Clear();
+            type.DataBindings.Add("Text", bS, "TYPE", false, DataSourceUpdateMode.Never);
+            size.DataBindings.Clear();
+            size.DataBindings.Add("Text", bS, "SIZE", false, DataSourceUpdateMode.Never);
+            priceOut.DataBindings.Clear();
+            priceOut.DataBindings.Add("Text", bS, "PRICE_OUT", false, DataSourceUpdateMode.Never);
+            priceIn.DataBindings.Clear();
+            priceIn.DataBindings.Add("Text", bS, "PRICE_IN", false, DataSourceUpdateMode.Never);
+            count.DataBindings.Clear();
+            count.DataBindings.Add("Text", bS, "COUNT", false, DataSourceUpdateMode.Never);
+        }
+
+        #endregion
     }
 }

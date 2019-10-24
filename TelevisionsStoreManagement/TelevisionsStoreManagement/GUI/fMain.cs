@@ -16,15 +16,19 @@ namespace TelevisionsStoreManagement.GUI
 {
     public partial class fMain : Form
     {
+        ProductCtr productCtr;
+        WareHouseCtr wareHouseCtr;
 
         public fMain()
         {
             InitializeComponent();
         }
-        public fMain(string displayName, int role)
+        public fMain(string displayName, int role, ProductCtr productCtrIn, WareHouseCtr wareHouseCtrIn)
         {
             InitializeComponent();
             Color_Button();
+            productCtr = productCtrIn;
+            wareHouseCtr = wareHouseCtrIn;
             mode = 0;
             txbDisplayName.Text = displayName;
             if (role == 1)
@@ -193,8 +197,7 @@ namespace TelevisionsStoreManagement.GUI
             
            
             panelMain.Controls.Clear();
-            ProductCtr productControl = new ProductCtr();
-            panelMain.Controls.Add(productControl);
+            panelMain.Controls.Add(productCtr);
             
         }
 
@@ -236,8 +239,7 @@ namespace TelevisionsStoreManagement.GUI
             btnWareHouse.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
             //       
             panelMain.Controls.Clear();
-            WareHouseCtr w = new WareHouseCtr();
-            panelMain.Controls.Add(w);
+            panelMain.Controls.Add(wareHouseCtr);
             
             
 
@@ -388,7 +390,8 @@ namespace TelevisionsStoreManagement.GUI
 
         private void fMain_Load(object sender, EventArgs e)
         {
-            ProductCtr productCtr = new ProductCtr();
+            //ProductCtr productCtr = new ProductCtr();
+            //WareHouseCtr warehouseCtr = new WareHouseCtr();
         }
 
         private void btnSmartTV_Click(object sender, EventArgs e)

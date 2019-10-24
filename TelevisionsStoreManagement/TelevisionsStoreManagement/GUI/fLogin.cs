@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using TelevisionsStoreManagement.BUS;
 using TelevisionsStoreManagement.DTO;
 using TelevisionsStoreManagement.GUI;
+using TelevisionsStoreManagement.UC;
 
 namespace TelevisionsStoreManagement
 {
@@ -17,7 +18,8 @@ namespace TelevisionsStoreManagement
     {
         AccountBUS accountBus = new AccountBUS();
         AccountDTO accountDTO = new AccountDTO();
-
+        ProductCtr productCtr;
+        WareHouseCtr wareHouseCtr;
         public fLogin()
         {
             InitializeComponent();
@@ -28,6 +30,13 @@ namespace TelevisionsStoreManagement
             //fMain main = new fMain();
             //main.ShowDialog();
 
+        }
+
+        public fLogin(ProductCtr productCtrIn, WareHouseCtr wareHouseCtrIn)
+        {
+            InitializeComponent();
+            productCtr = productCtrIn;
+            wareHouseCtr = wareHouseCtrIn;
         }
 
 
@@ -45,7 +54,7 @@ namespace TelevisionsStoreManagement
             if (accountBus.Login(accountDTO))
             {
                 Hide();
-                fMain f = new fMain(accountDTO.Displayname, accountDTO.Role);
+                fMain f = new fMain(accountDTO.Displayname, accountDTO.Role, productCtr, wareHouseCtr);
                 f.ShowDialog();
             }
             else

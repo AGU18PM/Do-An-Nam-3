@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TelevisionsStoreManagement.UC;
 
 namespace TelevisionsStoreManagement.GUI
 {
@@ -16,6 +17,9 @@ namespace TelevisionsStoreManagement.GUI
         {
             InitializeComponent();
         }
+
+        WareHouseCtr wareHouseCtr;
+        ProductCtr productCtr;
 
         private void timerLoading_Tick(object sender, EventArgs e)
         {
@@ -34,6 +38,7 @@ namespace TelevisionsStoreManagement.GUI
                     timerLoading.Stop();
                     System.Threading.Thread.Sleep(3500);
                     label4.Text = "Loading Product...";
+                    productCtr = new ProductCtr();
                     timerLoading.Start();
                 }
                 if (panelLoading.Width == 336)
@@ -41,13 +46,16 @@ namespace TelevisionsStoreManagement.GUI
                     timerLoading.Stop();
                     System.Threading.Thread.Sleep(1000);
                     label4.Text = "Loading Customer...";
+                    wareHouseCtr = new WareHouseCtr();
                     timerLoading.Start();
                 }
 
                 if (panelLoading.Width >= 368)
                 {
                     timerLoading.Stop();
-                    fLogin f = new fLogin();
+                    
+                    
+                    fLogin f = new fLogin(productCtr, wareHouseCtr);
                     this.Hide();
                     f.Show();
                 }

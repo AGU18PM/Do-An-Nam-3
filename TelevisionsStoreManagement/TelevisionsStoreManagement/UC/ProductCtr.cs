@@ -20,31 +20,28 @@ namespace TelevisionsStoreManagement.UC
         ProductBUS productBUS = new ProductBUS();
         BILLInfoBUS billInfoBus = new BILLInfoBUS();
         BillBUS billBUS = new BillBUS();
-        WareHouseBUS wareHouseBus = new WareHouseBUS();
         BillDTO billDTO = new BillDTO();
         CustomerDTO customerVL = new CustomerDTO();
-        // ProductDTO productDTO = new ProductDTO();
-        // BillInfoDTO[] billInfo = new BillInfoDTO[100];
-        //  BillDTO bill = new BillDTO();
-        Payment listProduct = new Payment();
         int isCreateBill = 0;
         string typeInput = "";
-        string payment = "";
-        int soLuong = 0;
-        int flag = 0;
 
         public ProductCtr()
         {
             InitializeComponent();
             //firstShowData();
-            productBUS.ShowProductData(dGVProduct, txbID, txbCategory, txbName, txbType, txbSize, txbPrice, typeInput);
+            showProduct();
+        }
+
+        public void showProduct()
+        {
+            productBUS.ShowProductData(dGVProduct, txbID, txbCategory, txbName, txbType, txbSize, txbPrice, typeInput, nUDCount);
         }
 
         public ProductCtr(string type)
         {
             InitializeComponent();
             typeInput = type;
-            productBUS.ShowProductData(dGVProduct, txbID, txbCategory, txbName, txbType, txbSize, txbPrice, typeInput);
+            productBUS.ShowProductData(dGVProduct, txbID, txbCategory, txbName, txbType, txbSize, txbPrice, typeInput, nUDCount);
         }
 
         //Load đầy đủ data
@@ -208,9 +205,9 @@ namespace TelevisionsStoreManagement.UC
 
         private void nUDCount_ValueChanged(object sender, EventArgs e)
         {
-            int price = Convert.ToInt32(txbPrice.Text);
-            int totalPrice = price * (Convert.ToInt32(nUDCount.Value));
-            txbTotalPrice.Text = totalPrice.ToString();
+            //int price = Convert.ToInt32(txbPrice.Text);
+            //int totalPrice = price * (Convert.ToInt32(nUDCount.Value));
+            //txbTotalPrice.Text = totalPrice.ToString();
         }
 
         private void btnPayment_Click(object sender, EventArgs e)
@@ -237,13 +234,14 @@ namespace TelevisionsStoreManagement.UC
             else
             {
                 billDTO.Status = 1;
-                if (wareHouseBus.Update(billDTO))
+                if (productBUS.Update(billDTO))
                 {
                     billBUS.submitOrCancelPayment(billDTO, txbCustomerPhonenumber.Text);
                     MessageBox.Show("Tong gia la: " + billDTO.TotalPrice.ToString());
                     lbPayment.Items.Clear();
                     isCreateBill = 0;
-                    updateCount();
+                    productBUS.ShowProductData(dGVProduct, txbID, txbCategory, txbName, txbType, txbSize, txbPrice, typeInput, nUDCount);
+                    // updateCount();
                 }
                 else
                 {
@@ -274,7 +272,6 @@ namespace TelevisionsStoreManagement.UC
                     customerVL.ID = 1;
                     billDTO = billBUS.createBill(customerVL);
                     isCreateBill = 1;
-
                 }
 
                 //if (wareHouseBus.CheckCount(txbID.Text, Convert.ToInt32(nUDCount.Value), billDTO))
@@ -304,24 +301,12 @@ namespace TelevisionsStoreManagement.UC
 
         private void dGVProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            updateCount();
-        }
-
-        public void updateCount()
-        {
-            nUDCount.Value = nUDCount.Minimum;
-            DataTable result = wareHouseBus.getCountByIDTV(txbID.Text);
-            if (result.Rows.Count == 0)
-            {
-                nUDCount.Maximum = 0;
-            }
-            else
-                nUDCount.Maximum = Convert.ToInt32(result.Rows[0][0]);
+            // updateCount();
         }
 
         private void ProductCtr_Load(object sender, EventArgs e)
         {
-            updateCount();
+            //   updateCount();
         }
 
 
@@ -382,15 +367,25 @@ namespace TelevisionsStoreManagement.UC
             {
                 dGVProduct.DataSource = "";
                 //dGVProduct.Rows.Clear();
-                productBUS.ShowProductDataByCategory(dGVProduct, result, txbID, txbCategory, txbName, txbType, txbSize, txbPrice, typeInput);
+                productBUS.ShowProductDataByCategory(dGVProduct, result, txbID, txbCategory, txbName, txbType, txbSize, txbPrice, typeInput, nUDCount);
             }
             else
             {
                 dGVProduct.DataSource = "";
-                productBUS.ShowProductData(dGVProduct, txbID, txbCategory, txbName, txbType, txbSize, txbPrice, typeInput);
+                productBUS.ShowProductData(dGVProduct, txbID, txbCategory, txbName, txbType, txbSize, txbPrice, typeInput, nUDCount);
             }
         }
 
-
+        //public void updateCount()
+        //{
+        //    nUDCount.Value = nUDCount.Minimum;
+        //    DataTable result = wareHouseBus.getCountByIDTV(txbID.Text);
+        //    if (result.Rows.Count == 0)
+        //    {
+        //        nUDCount.Maximum = 0;
+        //    }
+        //    else
+        //        nUDCount.Maximum = Convert.ToInt32(result.Rows[0][0]);
+        //}
     }
 }
