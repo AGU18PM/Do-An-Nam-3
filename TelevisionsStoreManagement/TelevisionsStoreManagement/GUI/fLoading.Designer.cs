@@ -102,9 +102,9 @@
             // panelLoading
             // 
             this.panelLoading.BackColor = System.Drawing.Color.Cornsilk;
-            this.panelLoading.Location = new System.Drawing.Point(0, 466);
+            this.panelLoading.Location = new System.Drawing.Point(0, 468);
             this.panelLoading.Name = "panelLoading";
-            this.panelLoading.Size = new System.Drawing.Size(0, 8);
+            this.panelLoading.Size = new System.Drawing.Size(0, 6);
             this.panelLoading.TabIndex = 20;
             // 
             // label5

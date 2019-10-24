@@ -16,6 +16,9 @@ namespace TelevisionsStoreManagement.GUI
 {
     public partial class fMain : Form
     {
+        int mov;
+        int movX;
+        int movY;
         ProductCtr productCtr;
         WareHouseCtr wareHouseCtr;
 
@@ -361,6 +364,7 @@ namespace TelevisionsStoreManagement.GUI
 
         }
 
+        
         private void btnRestoreDown_Click(object sender, EventArgs e)
         {
             if (PanelForm.Location.X == 1019 && PanelForm.Location.Y == 0)
@@ -368,6 +372,8 @@ namespace TelevisionsStoreManagement.GUI
                 PanelForm.Location = new Point(840, 0);
                 Size = new Size(1191, 578);
                 Location = new Point(93, 66);
+                
+                
 
                 // MainPanel.Size = new Size(137, 65);
             }
@@ -420,6 +426,31 @@ namespace TelevisionsStoreManagement.GUI
             panelMain.Controls.Clear();
             ProductCtr productControl = new ProductCtr("4");
             panelMain.Controls.Add(productControl);
+        }
+
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            mov = 1;
+            movX = e.X;
+            movY = e.Y;
+
+        }
+
+        private void panel2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mov == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - movX, MousePosition.Y - movY);
+                PanelForm.Location = new Point(840, 0);
+                Size = new Size(1191, 578);
+            }
+            
+
+        }
+
+        private void panel2_MouseUp(object sender, MouseEventArgs e)
+        {
+            mov = 0;
         }
     }
 }

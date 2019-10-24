@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMain));
             this.PanelMenuMain = new System.Windows.Forms.Panel();
+            this.txbRole = new System.Windows.Forms.TextBox();
+            this.txbDisplayName = new System.Windows.Forms.TextBox();
             this.PanelMenuSlide = new System.Windows.Forms.Panel();
             this.PanelColorHelp = new System.Windows.Forms.Panel();
             this.TriangleCorner4 = new System.Windows.Forms.PictureBox();
@@ -65,8 +67,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.txbDisplayName = new System.Windows.Forms.TextBox();
-            this.txbRole = new System.Windows.Forms.TextBox();
             this.PanelMenuMain.SuspendLayout();
             this.PanelMenuSlide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner4)).BeginInit();
@@ -100,6 +100,32 @@
             this.PanelMenuMain.Name = "PanelMenuMain";
             this.PanelMenuMain.Size = new System.Drawing.Size(190, 730);
             this.PanelMenuMain.TabIndex = 0;
+            // 
+            // txbRole
+            // 
+            this.txbRole.BackColor = System.Drawing.SystemColors.Control;
+            this.txbRole.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbRole.Enabled = false;
+            this.txbRole.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbRole.Location = new System.Drawing.Point(3, 152);
+            this.txbRole.Multiline = true;
+            this.txbRole.Name = "txbRole";
+            this.txbRole.Size = new System.Drawing.Size(184, 27);
+            this.txbRole.TabIndex = 12;
+            this.txbRole.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txbDisplayName
+            // 
+            this.txbDisplayName.BackColor = System.Drawing.SystemColors.Control;
+            this.txbDisplayName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbDisplayName.Enabled = false;
+            this.txbDisplayName.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbDisplayName.Location = new System.Drawing.Point(6, 125);
+            this.txbDisplayName.Multiline = true;
+            this.txbDisplayName.Name = "txbDisplayName";
+            this.txbDisplayName.Size = new System.Drawing.Size(181, 27);
+            this.txbDisplayName.TabIndex = 11;
+            this.txbDisplayName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // PanelMenuSlide
             // 
@@ -432,6 +458,9 @@
             this.panel2.Size = new System.Drawing.Size(1180, 30);
             this.panel2.TabIndex = 2;
             this.panel2.DoubleClick += new System.EventHandler(this.btnRestoreDown_Click);
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
+            this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
             // 
             // PanelForm
             // 
@@ -540,36 +569,11 @@
             this.panelMain.Size = new System.Drawing.Size(1180, 545);
             this.panelMain.TabIndex = 13;
             // 
-            // txbDisplayName
-            // 
-            this.txbDisplayName.BackColor = System.Drawing.SystemColors.Control;
-            this.txbDisplayName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbDisplayName.Enabled = false;
-            this.txbDisplayName.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbDisplayName.Location = new System.Drawing.Point(6, 125);
-            this.txbDisplayName.Multiline = true;
-            this.txbDisplayName.Name = "txbDisplayName";
-            this.txbDisplayName.Size = new System.Drawing.Size(181, 27);
-            this.txbDisplayName.TabIndex = 11;
-            this.txbDisplayName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txbRole
-            // 
-            this.txbRole.BackColor = System.Drawing.SystemColors.Control;
-            this.txbRole.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbRole.Enabled = false;
-            this.txbRole.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbRole.Location = new System.Drawing.Point(3, 152);
-            this.txbRole.Multiline = true;
-            this.txbRole.Name = "txbRole";
-            this.txbRole.Size = new System.Drawing.Size(184, 27);
-            this.txbRole.TabIndex = 12;
-            this.txbRole.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1370, 730);
             this.Controls.Add(this.panel2);
