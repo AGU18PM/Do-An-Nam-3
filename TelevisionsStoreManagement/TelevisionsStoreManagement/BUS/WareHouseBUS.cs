@@ -65,22 +65,22 @@ namespace TelevisionsStoreManagement.BUS
             DataTable result = data.ListProduct();
             dGV.DataSource = result;
             bS.DataSource = result;
-            iD.DataBindings.Clear();
-            iD.DataBindings.Add("Text", bS, "ID", false, DataSourceUpdateMode.Never);
-            category.DataBindings.Clear();
-            category.DataBindings.Add("Text", bS, "CATEGORY_NAME", false, DataSourceUpdateMode.Never);
-            productName.DataBindings.Clear();
-            productName.DataBindings.Add("Text", bS, "NAME", false, DataSourceUpdateMode.Never);
-            type.DataBindings.Clear();
-            type.DataBindings.Add("Text", bS, "TYPE", false, DataSourceUpdateMode.Never);
-            size.DataBindings.Clear();
-            size.DataBindings.Add("Text", bS, "SIZE", false, DataSourceUpdateMode.Never);
-            priceOut.DataBindings.Clear();
-            priceOut.DataBindings.Add("Text", bS, "PRICE_OUT", false, DataSourceUpdateMode.Never);
-            priceIn.DataBindings.Clear();
-            priceIn.DataBindings.Add("Text", bS, "PRICE_IN", false, DataSourceUpdateMode.Never);
-            count.DataBindings.Clear();
-            count.DataBindings.Add("Text", bS, "COUNT", false, DataSourceUpdateMode.Never);
+            //iD.DataBindings.Clear();
+            //iD.DataBindings.Add("Text", bS, "ID", false, DataSourceUpdateMode.Never);
+            //category.DataBindings.Clear();
+            //category.DataBindings.Add("Text", bS, "CATEGORY_NAME", false, DataSourceUpdateMode.Never);
+            //productName.DataBindings.Clear();
+            //productName.DataBindings.Add("Text", bS, "NAME", false, DataSourceUpdateMode.Never);
+            //type.DataBindings.Clear();
+            //type.DataBindings.Add("Text", bS, "TYPE", false, DataSourceUpdateMode.Never);
+            //size.DataBindings.Clear();
+            //size.DataBindings.Add("Text", bS, "SIZE", false, DataSourceUpdateMode.Never);
+            //priceOut.DataBindings.Clear();
+            //priceOut.DataBindings.Add("Text", bS, "PRICE_OUT", false, DataSourceUpdateMode.Never);
+            //priceIn.DataBindings.Clear();
+            //priceIn.DataBindings.Add("Text", bS, "PRICE_IN", false, DataSourceUpdateMode.Never);
+            //count.DataBindings.Clear();
+            //count.DataBindings.Add("Text", bS, "COUNT", false, DataSourceUpdateMode.Never);
         }
     }
 }

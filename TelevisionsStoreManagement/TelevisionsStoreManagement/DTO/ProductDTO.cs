@@ -20,6 +20,7 @@ namespace TelevisionsStoreManagement.DTO
         int size; //inch
         double priceIn;
         double priceOut;
+        int count;
 
         public int ProductId { get => productId; set => productId = value; }
         public string ProductName { get => productName; set => productName = value; }
@@ -29,5 +30,6 @@ namespace TelevisionsStoreManagement.DTO
         public double PriceIn { get => priceIn; set => priceIn = value; }
         public double PriceOut { get => priceOut; set => priceOut = value; }
         public string Category { get => category; set => category = value; }
+        public int Count { get => count; set => count = value; }
     }
 }

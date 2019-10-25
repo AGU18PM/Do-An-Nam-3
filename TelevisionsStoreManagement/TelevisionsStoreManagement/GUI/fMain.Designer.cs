@@ -632,6 +632,7 @@
             this.btnSignOut.Text = "Đăng xuất";
             this.btnSignOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSignOut.UseVisualStyleBackColor = false;
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
             // 
             // btnRegister
             // 

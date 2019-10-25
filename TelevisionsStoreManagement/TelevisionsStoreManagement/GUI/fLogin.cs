@@ -54,7 +54,7 @@ namespace TelevisionsStoreManagement
             if (accountBus.Login(accountDTO))
             {
                 Hide();
-                fMain f = new fMain(accountDTO.Displayname, accountDTO.Role, productCtr, wareHouseCtr);
+                fMain f = new fMain(accountDTO.Displayname, accountDTO.Role, accountDTO.Img);
                 f.ShowDialog();
             }
             else

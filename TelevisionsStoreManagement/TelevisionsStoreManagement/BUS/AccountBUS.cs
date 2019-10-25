@@ -21,6 +21,7 @@ namespace TelevisionsStoreManagement.BUS
             {
                 account.Displayname = result.Rows[0][2].ToString();
                 account.Role = Convert.ToInt32(result.Rows[0][3]);
+                account.Img = result.Rows[0][4].ToString();
             }
             return result.Rows.Count > 0;
         }

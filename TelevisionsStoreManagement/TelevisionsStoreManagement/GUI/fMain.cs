@@ -21,17 +21,15 @@ namespace TelevisionsStoreManagement.GUI
         int movY;
         ProductCtr productCtr;
         WareHouseCtr wareHouseCtr;
-
+        int flag = 0;
         public fMain()
         {
             InitializeComponent();
         }
-        public fMain(string displayName, int role, ProductCtr productCtrIn, WareHouseCtr wareHouseCtrIn)
+        public fMain(string displayName, int role, string img)
         {
             InitializeComponent();
             Color_Button();
-            productCtr = productCtrIn;
-            wareHouseCtr = wareHouseCtrIn;
             mode = 0;
             txbDisplayName.Text = displayName;
             if (role == 1)
@@ -40,6 +38,7 @@ namespace TelevisionsStoreManagement.GUI
             }
             else
                 txbRole.Text = "Staff";
+            picBUser.Image = Image.FromFile(img);
 
         }
 
@@ -198,11 +197,9 @@ namespace TelevisionsStoreManagement.GUI
             /*panelMain.Controls.Clear();            
             Thread thrGenerating = new Thread(new ThreadStart(doWork));
             thrGenerating.Start();*/
-            
-           
-            panelMain.Controls.Clear();
-            panelMain.Controls.Add(productCtr);
-            
+                productCtr = new ProductCtr();
+                panelMain.Controls.Clear();
+                panelMain.Controls.Add(productCtr);
         }
 
 
@@ -241,11 +238,21 @@ namespace TelevisionsStoreManagement.GUI
             
             btnHome.ForeColor = System.Drawing.Color.DimGray;
             btnWareHouse.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
-            //       
+            //
+            wareHouseCtr = new WareHouseCtr();
             panelMain.Controls.Clear();
             panelMain.Controls.Add(wareHouseCtr);
-            
-            
+            //if (flag == 0)
+            //{
+            //    panelMain.Controls.Clear();
+            //    panelMain.Controls.Add(productCtr);
+            //}
+            //else
+            //{
+                
+            //}
+            //flag = 1;
+
 
         }
 
@@ -363,6 +370,10 @@ namespace TelevisionsStoreManagement.GUI
             btnHome.ForeColor = System.Drawing.Color.DimGray;
             btnHelp.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
 
+            test t = new test();
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(t);
+
         }
 
         
@@ -462,6 +473,13 @@ namespace TelevisionsStoreManagement.GUI
             }
             else
                 PanelUser.Visible = false;
+        }
+
+        private void btnSignOut_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            fLogin login = new fLogin();
+            login.ShowDialog();
         }
     }
 }

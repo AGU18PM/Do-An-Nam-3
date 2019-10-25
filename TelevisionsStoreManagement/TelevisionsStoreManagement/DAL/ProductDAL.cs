@@ -62,7 +62,7 @@ namespace TelevisionsStoreManagement.DAL
             else
             {
                 sql = "select ID , CATEGORY_NAME , NAME , TYPE , SIZE , PRICE_OUT , COUNT from tivi WHERE ( " + category + " ) AND TYPE = '" + typeInput + "'";
-                
+
             }
 
             DataTable result = DataProvider.Instance.ExecuteQuery(sql, new object[] { category });
@@ -161,6 +161,36 @@ namespace TelevisionsStoreManagement.DAL
             }
             return result;
 
+        }
+
+        public bool AddProduct(ProductDTO product)
+        {
+            string sql = "SELECT * FROM TIVI WHERE CATEGORY_NAME = '" + product.Category + "' AND NAME = N'" + product.ProductName + "'";
+            DataTable result = DataProvider.Instance.ExecuteQuery(sql);
+            if (result.Rows.Count == 1)
+            {
+                return false;
+            }
+            else
+            {
+                sql = @"INSERT INTO TIVI ( CATEGORY_NAME , NAME , TYPE , SIZE , PRICE_IN , PRICE_OUT , COUNT ) 
+                             VALUES('" + product.Category + "', '" + product.ProductName + "', " + product.Type + " , " +
+                             product.Size + " , " + product.PriceIn + " , " + product.PriceOut + " , " + product.Count + " )";
+                DataProvider.Instance.ExecuteNonQuery(sql);
+                return true;
+            }
+        }
+
+        public void UpdateProduct(ProductDTO product)
+        {
+            string sql = "UPDATE TIVI SET CATEGORY_NAME = '" + product.Category + "' , NAME = N'" + product.ProductName + "' , TYPE = " + product.Type + " , SIZE = " + product.Size + " , PRICE_IN = " + product.PriceIn + " , PRICE_OUT = " + product.PriceOut + " , COUNT = " + product.Count + " WHERE ID = " + product.ProductId;
+            DataProvider.Instance.ExecuteNonQuery(sql);
+        }
+
+        public void DeleteProduct(ProductDTO productDto)
+        {
+            string sql = "DELETE TIVI WHERE ID = " + productDto.ProductId;
+            DataProvider.Instance.ExecuteNonQuery(sql);
         }
     }
 }

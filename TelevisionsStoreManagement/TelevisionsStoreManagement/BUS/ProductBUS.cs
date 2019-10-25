@@ -44,7 +44,7 @@ namespace TelevisionsStoreManagement.BUS
         //    return reslut;
         //}
 
-        public void ShowProductDataByCategory(DataGridView dGV, string category, TextBox iD, TextBox txbcategory, TextBox name, TextBox type, TextBox size, TextBox price, string typeInput , NumericUpDown count)
+        public void ShowProductDataByCategory(DataGridView dGV, string category, TextBox iD, TextBox txbcategory, TextBox name, TextBox type, TextBox size, TextBox price, string typeInput, NumericUpDown count)
         {
             BindingSource bS = new BindingSource();
             bS.DataSource = data.getListProductByCategory(category, typeInput);
@@ -125,11 +125,10 @@ namespace TelevisionsStoreManagement.BUS
         }
 
         #region WareHouse
-        public void loadDataToDGV(DataGridView dGV, TextBox iD, ComboBox category, TextBox productName, ComboBox type, NumericUpDown size, NumericUpDown count, TextBox priceOut, TextBox priceIn)
+        public void loadDataToDGV(DataGridView dGV, TextBox iD, ComboBox category, TextBox productName, ComboBox type, TextBox size, NumericUpDown count, TextBox priceOut, TextBox priceIn)
         {
             BindingSource bS = new BindingSource();
             DataTable result = data.LoadDataToWareHouseDGV();
-            dGV.DataSource = result;
             bS.DataSource = result;
             iD.DataBindings.Clear();
             iD.DataBindings.Add("Text", bS, "ID", false, DataSourceUpdateMode.Never);
@@ -146,12 +145,27 @@ namespace TelevisionsStoreManagement.BUS
             priceIn.DataBindings.Clear();
             priceIn.DataBindings.Add("Text", bS, "PRICE_IN", false, DataSourceUpdateMode.Never);
             count.DataBindings.Clear();
-            count.DataBindings.Add("Text", bS, "COUNT", false, DataSourceUpdateMode.Never);
+            count.DataBindings.Add("Maximum", bS, "COUNT", false, DataSourceUpdateMode.Never);
+            dGV.DataSource = bS;
         }
 
+        public bool AddProduct(ProductDTO product)
+        {
+            return data.AddProduct(product);
+        }
+
+        public void UpdateProduct(ProductDTO product)
+        {
+            data.UpdateProduct(product);
+        }
+
+        public void DeleteProduct(ProductDTO product)
+        {
+            data.DeleteProduct(product);
+        }
         #endregion
 
-        
+
 
     }
 }
