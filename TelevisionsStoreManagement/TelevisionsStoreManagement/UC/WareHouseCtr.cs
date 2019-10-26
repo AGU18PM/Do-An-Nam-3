@@ -181,6 +181,7 @@ namespace TelevisionsStoreManagement.UC
             toDo = 3;
             if(MessageBox.Show("Nếu bạn xóa sản phẩm này, những hóa đơn liên qua sẽ bị xóa, bạn có chắc muốn xóa? " + txbName.Text + " không?", "Xóa", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
+                
                 productDTO.ProductId = Convert.ToInt32(txbID.Text);
                 productBUS.DeleteProduct(productDTO);
                 productBUS.loadDataToDGV(dGVWareHouse, txbID, cboCategory, txbName, cboType, txbSize, nUDCount, txbPriceOut, txbPriceIn);

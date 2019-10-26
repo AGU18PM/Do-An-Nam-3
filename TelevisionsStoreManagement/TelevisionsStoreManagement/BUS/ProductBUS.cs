@@ -14,6 +14,7 @@ namespace TelevisionsStoreManagement.BUS
     class ProductBUS
     {
         ProductDAL data = new ProductDAL();
+        BILLInfoBUS billInfoBUS = new BILLInfoBUS();
         public void ShowProductData(DataGridView dGV, TextBox iD, TextBox category, TextBox name, TextBox type, TextBox size, TextBox price, string typeInput, NumericUpDown count)
         {
             BindingSource bS = new BindingSource();
@@ -161,6 +162,10 @@ namespace TelevisionsStoreManagement.BUS
 
         public void DeleteProduct(ProductDTO product)
         {
+            BillInfoDTO billInfo = new BillInfoDTO();
+            BillDTO billDTO = new BillDTO();
+            billInfo.Tivi = product;
+            billInfoBUS.DelNGetBill(billInfo);
             data.DeleteProduct(product);
         }
         #endregion

@@ -28,5 +28,10 @@ namespace TelevisionsStoreManagement.BUS
         {
             return data.getListBillInfoByBillID(bill);
         }
+
+        public void DelNGetBill(BillInfoDTO billInfo)
+        {
+            data.DeleteAndGetBill(billInfo);
+        }
     }
 }

@@ -18,8 +18,6 @@ CREATE TABLE ACCOUNT(
 	IMG VARCHAR(1000),
 )
 
-DROP TABLE ACCOUNT
-
 GO
 
 CREATE TABLE CUSTOMER(
@@ -98,7 +96,7 @@ GO
 
 USP_Login 'pntn0705' , '1'
 
-UPDATE ACCOUNT SET IMG = 'C:\\Users\\Num\\Documents\\GitHub\\Do-An-Nam-3\\TelevisionsStoreManagement\\IMG\\ACCOUNT\\Num.jpg' where PASSWORD =1
+UPDATE ACCOUNT SET IMG = '\\IMG\\ACCOUNT\\Num.jpg' where PASSWORD =1
 
 INSERT INTO ACCOUNT(USERNAME, PASSWORD, DISPLAYNAME, ROLE, IMG) VALUES('pntn0705' , '1' , N'Trường Nam' , 1 , '@C:\Users\Num\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\IMG\ACCOUNT\Num.jpg')
 
@@ -117,10 +115,12 @@ select * from Tivi
 select ID , CATEGORY_NAME , NAME , TYPE , SIZE , PRICE_OUT from tivi WHERE TYPE = '3'
 
 insert into WAREHOUSE(ID_TV,COUNT) values (1,20)
-insert into CUSTOMER(NAME,PHONE_NUMBER,TYPE,PAYCOUNT) values (N'Kháhc','1',0,0)
+insert into CUSTOMER(NAME,PHONE_NUMBER,TYPE,PAYCOUNT) values (N'Nam béo','0918814602',0,0)
+insert into CUSTOMER(NAME,PHONE_NUMBER,TYPE,PAYCOUNT) values (N'Khách','1',0,0)
 
 
-SELECT * FROM ACCOUNT
+
+SELECT * FROM CUSTOMER
 
 select * from account where USERNAME = 'pntn0705'
 
@@ -146,6 +146,8 @@ SELECT T.CATEGORY_NAME , T.NAME, T.PRICE_OUT , I.COUNT , I.TOTAL_PRICE FROM BILL
 DELETE BILL_INFO WHERE ID_BILL = 5
 
 DELETE BILL_OUT WHERE TOTALPRICE = 0
+
+
 
 SELECT * FROM TIVI
 

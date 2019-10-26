@@ -75,5 +75,11 @@ namespace TelevisionsStoreManagement.DAL
             string sql = "SELECT T.CATEGORY_NAME , T.NAME, T.PRICE_OUT , I.COUNT , I.TOTAL_PRICE FROM BILL_OUT O, BILL_INFO I, TIVI T WHERE O.ID = I.ID_BILL AND I.ID_TV = T.ID AND ID_BILL = " + ID;
             return DataProvider.Instance.ExecuteQuery(sql);
         }
+
+        public void Delete(BillDTO bill)
+        {
+            string sql = "DELETE BILL_OUT WHERE ID = " + bill.ID;
+            DataProvider.Instance.ExecuteNonQuery(sql);
+        }
     }
 }

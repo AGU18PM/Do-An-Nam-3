@@ -60,5 +60,10 @@ namespace TelevisionsStoreManagement.BUS
             bS.DataSource = result;
             dGV.DataSource = bS;
         }
+
+        public void Delete(BillDTO bill)
+        {
+            data.Delete(bill);
+        }
     }
 }
