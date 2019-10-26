@@ -96,7 +96,7 @@ GO
 
 USP_Login 'pntn0705' , '1'
 
-UPDATE ACCOUNT SET IMG = '\\IMG\\ACCOUNT\\Num.jpg' where PASSWORD =1
+UPDATE ACCOUNT SET IMG = '\\IMG\\ACCOUNT\\An.jpg' where PASSWORD =1
 
 INSERT INTO ACCOUNT(USERNAME, PASSWORD, DISPLAYNAME, ROLE, IMG) VALUES('pntn0705' , '1' , N'Trường Nam' , 1 , '@C:\Users\Num\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\IMG\ACCOUNT\Num.jpg')
 
@@ -110,7 +110,7 @@ select * from tivi where CATEGORY_NAME = 'Samsung' --or CATEGORY_NAME = 'Sony'
 delete from tivi where name = 'cùi bắp'
 
 
-select * from Tivi
+select * from ACCOUNT
 
 select ID , CATEGORY_NAME , NAME , TYPE , SIZE , PRICE_OUT from tivi WHERE TYPE = '3'
 
@@ -149,7 +149,7 @@ DELETE BILL_OUT WHERE TOTALPRICE = 0
 
 
 
-SELECT * FROM TIVI
+SELECT * FROM CUSTOMER
 
 SELECT * FROM BILL_OUT , CUSTOMER WHERE BILL_OUT.ID_CUSTOMER = CUSTOMER.ID
 

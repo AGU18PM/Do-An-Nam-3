@@ -66,13 +66,13 @@
             this.btnRestoreDown = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.btnNotification = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.picBUser = new System.Windows.Forms.PictureBox();
             this.PanelUser = new System.Windows.Forms.Panel();
             this.btnSignOut = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnChangePassword = new System.Windows.Forms.Button();
+            this.btnNotification = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.picBUser = new System.Windows.Forms.PictureBox();
             this.lbNotification = new System.Windows.Forms.ListBox();
             this.PanelMenuMain.SuspendLayout();
             this.PanelMenuSlide.SuspendLayout();
@@ -87,9 +87,9 @@
             this.panel2.SuspendLayout();
             this.PanelForm.SuspendLayout();
             this.panelMain.SuspendLayout();
+            this.PanelUser.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBUser)).BeginInit();
-            this.PanelUser.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelMenuMain
@@ -571,42 +571,6 @@
             this.panelMain.Size = new System.Drawing.Size(1180, 545);
             this.panelMain.TabIndex = 13;
             // 
-            // btnNotification
-            // 
-            this.btnNotification.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.btnNotification.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNotification.BackgroundImage")));
-            this.btnNotification.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnNotification.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnNotification.FlatAppearance.BorderSize = 0;
-            this.btnNotification.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNotification.Location = new System.Drawing.Point(3, 3);
-            this.btnNotification.Name = "btnNotification";
-            this.btnNotification.Size = new System.Drawing.Size(40, 40);
-            this.btnNotification.TabIndex = 14;
-            this.btnNotification.UseVisualStyleBackColor = false;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.picBUser);
-            this.panel1.Controls.Add(this.txbRole);
-            this.panel1.Controls.Add(this.btnNotification);
-            this.panel1.Controls.Add(this.btnDown);
-            this.panel1.Controls.Add(this.txbDisplayName);
-            this.panel1.Location = new System.Drawing.Point(1094, 128);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(273, 58);
-            this.panel1.TabIndex = 15;
-            // 
-            // picBUser
-            // 
-            this.picBUser.Image = ((System.Drawing.Image)(resources.GetObject("picBUser.Image")));
-            this.picBUser.Location = new System.Drawing.Point(195, -2);
-            this.picBUser.Name = "picBUser";
-            this.picBUser.Size = new System.Drawing.Size(40, 40);
-            this.picBUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBUser.TabIndex = 16;
-            this.picBUser.TabStop = false;
-            // 
             // PanelUser
             // 
             this.PanelUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
@@ -668,6 +632,42 @@
             this.btnChangePassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnChangePassword.UseVisualStyleBackColor = false;
             // 
+            // btnNotification
+            // 
+            this.btnNotification.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.btnNotification.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNotification.BackgroundImage")));
+            this.btnNotification.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNotification.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnNotification.FlatAppearance.BorderSize = 0;
+            this.btnNotification.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNotification.Location = new System.Drawing.Point(3, 3);
+            this.btnNotification.Name = "btnNotification";
+            this.btnNotification.Size = new System.Drawing.Size(40, 40);
+            this.btnNotification.TabIndex = 14;
+            this.btnNotification.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.picBUser);
+            this.panel1.Controls.Add(this.txbRole);
+            this.panel1.Controls.Add(this.btnNotification);
+            this.panel1.Controls.Add(this.btnDown);
+            this.panel1.Controls.Add(this.txbDisplayName);
+            this.panel1.Location = new System.Drawing.Point(1094, 128);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(273, 58);
+            this.panel1.TabIndex = 15;
+            // 
+            // picBUser
+            // 
+            this.picBUser.Image = ((System.Drawing.Image)(resources.GetObject("picBUser.Image")));
+            this.picBUser.Location = new System.Drawing.Point(195, -2);
+            this.picBUser.Name = "picBUser";
+            this.picBUser.Size = new System.Drawing.Size(40, 40);
+            this.picBUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBUser.TabIndex = 16;
+            this.picBUser.TabStop = false;
+            // 
             // lbNotification
             // 
             this.lbNotification.FormattingEnabled = true;
@@ -675,6 +675,7 @@
             this.lbNotification.Name = "lbNotification";
             this.lbNotification.Size = new System.Drawing.Size(269, 95);
             this.lbNotification.TabIndex = 18;
+            this.lbNotification.Visible = false;
             // 
             // fMain
             // 
@@ -708,10 +709,10 @@
             this.panel2.ResumeLayout(false);
             this.PanelForm.ResumeLayout(false);
             this.panelMain.ResumeLayout(false);
+            this.PanelUser.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBUser)).EndInit();
-            this.PanelUser.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

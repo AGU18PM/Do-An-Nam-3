@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WareHouseCtr));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.nUDUpdate = new System.Windows.Forms.NumericUpDown();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
-            this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.txbSize = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.cboCategory = new System.Windows.Forms.ComboBox();
             this.cboType = new System.Windows.Forms.ComboBox();
             this.txbPriceOut = new System.Windows.Forms.TextBox();
@@ -53,6 +53,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txbID = new System.Windows.Forms.TextBox();
             this.dGVWareHouse = new System.Windows.Forms.DataGridView();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productNam = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,20 +76,21 @@
             // 
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.dGVWareHouse);
-            this.panel1.Location = new System.Drawing.Point(4, 4);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1049, 497);
+            this.panel1.Size = new System.Drawing.Size(1180, 545);
             this.panel1.TabIndex = 0;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.nUDUpdate);
-            this.panel2.Controls.Add(this.btnCancel);
-            this.panel2.Controls.Add(this.btnDelete);
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.btnUpdate);
+            this.panel2.Controls.Add(this.btnDelete);
+            this.panel2.Controls.Add(this.btnAdd);
+            this.panel2.Controls.Add(this.btnCancel);
+            this.panel2.Controls.Add(this.nUDUpdate);
             this.panel2.Controls.Add(this.txbSize);
             this.panel2.Controls.Add(this.btnSave);
-            this.panel2.Controls.Add(this.btnAdd);
             this.panel2.Controls.Add(this.cboCategory);
             this.panel2.Controls.Add(this.cboType);
             this.panel2.Controls.Add(this.txbPriceOut);
@@ -101,9 +106,9 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.txbID);
-            this.panel2.Location = new System.Drawing.Point(760, 3);
+            this.panel2.Location = new System.Drawing.Point(776, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(286, 491);
+            this.panel2.Size = new System.Drawing.Size(396, 491);
             this.panel2.TabIndex = 2;
             // 
             // nUDUpdate
@@ -113,35 +118,6 @@
             this.nUDUpdate.Size = new System.Drawing.Size(45, 20);
             this.nUDUpdate.TabIndex = 37;
             this.nUDUpdate.Visible = false;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Enabled = false;
-            this.btnCancel.Location = new System.Drawing.Point(5, 384);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(96, 54);
-            this.btnCancel.TabIndex = 36;
-            this.btnCancel.Text = "Hủy";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(109, 324);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(95, 54);
-            this.btnDelete.TabIndex = 35;
-            this.btnDelete.Text = "Xóa";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(6, 324);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(95, 54);
-            this.btnUpdate.TabIndex = 34;
-            this.btnUpdate.Text = "Sửa";
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txbSize
             // 
@@ -158,25 +134,23 @@
             // btnSave
             // 
             this.btnSave.Enabled = false;
-            this.btnSave.Location = new System.Drawing.Point(108, 264);
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSave.Location = new System.Drawing.Point(312, 263);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(96, 54);
+            this.btnSave.Size = new System.Drawing.Size(80, 68);
             this.btnSave.TabIndex = 32;
             this.btnSave.Text = "Lưu";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(6, 263);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(95, 54);
-            this.btnAdd.TabIndex = 31;
-            this.btnAdd.Text = "Thêm";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
             // cboCategory
             // 
+            this.cboCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboCategory.FormattingEnabled = true;
             this.cboCategory.Location = new System.Drawing.Point(101, 78);
             this.cboCategory.Name = "cboCategory";
@@ -185,6 +159,7 @@
             // 
             // cboType
             // 
+            this.cboType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboType.FormattingEnabled = true;
             this.cboType.Location = new System.Drawing.Point(101, 138);
             this.cboType.Name = "cboType";
@@ -330,9 +305,22 @@
             // 
             this.dGVWareHouse.AllowUserToAddRows = false;
             this.dGVWareHouse.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dGVWareHouse.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dGVWareHouse.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVWareHouse.BackgroundColor = System.Drawing.Color.White;
             this.dGVWareHouse.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dGVWareHouse.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(197)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGVWareHouse.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dGVWareHouse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVWareHouse.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -343,8 +331,17 @@
             this.priceOut,
             this.colPriceIn,
             this.colCount});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGVWareHouse.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dGVWareHouse.EnableHeadersVisualStyles = false;
             this.dGVWareHouse.GridColor = System.Drawing.SystemColors.Control;
-            this.dGVWareHouse.Location = new System.Drawing.Point(3, 3);
+            this.dGVWareHouse.Location = new System.Drawing.Point(11, 0);
             this.dGVWareHouse.MultiSelect = false;
             this.dGVWareHouse.Name = "dGVWareHouse";
             this.dGVWareHouse.ReadOnly = true;
@@ -353,6 +350,74 @@
             this.dGVWareHouse.Size = new System.Drawing.Size(751, 491);
             this.dGVWareHouse.TabIndex = 1;
             this.dGVWareHouse.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVWareHouse_CellClick);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Enabled = false;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCancel.Location = new System.Drawing.Point(234, 263);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(80, 68);
+            this.btnCancel.TabIndex = 38;
+            this.btnCancel.Text = "Hủy";
+            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Enabled = false;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAdd.Location = new System.Drawing.Point(2, 263);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(80, 68);
+            this.btnAdd.TabIndex = 39;
+            this.btnAdd.Text = "Thêm";
+            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Enabled = false;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnDelete.Location = new System.Drawing.Point(156, 263);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(80, 68);
+            this.btnDelete.TabIndex = 40;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Enabled = false;
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
+            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnUpdate.Location = new System.Drawing.Point(78, 263);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(80, 68);
+            this.btnUpdate.TabIndex = 41;
+            this.btnUpdate.Text = "Cập nhật";
+            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // ID
             // 
@@ -392,6 +457,7 @@
             this.type.HeaderText = "Loại";
             this.type.Name = "type";
             this.type.ReadOnly = true;
+            this.type.Width = 75;
             // 
             // size
             // 
@@ -406,21 +472,21 @@
             // 
             this.priceOut.DataPropertyName = "PRICE_OUT";
             this.priceOut.FillWeight = 99.75531F;
-            this.priceOut.HeaderText = "Giá xuat";
+            this.priceOut.HeaderText = "Giá xuất";
             this.priceOut.Name = "priceOut";
             this.priceOut.ReadOnly = true;
             // 
             // colPriceIn
             // 
             this.colPriceIn.DataPropertyName = "PRICE_IN";
-            this.colPriceIn.HeaderText = "Gia nhap";
+            this.colPriceIn.HeaderText = "Gia nhập";
             this.colPriceIn.Name = "colPriceIn";
             this.colPriceIn.ReadOnly = true;
             // 
             // colCount
             // 
             this.colCount.DataPropertyName = "COUNT";
-            this.colCount.HeaderText = "So luong";
+            this.colCount.HeaderText = "Số lượng";
             this.colCount.Name = "colCount";
             this.colCount.ReadOnly = true;
             // 
@@ -428,9 +494,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
             this.Controls.Add(this.panel1);
             this.Name = "WareHouseCtr";
-            this.Size = new System.Drawing.Size(1056, 504);
+            this.Size = new System.Drawing.Size(1180, 545);
             this.Load += new System.EventHandler(this.WareHouseCtr_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -446,14 +513,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dGVWareHouse;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Category;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productNam;
-        private System.Windows.Forms.DataGridViewTextBoxColumn type;
-        private System.Windows.Forms.DataGridViewTextBoxColumn size;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceOut;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPriceIn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCount;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -470,12 +529,20 @@
         private System.Windows.Forms.TextBox txbName;
         private System.Windows.Forms.ComboBox cboCategory;
         private System.Windows.Forms.ComboBox cboType;
-        private DevExpress.XtraEditors.SimpleButton btnAdd;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox txbSize;
-        private DevExpress.XtraEditors.SimpleButton btnUpdate;
-        private DevExpress.XtraEditors.SimpleButton btnDelete;
-        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.NumericUpDown nUDUpdate;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Category;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productNam;
+        private System.Windows.Forms.DataGridViewTextBoxColumn type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn size;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceOut;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPriceIn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCount;
     }
 }
