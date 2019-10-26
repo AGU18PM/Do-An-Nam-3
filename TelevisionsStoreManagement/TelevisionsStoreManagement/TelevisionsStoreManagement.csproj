@@ -108,6 +108,7 @@
     <Compile Include="DAL\BillDAL.cs" />
     <Compile Include="DAL\BillInfoDAL.cs" />
     <Compile Include="DAL\CategoryDAL.cs" />
+    <Compile Include="DAL\CustomerDAL.cs" />
     <Compile Include="DAL\ProductDAL.cs" />
     <Compile Include="DAL\WareHouseDAL.cs" />
     <Compile Include="DTO\BillDTO.cs" />
@@ -122,6 +123,12 @@
     <Compile Include="DAL\Products.cs" />
     <Compile Include="Datatable.cs" />
     <Compile Include="DTO\WareHouseDTO.cs" />
+    <Compile Include="GUI\fBillInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fBillInfo.Designer.cs">
+      <DependentUpon>fBillInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\fLoading.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +161,12 @@
     <Compile Include="UC\ProductCtr.Designer.cs">
       <DependentUpon>ProductCtr.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\RevenCtr.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\RevenCtr.Designer.cs">
+      <DependentUpon>RevenCtr.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\test.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -166,6 +179,9 @@
     <Compile Include="UC\WareHouseCtr.Designer.cs">
       <DependentUpon>WareHouseCtr.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GUI\fBillInfo.resx">
+      <DependentUpon>fBillInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\fLoading.resx">
       <DependentUpon>fLoading.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\ProductCtr.resx">
       <DependentUpon>ProductCtr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\RevenCtr.resx">
+      <DependentUpon>RevenCtr.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\test.resx">
       <DependentUpon>test.cs</DependentUpon>

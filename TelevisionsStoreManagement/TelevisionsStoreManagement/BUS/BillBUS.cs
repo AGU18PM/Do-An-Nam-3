@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,8 +25,7 @@ namespace TelevisionsStoreManagement.BUS
 
         public void submitOrCancelPayment(BillDTO bill, string sdt)
         {
-            CustomerDTO customer = new CustomerDTO();
-            customer.PhoneNumber = sdt;
+            bill.Customer.PhoneNumber = sdt;
             data.submitOrCancelBill(bill);
            // double type = data.getTypeCustomer(customer);
            //    double disCount;
@@ -41,6 +41,24 @@ namespace TelevisionsStoreManagement.BUS
             //{
                 
             //}
+        }
+
+        public void ShowHistory(DataGridView dGV, Label id)
+        {
+            DataTable result = data.getData();
+            BindingSource bS = new BindingSource();
+            bS.DataSource = result;
+            dGV.DataSource = bS;
+            id.DataBindings.Clear();
+            id.DataBindings.Add("Text", bS, "ID" ,false, DataSourceUpdateMode.Never);
+        }
+
+        public void GetMoreForHistory(DataGridView dGV, string id)
+        {
+            DataTable result = data.getMoreForHistory(id);
+            BindingSource bS = new BindingSource();
+            bS.DataSource = result;
+            dGV.DataSource = bS;
         }
     }
 }

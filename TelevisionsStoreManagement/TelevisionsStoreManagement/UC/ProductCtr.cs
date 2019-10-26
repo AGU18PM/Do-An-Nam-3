@@ -236,11 +236,24 @@ namespace TelevisionsStoreManagement.UC
                 billDTO.Status = 1;
                 if (productBUS.Update(billDTO))
                 {
-                    billBUS.submitOrCancelPayment(billDTO, txbCustomerPhonenumber.Text);
-                    MessageBox.Show("Tong gia la: " + billDTO.TotalPrice.ToString());
-                    lbPayment.Items.Clear();
-                    isCreateBill = 0;
-                    productBUS.ShowProductData(dGVProduct, txbID, txbCategory, txbName, txbType, txbSize, txbPrice, typeInput, nUDCount);
+                    if(txbCustomerPhonenumber.Text!="")
+                    {
+                        billBUS.submitOrCancelPayment(billDTO, txbCustomerPhonenumber.Text);
+                        MessageBox.Show("Tong gia la: " + billDTO.TotalPrice.ToString());
+                        lbPayment.Items.Clear();
+                        isCreateBill = 0;
+                        productBUS.ShowProductData(dGVProduct, txbID, txbCategory, txbName, txbType, txbSize, txbPrice, typeInput, nUDCount);
+                    }
+                    else
+                    {
+                        txbCustomerPhonenumber.Text = "1";
+                        billDTO.Customer.ID = 3;
+                        billBUS.submitOrCancelPayment(billDTO, txbCustomerPhonenumber.Text);
+                        MessageBox.Show("Tong gia la: " + billDTO.TotalPrice.ToString());
+                        lbPayment.Items.Clear();
+                        isCreateBill = 0;
+                        productBUS.ShowProductData(dGVProduct, txbID, txbCategory, txbName, txbType, txbSize, txbPrice, typeInput, nUDCount);
+                    }
                     // updateCount();
                 }
                 else

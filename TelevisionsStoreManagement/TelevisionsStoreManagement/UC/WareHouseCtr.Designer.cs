@@ -30,6 +30,11 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.nUDUpdate = new System.Windows.Forms.NumericUpDown();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
+            this.txbSize = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.cboCategory = new System.Windows.Forms.ComboBox();
@@ -56,16 +61,11 @@
             this.priceOut = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPriceIn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txbSize = new System.Windows.Forms.TextBox();
-            this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
-            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.nUDUpdate = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDUpdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVWareHouse)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDUpdate)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -105,6 +105,55 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(286, 491);
             this.panel2.TabIndex = 2;
+            // 
+            // nUDUpdate
+            // 
+            this.nUDUpdate.Location = new System.Drawing.Point(235, 167);
+            this.nUDUpdate.Name = "nUDUpdate";
+            this.nUDUpdate.Size = new System.Drawing.Size(45, 20);
+            this.nUDUpdate.TabIndex = 37;
+            this.nUDUpdate.Visible = false;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Enabled = false;
+            this.btnCancel.Location = new System.Drawing.Point(5, 384);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(96, 54);
+            this.btnCancel.TabIndex = 36;
+            this.btnCancel.Text = "Hủy";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(109, 324);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(95, 54);
+            this.btnDelete.TabIndex = 35;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(6, 324);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(95, 54);
+            this.btnUpdate.TabIndex = 34;
+            this.btnUpdate.Text = "Sửa";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // txbSize
+            // 
+            this.txbSize.BackColor = System.Drawing.Color.White;
+            this.txbSize.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbSize.Enabled = false;
+            this.txbSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbSize.Location = new System.Drawing.Point(101, 170);
+            this.txbSize.Multiline = true;
+            this.txbSize.Name = "txbSize";
+            this.txbSize.Size = new System.Drawing.Size(52, 17);
+            this.txbSize.TabIndex = 33;
             // 
             // btnSave
             // 
@@ -296,8 +345,11 @@
             this.colCount});
             this.dGVWareHouse.GridColor = System.Drawing.SystemColors.Control;
             this.dGVWareHouse.Location = new System.Drawing.Point(3, 3);
+            this.dGVWareHouse.MultiSelect = false;
             this.dGVWareHouse.Name = "dGVWareHouse";
+            this.dGVWareHouse.ReadOnly = true;
             this.dGVWareHouse.RowHeadersVisible = false;
+            this.dGVWareHouse.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dGVWareHouse.Size = new System.Drawing.Size(751, 491);
             this.dGVWareHouse.TabIndex = 1;
             this.dGVWareHouse.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVWareHouse_CellClick);
@@ -372,55 +424,6 @@
             this.colCount.Name = "colCount";
             this.colCount.ReadOnly = true;
             // 
-            // txbSize
-            // 
-            this.txbSize.BackColor = System.Drawing.Color.White;
-            this.txbSize.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbSize.Enabled = false;
-            this.txbSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbSize.Location = new System.Drawing.Point(101, 170);
-            this.txbSize.Multiline = true;
-            this.txbSize.Name = "txbSize";
-            this.txbSize.Size = new System.Drawing.Size(52, 17);
-            this.txbSize.TabIndex = 33;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(6, 324);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(95, 54);
-            this.btnUpdate.TabIndex = 34;
-            this.btnUpdate.Text = "Sửa";
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(109, 324);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(95, 54);
-            this.btnDelete.TabIndex = 35;
-            this.btnDelete.Text = "Xóa";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Enabled = false;
-            this.btnCancel.Location = new System.Drawing.Point(5, 384);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(96, 54);
-            this.btnCancel.TabIndex = 36;
-            this.btnCancel.Text = "Hủy";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // nUDUpdate
-            // 
-            this.nUDUpdate.Location = new System.Drawing.Point(235, 167);
-            this.nUDUpdate.Name = "nUDUpdate";
-            this.nUDUpdate.Size = new System.Drawing.Size(45, 20);
-            this.nUDUpdate.TabIndex = 37;
-            this.nUDUpdate.Visible = false;
-            // 
             // WareHouseCtr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -432,9 +435,9 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDUpdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVWareHouse)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDUpdate)).EndInit();
             this.ResumeLayout(false);
 
         }

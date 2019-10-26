@@ -179,7 +179,7 @@ namespace TelevisionsStoreManagement.UC
         private void btnDelete_Click(object sender, EventArgs e)
         {
             toDo = 3;
-            if(MessageBox.Show("Bạn có muốn xóa " + txbName.Text + " không?", "Xóa", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if(MessageBox.Show("Nếu bạn xóa sản phẩm này, những hóa đơn liên qua sẽ bị xóa, bạn có chắc muốn xóa? " + txbName.Text + " không?", "Xóa", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 productDTO.ProductId = Convert.ToInt32(txbID.Text);
                 productBUS.DeleteProduct(productDTO);

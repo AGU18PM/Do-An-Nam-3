@@ -86,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner1)).BeginInit();
             this.panel2.SuspendLayout();
             this.PanelForm.SuspendLayout();
+            this.panelMain.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBUser)).BeginInit();
             this.PanelUser.SuspendLayout();
@@ -487,7 +488,7 @@
             this.btnDown.FlatAppearance.BorderSize = 0;
             this.btnDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDown.Image = ((System.Drawing.Image)(resources.GetObject("btnDown.Image")));
-            this.btnDown.Location = new System.Drawing.Point(232, 0);
+            this.btnDown.Location = new System.Drawing.Point(235, -2);
             this.btnDown.Name = "btnDown";
             this.btnDown.Size = new System.Drawing.Size(40, 40);
             this.btnDown.TabIndex = 11;
@@ -564,6 +565,7 @@
             // 
             // panelMain
             // 
+            this.panelMain.Controls.Add(this.PanelUser);
             this.panelMain.Location = new System.Drawing.Point(190, 185);
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1180, 545);
@@ -577,7 +579,7 @@
             this.btnNotification.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnNotification.FlatAppearance.BorderSize = 0;
             this.btnNotification.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNotification.Location = new System.Drawing.Point(3, 0);
+            this.btnNotification.Location = new System.Drawing.Point(3, 3);
             this.btnNotification.Name = "btnNotification";
             this.btnNotification.Size = new System.Drawing.Size(40, 40);
             this.btnNotification.TabIndex = 14;
@@ -590,7 +592,7 @@
             this.panel1.Controls.Add(this.btnNotification);
             this.panel1.Controls.Add(this.btnDown);
             this.panel1.Controls.Add(this.txbDisplayName);
-            this.panel1.Location = new System.Drawing.Point(1076, 127);
+            this.panel1.Location = new System.Drawing.Point(1094, 128);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(273, 58);
             this.panel1.TabIndex = 15;
@@ -598,7 +600,7 @@
             // picBUser
             // 
             this.picBUser.Image = ((System.Drawing.Image)(resources.GetObject("picBUser.Image")));
-            this.picBUser.Location = new System.Drawing.Point(192, 0);
+            this.picBUser.Location = new System.Drawing.Point(195, -2);
             this.picBUser.Name = "picBUser";
             this.picBUser.Size = new System.Drawing.Size(40, 40);
             this.picBUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -611,7 +613,7 @@
             this.PanelUser.Controls.Add(this.btnSignOut);
             this.PanelUser.Controls.Add(this.btnRegister);
             this.PanelUser.Controls.Add(this.btnChangePassword);
-            this.PanelUser.Location = new System.Drawing.Point(1245, 167);
+            this.PanelUser.Location = new System.Drawing.Point(1073, 3);
             this.PanelUser.Name = "PanelUser";
             this.PanelUser.Size = new System.Drawing.Size(104, 139);
             this.PanelUser.TabIndex = 17;
@@ -669,7 +671,7 @@
             // lbNotification
             // 
             this.lbNotification.FormattingEnabled = true;
-            this.lbNotification.Location = new System.Drawing.Point(804, 58);
+            this.lbNotification.Location = new System.Drawing.Point(822, 84);
             this.lbNotification.Name = "lbNotification";
             this.lbNotification.Size = new System.Drawing.Size(269, 95);
             this.lbNotification.TabIndex = 18;
@@ -682,7 +684,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1370, 730);
             this.Controls.Add(this.lbNotification);
-            this.Controls.Add(this.PanelUser);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelMain);
@@ -706,6 +707,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.PanelForm.ResumeLayout(false);
+            this.panelMain.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBUser)).EndInit();

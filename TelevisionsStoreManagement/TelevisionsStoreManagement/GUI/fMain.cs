@@ -291,6 +291,9 @@ namespace TelevisionsStoreManagement.GUI
             
             btnHome.ForeColor = System.Drawing.Color.DimGray;
             btnReven.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
+            RevenCtr revenCtr = new RevenCtr();
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(revenCtr);
         }
 
         private void btnExit_Click(object sender, EventArgs e)
