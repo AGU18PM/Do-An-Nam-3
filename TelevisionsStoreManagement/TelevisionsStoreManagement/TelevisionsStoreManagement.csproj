@@ -100,34 +100,35 @@
     <Compile Include="BUS\AccountBUS.cs" />
     <Compile Include="BUS\BillBUS.cs" />
     <Compile Include="BUS\BILLInfoBUS.cs" />
-    <Compile Include="BUS\CategoryBUS.cs" />
     <Compile Include="BUS\CustomerBUS.cs" />
+    <Compile Include="BUS\DoanhThuBUS.cs" />
     <Compile Include="BUS\ProductBUS.cs" />
-    <Compile Include="BUS\WareHouseBUS.cs" />
     <Compile Include="DAL\AccountDAL.cs" />
     <Compile Include="DAL\BillDAL.cs" />
     <Compile Include="DAL\BillInfoDAL.cs" />
-    <Compile Include="DAL\CategoryDAL.cs" />
     <Compile Include="DAL\CustomerDAL.cs" />
+    <Compile Include="DAL\DoanhThuDAL.cs" />
     <Compile Include="DAL\ProductDAL.cs" />
-    <Compile Include="DAL\WareHouseDAL.cs" />
     <Compile Include="DTO\BillDTO.cs" />
     <Compile Include="DTO\BillInfoDTO.cs" />
-    <Compile Include="DTO\CategoryDTO.cs" />
-    <Compile Include="DAL\CategoryList.cs" />
     <Compile Include="DAL\DataProvider.cs" />
     <Compile Include="DTO\AccountDTO.cs" />
     <Compile Include="DTO\CustomerDTO.cs" />
-    <Compile Include="DTO\Payment.cs" />
+    <Compile Include="DTO\DoanhThu.cs" />
     <Compile Include="DTO\ProductDTO.cs" />
     <Compile Include="DAL\Products.cs" />
     <Compile Include="Datatable.cs" />
-    <Compile Include="DTO\WareHouseDTO.cs" />
     <Compile Include="GUI\fBillInfo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\fBillInfo.Designer.cs">
       <DependentUpon>fBillInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fCustomer.Designer.cs">
+      <DependentUpon>fCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\fLoading.cs">
       <SubType>Form</SubType>
@@ -181,6 +182,9 @@
     </Compile>
     <EmbeddedResource Include="GUI\fBillInfo.resx">
       <DependentUpon>fBillInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fCustomer.resx">
+      <DependentUpon>fCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fLoading.resx">
       <DependentUpon>fLoading.cs</DependentUpon>

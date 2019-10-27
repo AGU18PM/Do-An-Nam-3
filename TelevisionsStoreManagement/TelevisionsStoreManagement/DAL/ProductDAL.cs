@@ -192,5 +192,11 @@ namespace TelevisionsStoreManagement.DAL
             string sql = "DELETE TIVI WHERE ID = " + productDto.ProductId;
             DataProvider.Instance.ExecuteNonQuery(sql);
         }
+
+        public double DoanhThu(ProductDTO product)
+        {
+            string sql = "SELECT PRICE_IN AS PRICE FROM TIVI WHERE ID = " + product.ProductId;
+            return Convert.ToDouble(DataProvider.Instance.ExecuteQuery(sql).Rows[0][0]);
+        }
     }
 }

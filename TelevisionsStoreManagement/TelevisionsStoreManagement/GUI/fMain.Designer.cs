@@ -577,7 +577,7 @@
             this.PanelUser.Controls.Add(this.btnSignOut);
             this.PanelUser.Controls.Add(this.btnRegister);
             this.PanelUser.Controls.Add(this.btnChangePassword);
-            this.PanelUser.Location = new System.Drawing.Point(1073, 3);
+            this.PanelUser.Location = new System.Drawing.Point(1073, 13);
             this.PanelUser.Name = "PanelUser";
             this.PanelUser.Size = new System.Drawing.Size(104, 139);
             this.PanelUser.TabIndex = 17;
@@ -653,7 +653,7 @@
             this.panel1.Controls.Add(this.btnNotification);
             this.panel1.Controls.Add(this.btnDown);
             this.panel1.Controls.Add(this.txbDisplayName);
-            this.panel1.Location = new System.Drawing.Point(1094, 128);
+            this.panel1.Location = new System.Drawing.Point(1094, 141);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(273, 58);
             this.panel1.TabIndex = 15;

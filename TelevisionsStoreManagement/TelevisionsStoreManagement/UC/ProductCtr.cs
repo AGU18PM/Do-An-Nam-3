@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using TelevisionsStoreManagement.DAL;
 using TelevisionsStoreManagement.BUS;
 using TelevisionsStoreManagement.DTO;
+using TelevisionsStoreManagement.GUI;
 
 namespace TelevisionsStoreManagement.UC
 {
@@ -21,9 +22,12 @@ namespace TelevisionsStoreManagement.UC
         BILLInfoBUS billInfoBus = new BILLInfoBUS();
         BillBUS billBUS = new BillBUS();
         BillDTO billDTO = new BillDTO();
+        ProductDTO pro = new ProductDTO();
         CustomerDTO customerVL = new CustomerDTO();
+        DoanhThu doanhThu = new DoanhThu();
         int isCreateBill = 0;
         string typeInput = "";
+        double dthu = 0;
 
         public ProductCtr()
         {
@@ -236,9 +240,9 @@ namespace TelevisionsStoreManagement.UC
                 billDTO.Status = 1;
                 if (productBUS.Update(billDTO))
                 {
-                    if(txbCustomerPhonenumber.Text!="")
+                    if (txbCustomerPhonenumber.Text != "")
                     {
-                        billBUS.submitOrCancelPayment(billDTO, txbCustomerPhonenumber.Text);
+                        billBUS.submitOrCancelPayment(billDTO, txbCustomerPhonenumber.Text, doanhThu);
                         MessageBox.Show("Tong gia la: " + billDTO.TotalPrice.ToString());
                         lbPayment.Items.Clear();
                         isCreateBill = 0;
@@ -248,7 +252,7 @@ namespace TelevisionsStoreManagement.UC
                     {
                         txbCustomerPhonenumber.Text = "1";
                         billDTO.Customer.ID = 3;
-                        billBUS.submitOrCancelPayment(billDTO, txbCustomerPhonenumber.Text);
+                        billBUS.submitOrCancelPayment(billDTO, txbCustomerPhonenumber.Text, doanhThu);
                         MessageBox.Show("Tong gia la: " + billDTO.TotalPrice.ToString());
                         lbPayment.Items.Clear();
                         isCreateBill = 0;
@@ -261,6 +265,8 @@ namespace TelevisionsStoreManagement.UC
                     lbPayment.Items.Clear();
                 }
             }
+            btnPayment.Enabled = false;
+            btnCancel.Enabled = false;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -289,13 +295,18 @@ namespace TelevisionsStoreManagement.UC
 
                 //if (wareHouseBus.CheckCount(txbID.Text, Convert.ToInt32(nUDCount.Value), billDTO))
                 //{
-
                 int price = Convert.ToInt32(txbPrice.Text);
                 int totalPrice = price * (Convert.ToInt32(nUDCount.Value));
                 billInfoBus.createBillInfo(billDTO, txbID.Text, nUDCount, totalPrice.ToString());
+                pro.ProductId = Convert.ToInt32(txbID.Text);
+                dthu = productBUS.DoanhThu(pro);
                 billDTO = billInfoBus.getTotalPriceByIDBill(billDTO);
                 string payment = "Ban da them " + txbName.Text + " hang " + txbCategory.Text + " so luong " + nUDCount.Value.ToString() + " tong gia = " + totalPrice.ToString();
                 lbPayment.Items.Add(payment);
+                dthu *= Convert.ToDouble(nUDCount.Value);
+                btnCancel.Enabled = true;
+                btnPayment.Enabled = true;
+                doanhThu.Value += dthu;
                 //}
                 //else
                 //{
@@ -307,7 +318,7 @@ namespace TelevisionsStoreManagement.UC
         private void btnCancel_Click(object sender, EventArgs e)
         {
             billDTO.Status = 0;
-            billBUS.submitOrCancelPayment(billDTO, txbCustomerPhonenumber.Text);
+            billBUS.submitOrCancelPayment(billDTO, txbCustomerPhonenumber.Text, doanhThu);
             lbPayment.Items.Clear();
             isCreateBill = 0;
         }
@@ -315,6 +326,12 @@ namespace TelevisionsStoreManagement.UC
         private void dGVProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // updateCount();
+        }
+
+        private void btnAddCustomer_Click(object sender, EventArgs e)
+        {
+            fCustomer f = new fCustomer();
+            f.ShowDialog();
         }
 
         private void ProductCtr_Load(object sender, EventArgs e)

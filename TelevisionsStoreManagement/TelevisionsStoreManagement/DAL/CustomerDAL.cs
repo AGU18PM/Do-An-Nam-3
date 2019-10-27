@@ -48,5 +48,14 @@ namespace TelevisionsStoreManagement.DAL
             string sql = "UPDATE CUSTOMER SET TYPE = 1 WHERE PHONE_NUMBER = " + customerDto.PhoneNumber;
             DataProvider.Instance.ExecuteNonQuery(sql);
         }
+
+        public bool AddCustomer(CustomerDTO customerDto)
+        {
+            if (checkCustomer(customerDto))
+                return false;
+            string sql = "INSERT INTO CUSTOMER (NAME, PHONE_NUMBER, TYPE, PAYCOUNT) VALUES (N'" + customerDto.Name + "' , '" + customerDto.PhoneNumber + "' , 0 , 0)";
+            DataProvider.Instance.ExecuteNonQuery(sql);
+            return true;
+        }
     }
 }

@@ -9,11 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TelevisionsStoreManagement.BUS;
 using TelevisionsStoreManagement.GUI;
+using TelevisionsStoreManagement.DTO;
 
 namespace TelevisionsStoreManagement.UC
 {
     public partial class RevenCtr : UserControl
     {
+        DoanhThuBUS doanhThuBUS = new DoanhThuBUS();
+        DoanhThu doanhThu = new DoanhThu();
         BillBUS billBUS = new BillBUS();
         public RevenCtr()
         {
@@ -26,6 +29,16 @@ namespace TelevisionsStoreManagement.UC
         {
             fBillInfo f = new fBillInfo(Label.Text);
             f.ShowDialog();
+        }
+
+        void loadingChart()
+        {
+            
+        }
+
+        private void RevenCtr_Load(object sender, EventArgs e)
+        {
+            doanhThuBUS.ShowDoanhThu(chart1, doanhThu);
         }
     }
 }

@@ -23,10 +23,10 @@ namespace TelevisionsStoreManagement.BUS
             return bill;
         }
 
-        public void submitOrCancelPayment(BillDTO bill, string sdt)
+        public void submitOrCancelPayment(BillDTO bill, string sdt, DoanhThu doanhThu)
         {
             bill.Customer.PhoneNumber = sdt;
-            data.submitOrCancelBill(bill);
+            data.submitOrCancelBill(bill, doanhThu);
            // double type = data.getTypeCustomer(customer);
            //    double disCount;
             //if(type == 1)

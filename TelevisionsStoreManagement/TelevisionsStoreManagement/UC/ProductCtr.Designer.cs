@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductCtr));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnPanasonic = new DevExpress.XtraEditors.CheckButton();
             this.btnLG = new DevExpress.XtraEditors.CheckButton();
@@ -43,7 +43,7 @@
             this.txbID = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnPayment = new System.Windows.Forms.Button();
             this.txbCategory = new System.Windows.Forms.TextBox();
             this.txbCustomerPhonenumber = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -69,6 +69,7 @@
             this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.size = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceOut = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAddCustomer = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelProduct.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -78,6 +79,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnAddCustomer);
             this.panel1.Controls.Add(this.btnPanasonic);
             this.panel1.Controls.Add(this.btnLG);
             this.panel1.Controls.Add(this.btnSony);
@@ -147,7 +149,7 @@
             this.panel2.Controls.Add(this.txbID);
             this.panel2.Controls.Add(this.btnAdd);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnPayment);
             this.panel2.Controls.Add(this.txbCategory);
             this.panel2.Controls.Add(this.txbCustomerPhonenumber);
             this.panel2.Controls.Add(this.label3);
@@ -182,6 +184,7 @@
             // btnCancel
             // 
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCancel.Enabled = false;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
@@ -233,21 +236,22 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "ID:";
             // 
-            // button1
+            // btnPayment
             // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(185, 364);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 69);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Thanh toán";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btnPayment_Click);
+            this.btnPayment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPayment.Enabled = false;
+            this.btnPayment.FlatAppearance.BorderSize = 0;
+            this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPayment.Image = ((System.Drawing.Image)(resources.GetObject("btnPayment.Image")));
+            this.btnPayment.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPayment.Location = new System.Drawing.Point(185, 364);
+            this.btnPayment.Name = "btnPayment";
+            this.btnPayment.Size = new System.Drawing.Size(83, 69);
+            this.btnPayment.TabIndex = 25;
+            this.btnPayment.Text = "Thanh toán";
+            this.btnPayment.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPayment.UseVisualStyleBackColor = true;
+            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
             // txbCategory
             // 
@@ -443,8 +447,8 @@
             // 
             this.dGVProduct.AllowUserToAddRows = false;
             this.dGVProduct.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            this.dGVProduct.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            this.dGVProduct.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dGVProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVProduct.BackgroundColor = System.Drawing.Color.White;
             this.dGVProduct.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -456,14 +460,14 @@
             this.type,
             this.size,
             this.priceOut});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dGVProduct.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGVProduct.DefaultCellStyle = dataGridViewCellStyle4;
             this.dGVProduct.GridColor = System.Drawing.SystemColors.Control;
             this.dGVProduct.Location = new System.Drawing.Point(11, 0);
             this.dGVProduct.MultiSelect = false;
@@ -531,6 +535,16 @@
             this.priceOut.Name = "priceOut";
             this.priceOut.ReadOnly = true;
             // 
+            // btnAddCustomer
+            // 
+            this.btnAddCustomer.Location = new System.Drawing.Point(581, 8);
+            this.btnAddCustomer.Name = "btnAddCustomer";
+            this.btnAddCustomer.Size = new System.Drawing.Size(158, 39);
+            this.btnAddCustomer.TabIndex = 12;
+            this.btnAddCustomer.Text = "Thêm khách hàng";
+            this.btnAddCustomer.UseVisualStyleBackColor = true;
+            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
+            // 
             // ProductCtr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -589,9 +603,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn type;
         private System.Windows.Forms.DataGridViewTextBoxColumn size;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceOut;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPayment;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnAddCustomer;
     }
 }

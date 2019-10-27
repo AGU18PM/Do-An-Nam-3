@@ -23,7 +23,7 @@ namespace TelevisionsStoreManagement.DAL
             return Convert.ToInt32(result.Rows[0][0]);
         }
 
-        public void submitOrCancelBill(BillDTO bill)
+        public void submitOrCancelBill(BillDTO bill, DoanhThu doanhThu)
         {
             double discount = 0;
             string sql;
@@ -38,6 +38,12 @@ namespace TelevisionsStoreManagement.DAL
                 }
                 sql = "UPDATE BILL_OUT SET TOTALPRICE = " + bill.TotalPrice.ToString() + " , STATUS = 1 , ID_CUSTOMER = " + bill.Customer.ID + " WHERE ID = " + bill.ID;
                 DataProvider.Instance.ExecuteNonQuery(sql);
+                //Them doanh thu
+                DoanhThuBUS doanhThuBUS = new DoanhThuBUS();
+                double tg = bill.TotalPrice;
+                tg -= doanhThu.Value;
+                doanhThu.Value = tg;
+                doanhThuBUS.UpdateDoanhThu(doanhThu);
                 if (customerBUS.CheckCustomer(bill.Customer))
                 {
                     customerBUS.UpdatePayCount(bill.Customer, bill);

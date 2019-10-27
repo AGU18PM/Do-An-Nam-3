@@ -20,6 +20,7 @@ namespace TelevisionsStoreManagement.GUI
 
         WareHouseCtr wareHouseCtr;
         ProductCtr productCtr;
+        RevenCtr revenCtr;
 
         private void timerLoading_Tick(object sender, EventArgs e)
         {
@@ -30,7 +31,8 @@ namespace TelevisionsStoreManagement.GUI
                 {
                     timerLoading.Stop();
                     System.Threading.Thread.Sleep(2000);
-                    label4.Text = "Loading User...";
+                    label4.Text = "Loading Reven...";
+                    revenCtr = new RevenCtr();
                     timerLoading.Start();
                 }
                 if (panelLoading.Width == 144)
@@ -55,7 +57,7 @@ namespace TelevisionsStoreManagement.GUI
                     timerLoading.Stop();
                     
                     
-                    fLogin f = new fLogin(productCtr, wareHouseCtr);
+                    fLogin f = new fLogin();
                     this.Hide();
                     f.Show();
                 }

@@ -42,10 +42,11 @@ namespace TelevisionsStoreManagement.DAL
             bill.ID = billInfo.IDBill;
             string sql = "SELECT ID_BILL FROM BILL_INFO WHERE ID_TV = " + billInfo.Tivi.ProductId;
             DataTable result = DataProvider.Instance.ExecuteQuery(sql);
-            sql = "DELETE BILL_INFO WHERE ID_TV = " + billInfo.Tivi.ProductId;
-            DataProvider.Instance.ExecuteNonQuery(sql);
+            
             for (int i = 0; i < result.Rows.Count; i++)
             {
+                sql = "DELETE BILL_INFO WHERE ID_BILL = " + Convert.ToInt32(result.Rows[i][0]);
+                DataProvider.Instance.ExecuteNonQuery(sql);
                 bill.ID = Convert.ToInt32(result.Rows[i][0]);
                 sql = "DELETE BILL_OUT WHERE ID = " + bill.ID;
                 DataProvider.Instance.ExecuteNonQuery(sql);

@@ -14,7 +14,7 @@ namespace TelevisionsStoreManagement.UC
 {
     public partial class WareHouseCtr : UserControl
     {
-        WareHouseBUS wareHouseBUS = new WareHouseBUS();
+       
         ProductBUS productBUS = new ProductBUS();
         ProductDTO productDTO = new ProductDTO();
         int toDo = 0; //1: Them moi 2: chinh sua 3: Xoa
@@ -31,6 +31,11 @@ namespace TelevisionsStoreManagement.UC
             cboCategory.Items.Add("Panasonic");
             cboCategory.Items.Add("Sony");
             cboCategory.Items.Add("LG");
+
+            DataMode(0, false);
+            btnAdd.Enabled = true;
+            btnUpdate.Enabled = true;
+            btnDelete.Enabled = true;
 
             cboType.Items.Add("Smart");
             cboType.Items.Add("Internet");
@@ -56,11 +61,11 @@ namespace TelevisionsStoreManagement.UC
                 txbPriceOut.Clear();
                 txbSize.Clear();
             }
-            if(mode == 2)
+            if (mode == 2)
             {
                 txbSize.Clear();
             }
-            
+
             txbName.Enabled = value;
             txbPriceIn.Enabled = value;
             txbPriceOut.Enabled = value;
@@ -75,7 +80,7 @@ namespace TelevisionsStoreManagement.UC
         {
             if (CheckBeforeSave())
             {
-                
+
                 productDTO.Category = cboCategory.Text;
                 productDTO.ProductName = txbName.Text;
                 if (cboType.Text == "Smart")
@@ -93,11 +98,23 @@ namespace TelevisionsStoreManagement.UC
                 if (productDTO.PriceIn <= 0)
                 {
                     MessageBox.Show("Vui lòng nhập giá nhập sản phẩm lớn hơn 0");
+                    DataMode(0, false);
+                    btnAdd.Enabled = true;
+                    btnUpdate.Enabled = true;
+                    nUDCount.Visible = true;
+                    nUDUpdate.Visible = false;
+                    btnDelete.Enabled = true;
                     return;
                 }
                 if (productDTO.PriceIn > productDTO.PriceOut)
                 {
                     MessageBox.Show("Vui lòng nhập giá bán lớn hơn giá nhập");
+                    DataMode(0, false);
+                    btnAdd.Enabled = true;
+                    nUDCount.Visible = true;
+                    nUDUpdate.Visible = false;
+                    btnUpdate.Enabled = true;
+                    btnDelete.Enabled = true;
                     return;
                 }
 
@@ -108,10 +125,22 @@ namespace TelevisionsStoreManagement.UC
                     if (productBUS.AddProduct(productDTO))
                     {
                         MessageBox.Show("Nhập thành công");
+                        DataMode(0, false);
+                        btnAdd.Enabled = true;
+                        nUDCount.Visible = true;
+                        nUDUpdate.Visible = false;
+                        btnUpdate.Enabled = true;
+                        btnDelete.Enabled = true;
                     }
                     else
                     {
                         MessageBox.Show("Nhập không thành công vui lòng kiểm tra lại dữ liệu");
+                        DataMode(0, false);
+                        nUDCount.Visible = true;
+                        nUDUpdate.Visible = false;
+                        btnAdd.Enabled = true;
+                        btnUpdate.Enabled = true;
+                        btnDelete.Enabled = true;
                     }
                 }
                 else if (toDo == 2)
@@ -120,6 +149,12 @@ namespace TelevisionsStoreManagement.UC
                     productDTO.ProductId = Convert.ToInt32(txbID.Text);
                     productBUS.UpdateProduct(productDTO);
                     MessageBox.Show("Cập nhật thành công");
+                    DataMode(0, false);
+                    btnAdd.Enabled = true;
+                    nUDCount.Visible = true;
+                    nUDUpdate.Visible = false;
+                    btnUpdate.Enabled = true;
+                    btnDelete.Enabled = true;
                 }
                 toDo = 0;
             }
@@ -129,6 +164,8 @@ namespace TelevisionsStoreManagement.UC
                 btnAdd.Enabled = true;
                 btnUpdate.Enabled = true;
                 btnDelete.Enabled = true;
+                nUDCount.Visible = true;
+                nUDUpdate.Visible = false;
             }
             productBUS.loadDataToDGV(dGVWareHouse, txbID, cboCategory, txbName, cboType, txbSize, nUDCount, txbPriceOut, txbPriceIn);
         }
@@ -166,6 +203,8 @@ namespace TelevisionsStoreManagement.UC
             btnAdd.Enabled = true;
             btnUpdate.Enabled = true;
             btnDelete.Enabled = true;
+            nUDCount.Visible = true;
+            nUDUpdate.Visible = false;
         }
 
         private void dGVWareHouse_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -179,14 +218,32 @@ namespace TelevisionsStoreManagement.UC
         private void btnDelete_Click(object sender, EventArgs e)
         {
             toDo = 3;
-            if(MessageBox.Show("Nếu bạn xóa sản phẩm này, những hóa đơn liên qua sẽ bị xóa, bạn có chắc muốn xóa? " + txbName.Text + " không?", "Xóa", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Nếu bạn xóa sản phẩm này, những hóa đơn liên qua sẽ bị xóa, bạn có chắc muốn xóa? " + txbName.Text + " không?", "Xóa", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                
+
                 productDTO.ProductId = Convert.ToInt32(txbID.Text);
                 productBUS.DeleteProduct(productDTO);
                 productBUS.loadDataToDGV(dGVWareHouse, txbID, cboCategory, txbName, cboType, txbSize, nUDCount, txbPriceOut, txbPriceIn);
                 MessageBox.Show("Xóa thành công");
             }
+        }
+
+        private bool NumberOnly(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar)||char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+            return e.Handled;
+        }
+
+        private void txbPriceOut_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = NumberOnly(sender, e);
         }
     }
 }

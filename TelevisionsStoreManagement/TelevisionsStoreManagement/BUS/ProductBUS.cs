@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.DashboardCommon.DataProcessing;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
@@ -168,9 +169,14 @@ namespace TelevisionsStoreManagement.BUS
             billInfoBUS.DelNGetBill(billInfo);
             data.DeleteProduct(product);
         }
+
+
         #endregion
 
-
+        public double DoanhThu(ProductDTO product)
+        {
+            return data.DoanhThu(product);
+        }
 
     }
 }

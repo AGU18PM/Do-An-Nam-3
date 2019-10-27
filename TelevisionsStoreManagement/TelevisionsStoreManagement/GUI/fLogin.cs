@@ -18,8 +18,7 @@ namespace TelevisionsStoreManagement
     {
         AccountBUS accountBus = new AccountBUS();
         AccountDTO accountDTO = new AccountDTO();
-        ProductCtr productCtr;
-        WareHouseCtr wareHouseCtr;
+        
         public fLogin()
         {
             InitializeComponent();
@@ -32,12 +31,6 @@ namespace TelevisionsStoreManagement
 
         }
 
-        public fLogin(ProductCtr productCtrIn, WareHouseCtr wareHouseCtrIn)
-        {
-            InitializeComponent();
-            productCtr = productCtrIn;
-            wareHouseCtr = wareHouseCtrIn;
-        }
 
 
         private void BtnLogin_Click(object sender, EventArgs e)

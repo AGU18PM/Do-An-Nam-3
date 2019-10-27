@@ -26,5 +26,10 @@ namespace TelevisionsStoreManagement.BUS
         {
             data.UpdatePayCount(customer, bill);
         }
+
+        public bool Addcustomer(CustomerDTO customerDto)
+        {
+            return data.AddCustomer(customerDto);
+        }
     }
 }
