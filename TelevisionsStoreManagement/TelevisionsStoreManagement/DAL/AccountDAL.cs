@@ -19,7 +19,7 @@ namespace TelevisionsStoreManagement.DAL
 
         public void AddAccount(AccountDTO account)
         {
-            string sql = "INSERT INTO ACCOUNT(NAME, USERNAME, PASSWORD, ROLE, STATUS) VALUES('" + account.Displayname + "' , '" + account.Username + "' , '" + account.Password + "' , '" + account.Role + "' , '1')";
+            string sql = "INSERT INTO ACCOUNT(USERNAME, PASSWORD, DISPLAYNAME, ROLE, IMG) VALUES('" + account.Username + "' , '" + account.Password + "' , N'" + account.Displayname + "' , 1 , '" + account.Img + "' )";
             DataProvider.Instance.ExecuteNonQuery(sql);
         }
 
@@ -31,7 +31,7 @@ namespace TelevisionsStoreManagement.DAL
 
         public void EditAccount(AccountDTO account)
         {
-            string sql = "UPDATE ACCOUNT SET NAME = '" + account.Displayname + "' , PASSWORD = '" + account.Password + "' , ROLE = " + account.Role + " , STATUS = 1 WHERE USERNAME = '" + account.Username + "'";
+            string sql = "UPDATE ACCOUNT SET PASSWORD = '" + account.Password + "' WHERE USERNAME = '" + account.Username + "'";
             DataProvider.Instance.ExecuteNonQuery(sql);
         }
 
@@ -42,6 +42,20 @@ namespace TelevisionsStoreManagement.DAL
             account.Displayname = result.Rows[0][2].ToString();
             account.Role = Convert.ToInt32(result.Rows[0][3]);
             return account;
+        }
+
+        public DataTable ShowAccount()
+        {
+            string sql = "SELECT USERNAME FROM ACCOUNT";
+            return DataProvider.Instance.ExecuteQuery(sql);
+        }
+
+        public bool CheckAccount(AccountDTO account)
+        {
+            string sql = "SELECT * FROM ACCOUNT WHERE USERNAME = '" + account.Username + "'";
+            if (DataProvider.Instance.ExecuteQuery(sql).Rows.Count == 0)
+                return true;
+            return false;
         }
     }
 }

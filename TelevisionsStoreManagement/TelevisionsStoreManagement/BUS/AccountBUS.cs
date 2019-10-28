@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,6 +41,20 @@ namespace TelevisionsStoreManagement.BUS
         public void DeleteAccount(AccountDTO account)
         {
             data.DeleteAccount(account);
+        }
+
+        public bool CheckAccount(AccountDTO account)
+        {
+            return data.CheckAccount(account);
+        }
+
+        public void ShowData(ComboBox userName)
+        {
+            userName.Items.Clear();
+            for(int i = 0; i< data.ShowAccount().Rows.Count; i++)
+            {
+                userName.Items.Add(data.ShowAccount().Rows[i][0].ToString());
+            }
         }
     }
 }

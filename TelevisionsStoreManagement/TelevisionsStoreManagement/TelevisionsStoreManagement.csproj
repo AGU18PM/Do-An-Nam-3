@@ -148,6 +148,12 @@
     <Compile Include="GUI\fMain.Designer.cs">
       <DependentUpon>fMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\fPasswordChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fPasswordChange.Designer.cs">
+      <DependentUpon>fPasswordChange.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\fSignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +201,9 @@
     <EmbeddedResource Include="GUI\fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fPasswordChange.resx">
+      <DependentUpon>fPasswordChange.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\fSignUp.resx">
       <DependentUpon>fSignUp.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,6 +216,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UC\HomePageCtr.resx">
       <DependentUpon>HomePageCtr.cs</DependentUpon>
@@ -233,6 +243,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="bin\Debug\IMG\ACCOUNT\user-icon-grey.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

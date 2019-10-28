@@ -38,6 +38,7 @@ namespace TelevisionsStoreManagement.GUI
             }
             else
                 txbRole.Text = "Staff";
+            
             picBUser.Image = Image.FromFile(img);
 
         }
@@ -487,6 +488,12 @@ namespace TelevisionsStoreManagement.GUI
         {
             fSignUp signUp = new fSignUp();
             signUp.Show();
+        }
+
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            fPasswordChange passwordChange = new fPasswordChange();
+            passwordChange.ShowDialog();
         }
     }
 }

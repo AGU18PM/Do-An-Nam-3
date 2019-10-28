@@ -29,47 +29,49 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fSignUp));
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnPickPicture = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnLogin = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txbPW2 = new System.Windows.Forms.TextBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.btnSignup = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txbPassword = new System.Windows.Forms.TextBox();
+            this.txbPW = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txbUsername = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.txbDisplayName = new System.Windows.Forms.TextBox();
+            this.cbAdmin = new System.Windows.Forms.CheckBox();
             this.btnExit = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPickPicture)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox3
+            // btnPickPicture
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(118, 28);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(96, 96);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 21;
-            this.pictureBox3.TabStop = false;
+            this.btnPickPicture.BackColor = System.Drawing.Color.Transparent;
+            this.btnPickPicture.Enabled = false;
+            this.btnPickPicture.Image = ((System.Drawing.Image)(resources.GetObject("btnPickPicture.Image")));
+            this.btnPickPicture.Location = new System.Drawing.Point(118, 28);
+            this.btnPickPicture.Name = "btnPickPicture";
+            this.btnPickPicture.Size = new System.Drawing.Size(96, 96);
+            this.btnPickPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnPickPicture.TabIndex = 21;
+            this.btnPickPicture.TabStop = false;
+            this.btnPickPicture.Click += new System.EventHandler(this.btnPickPicture_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.btnLogin);
+            this.panel1.Controls.Add(this.btnSignup);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(-1, 190);
@@ -77,25 +79,63 @@
             this.panel1.Size = new System.Drawing.Size(334, 306);
             this.panel1.TabIndex = 20;
             // 
-            // btnLogin
+            // panel4
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(175)))), ((int)(((byte)(252)))));
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(30, 212);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(275, 54);
-            this.btnLogin.TabIndex = 3;
-            this.btnLogin.TabStop = false;
-            this.btnLogin.Text = "ĐĂNG KÝ";
-            this.btnLogin.UseVisualStyleBackColor = false;
+            this.panel4.BackColor = System.Drawing.Color.LightGray;
+            this.panel4.Controls.Add(this.txbPW2);
+            this.panel4.Controls.Add(this.pictureBox4);
+            this.panel4.Location = new System.Drawing.Point(30, 128);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(275, 41);
+            this.panel4.TabIndex = 4;
+            this.panel4.TabStop = true;
+            // 
+            // txbPW2
+            // 
+            this.txbPW2.BackColor = System.Drawing.Color.LightGray;
+            this.txbPW2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbPW2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbPW2.ForeColor = System.Drawing.Color.DimGray;
+            this.txbPW2.Location = new System.Drawing.Point(7, 5);
+            this.txbPW2.Multiline = true;
+            this.txbPW2.Name = "txbPW2";
+            this.txbPW2.PasswordChar = '*';
+            this.txbPW2.Size = new System.Drawing.Size(214, 27);
+            this.txbPW2.TabIndex = 2;
+            this.txbPW2.Text = "Nhập lại mật khẩu";
+            this.txbPW2.UseSystemPasswordChar = true;
+            this.txbPW2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbUsername_KeyPress);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(227, 9);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox4.TabIndex = 10;
+            this.pictureBox4.TabStop = false;
+            // 
+            // btnSignup
+            // 
+            this.btnSignup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(175)))), ((int)(((byte)(252)))));
+            this.btnSignup.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSignup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignup.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignup.ForeColor = System.Drawing.Color.White;
+            this.btnSignup.Location = new System.Drawing.Point(30, 212);
+            this.btnSignup.Name = "btnSignup";
+            this.btnSignup.Size = new System.Drawing.Size(275, 54);
+            this.btnSignup.TabIndex = 3;
+            this.btnSignup.TabStop = false;
+            this.btnSignup.Text = "ĐĂNG KÝ";
+            this.btnSignup.UseVisualStyleBackColor = false;
+            this.btnSignup.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.LightGray;
-            this.panel3.Controls.Add(this.txbPassword);
+            this.panel3.Controls.Add(this.txbPW);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Location = new System.Drawing.Point(30, 72);
             this.panel3.Name = "panel3";
@@ -103,20 +143,21 @@
             this.panel3.TabIndex = 3;
             this.panel3.TabStop = true;
             // 
-            // txbPassword
+            // txbPW
             // 
-            this.txbPassword.BackColor = System.Drawing.Color.LightGray;
-            this.txbPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbPassword.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbPassword.ForeColor = System.Drawing.Color.DimGray;
-            this.txbPassword.Location = new System.Drawing.Point(7, 5);
-            this.txbPassword.Multiline = true;
-            this.txbPassword.Name = "txbPassword";
-            this.txbPassword.PasswordChar = '*';
-            this.txbPassword.Size = new System.Drawing.Size(214, 27);
-            this.txbPassword.TabIndex = 2;
-            this.txbPassword.Text = "Mật khẩu";
-            this.txbPassword.UseSystemPasswordChar = true;
+            this.txbPW.BackColor = System.Drawing.Color.LightGray;
+            this.txbPW.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbPW.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbPW.ForeColor = System.Drawing.Color.DimGray;
+            this.txbPW.Location = new System.Drawing.Point(7, 5);
+            this.txbPW.Multiline = true;
+            this.txbPW.Name = "txbPW";
+            this.txbPW.PasswordChar = '*';
+            this.txbPW.Size = new System.Drawing.Size(214, 27);
+            this.txbPW.TabIndex = 2;
+            this.txbPW.Text = "Mật khẩu";
+            this.txbPW.UseSystemPasswordChar = true;
+            this.txbPW.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbUsername_KeyPress);
             // 
             // pictureBox1
             // 
@@ -152,6 +193,8 @@
             this.txbUsername.TabIndex = 1;
             this.txbUsername.Text = "Tên đăng nhập";
             this.txbUsername.UseSystemPasswordChar = true;
+            this.txbUsername.TextChanged += new System.EventHandler(this.txbUsername_TextChanged);
+            this.txbUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbUsername_KeyPress);
             // 
             // pictureBox2
             // 
@@ -163,67 +206,31 @@
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
-            // textBox1
+            // txbDisplayName
             // 
-            this.textBox1.BackColor = System.Drawing.Color.LightGray;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox1.Location = new System.Drawing.Point(56, 134);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(214, 27);
-            this.textBox1.TabIndex = 12;
-            this.textBox1.Text = "Nhập tên hiển thị";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.UseSystemPasswordChar = true;
+            this.txbDisplayName.BackColor = System.Drawing.Color.LightGray;
+            this.txbDisplayName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbDisplayName.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbDisplayName.ForeColor = System.Drawing.Color.DimGray;
+            this.txbDisplayName.Location = new System.Drawing.Point(56, 134);
+            this.txbDisplayName.Multiline = true;
+            this.txbDisplayName.Name = "txbDisplayName";
+            this.txbDisplayName.Size = new System.Drawing.Size(214, 27);
+            this.txbDisplayName.TabIndex = 12;
+            this.txbDisplayName.Text = "Nhập tên hiển thị";
+            this.txbDisplayName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txbDisplayName.UseSystemPasswordChar = true;
             // 
-            // panel4
+            // cbAdmin
             // 
-            this.panel4.BackColor = System.Drawing.Color.LightGray;
-            this.panel4.Controls.Add(this.textBox2);
-            this.panel4.Controls.Add(this.pictureBox4);
-            this.panel4.Location = new System.Drawing.Point(30, 128);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(275, 41);
-            this.panel4.TabIndex = 4;
-            this.panel4.TabStop = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.LightGray;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.textBox2.Location = new System.Drawing.Point(7, 5);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(214, 27);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.Text = "Nhập lại mật khẩu";
-            this.textBox2.UseSystemPasswordChar = true;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(227, 9);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox4.TabIndex = 10;
-            this.pictureBox4.TabStop = false;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.checkBox1.Location = new System.Drawing.Point(125, 167);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(86, 17);
-            this.checkBox1.TabIndex = 22;
-            this.checkBox1.Text = "Administrater";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbAdmin.AutoSize = true;
+            this.cbAdmin.ForeColor = System.Drawing.Color.DimGray;
+            this.cbAdmin.Location = new System.Drawing.Point(125, 167);
+            this.cbAdmin.Name = "cbAdmin";
+            this.cbAdmin.Size = new System.Drawing.Size(86, 17);
+            this.cbAdmin.TabIndex = 22;
+            this.cbAdmin.Text = "Administrater";
+            this.cbAdmin.UseVisualStyleBackColor = true;
             // 
             // btnExit
             // 
@@ -248,26 +255,26 @@
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(333, 496);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.cbAdmin);
+            this.Controls.Add(this.txbDisplayName);
+            this.Controls.Add(this.btnPickPicture);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fSignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fSignUp";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPickPicture)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,20 +282,20 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox btnPickPicture;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txbPW2;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnSignup;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txbPassword;
+        private System.Windows.Forms.TextBox txbPW;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txbUsername;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox txbDisplayName;
+        private System.Windows.Forms.CheckBox cbAdmin;
         private System.Windows.Forms.Button btnExit;
     }
 }
