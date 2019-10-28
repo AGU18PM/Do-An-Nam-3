@@ -74,6 +74,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.picBUser = new System.Windows.Forms.PictureBox();
             this.lbNotification = new System.Windows.Forms.ListBox();
+            this.labelNotification = new System.Windows.Forms.Label();
             this.PanelMenuMain.SuspendLayout();
             this.PanelMenuSlide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner4)).BeginInit();
@@ -577,7 +578,7 @@
             this.PanelUser.Controls.Add(this.btnSignOut);
             this.PanelUser.Controls.Add(this.btnRegister);
             this.PanelUser.Controls.Add(this.btnChangePassword);
-            this.PanelUser.Location = new System.Drawing.Point(1073, 13);
+            this.PanelUser.Location = new System.Drawing.Point(1073, 2);
             this.PanelUser.Name = "PanelUser";
             this.PanelUser.Size = new System.Drawing.Size(104, 139);
             this.PanelUser.TabIndex = 17;
@@ -615,6 +616,7 @@
             this.btnRegister.Text = "Đăng ký";
             this.btnRegister.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // btnChangePassword
             // 
@@ -648,12 +650,13 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.labelNotification);
             this.panel1.Controls.Add(this.picBUser);
             this.panel1.Controls.Add(this.txbRole);
             this.panel1.Controls.Add(this.btnNotification);
             this.panel1.Controls.Add(this.btnDown);
             this.panel1.Controls.Add(this.txbDisplayName);
-            this.panel1.Location = new System.Drawing.Point(1094, 141);
+            this.panel1.Location = new System.Drawing.Point(1094, 130);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(273, 58);
             this.panel1.TabIndex = 15;
@@ -676,6 +679,19 @@
             this.lbNotification.Size = new System.Drawing.Size(269, 95);
             this.lbNotification.TabIndex = 18;
             this.lbNotification.Visible = false;
+            // 
+            // labelNotification
+            // 
+            this.labelNotification.AutoSize = true;
+            this.labelNotification.BackColor = System.Drawing.Color.Transparent;
+            this.labelNotification.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNotification.ForeColor = System.Drawing.Color.Red;
+            this.labelNotification.Location = new System.Drawing.Point(34, -11);
+            this.labelNotification.Name = "labelNotification";
+            this.labelNotification.Size = new System.Drawing.Size(19, 25);
+            this.labelNotification.TabIndex = 21;
+            this.labelNotification.Text = "!";
+            this.labelNotification.Visible = false;
             // 
             // fMain
             // 
@@ -768,5 +784,6 @@
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnChangePassword;
         private System.Windows.Forms.ListBox lbNotification;
+        private System.Windows.Forms.Label labelNotification;
     }
 }

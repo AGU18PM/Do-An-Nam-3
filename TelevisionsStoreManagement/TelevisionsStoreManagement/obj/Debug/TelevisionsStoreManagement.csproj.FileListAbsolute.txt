@@ -695,5 +695,6 @@ C:\Users\Admin\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Televisio
 C:\Users\Admin\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.UC.WareHouseCtr.resources
 C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.GUI.fBillInfo.resources
 C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.UC.RevenCtr.resources
-C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.UC.test.resources
 C:\Users\Num\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.GUI.fCustomer.resources
+C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.GUI.fCustomer.resources
+C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.GUI.fSignUp.resources

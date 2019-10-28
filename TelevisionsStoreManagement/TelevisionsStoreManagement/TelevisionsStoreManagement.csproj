@@ -148,6 +148,12 @@
     <Compile Include="GUI\fMain.Designer.cs">
       <DependentUpon>fMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\fSignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fSignUp.Designer.cs">
+      <DependentUpon>fSignUp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UC\HomePageCtr.cs">
@@ -167,12 +173,6 @@
     </Compile>
     <Compile Include="UC\RevenCtr.Designer.cs">
       <DependentUpon>RevenCtr.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC\test.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC\test.Designer.cs">
-      <DependentUpon>test.cs</DependentUpon>
     </Compile>
     <Compile Include="UC\WareHouseCtr.cs">
       <SubType>UserControl</SubType>
@@ -195,6 +195,9 @@
     <EmbeddedResource Include="GUI\fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fSignUp.resx">
+      <DependentUpon>fSignUp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -213,9 +216,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\RevenCtr.resx">
       <DependentUpon>RevenCtr.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC\test.resx">
-      <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\WareHouseCtr.resx">
       <DependentUpon>WareHouseCtr.cs</DependentUpon>

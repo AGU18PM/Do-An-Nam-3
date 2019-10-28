@@ -373,9 +373,7 @@ namespace TelevisionsStoreManagement.GUI
             btnHome.ForeColor = System.Drawing.Color.DimGray;
             btnHelp.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
 
-            test t = new test();
-            panelMain.Controls.Clear();
-            panelMain.Controls.Add(t);
+            
 
         }
 
@@ -483,6 +481,12 @@ namespace TelevisionsStoreManagement.GUI
             this.Hide();
             fLogin login = new fLogin();
             login.ShowDialog();
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            fSignUp signUp = new fSignUp();
+            signUp.Show();
         }
     }
 }
