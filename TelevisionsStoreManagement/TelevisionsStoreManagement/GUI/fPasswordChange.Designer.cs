@@ -41,6 +41,7 @@
             this.cboUserName = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -88,6 +89,7 @@
             this.txbPW2.TabIndex = 2;
             this.txbPW2.Text = "Nhập lại mật khẩu";
             this.txbPW2.UseSystemPasswordChar = true;
+            this.txbPW2.Enter += new System.EventHandler(this.txbPW2_Enter);
             this.txbPW2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbPW_KeyPress);
             // 
             // pictureBox4
@@ -141,6 +143,7 @@
             this.txbPW.TabIndex = 2;
             this.txbPW.Text = "Mật khẩu";
             this.txbPW.UseSystemPasswordChar = true;
+            this.txbPW.Enter += new System.EventHandler(this.txbPW_Enter);
             this.txbPW.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbPW_KeyPress);
             // 
             // pictureBox1
@@ -168,6 +171,7 @@
             // 
             this.cboUserName.BackColor = System.Drawing.Color.LightGray;
             this.cboUserName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboUserName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboUserName.Font = new System.Drawing.Font("Calibri", 15.75F);
             this.cboUserName.ForeColor = System.Drawing.Color.DimGray;
             this.cboUserName.FormattingEnabled = true;
@@ -190,20 +194,33 @@
             // 
             this.panel5.BackgroundImage = global::TelevisionsStoreManagement.Properties.Resources.user_icon_grey;
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel5.Location = new System.Drawing.Point(37, 12);
+            this.panel5.Location = new System.Drawing.Point(91, 12);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(268, 171);
+            this.panel5.Size = new System.Drawing.Size(153, 83);
             this.panel5.TabIndex = 22;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(46, 110);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(247, 45);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "ĐỔI MẬT KHẨU";
             // 
             // fPasswordChange
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(333, 496);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fPasswordChange";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fPasswordChange";
             this.Load += new System.EventHandler(this.fPasswordChange_Load);
             this.panel1.ResumeLayout(false);
@@ -216,6 +233,7 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -233,5 +251,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ComboBox cboUserName;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductCtr));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAddCustomer = new System.Windows.Forms.Button();
             this.btnPanasonic = new DevExpress.XtraEditors.CheckButton();
             this.btnLG = new DevExpress.XtraEditors.CheckButton();
             this.btnSony = new DevExpress.XtraEditors.CheckButton();
@@ -69,7 +70,6 @@
             this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.size = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceOut = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAddCustomer = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelProduct.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -79,15 +79,30 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnAddCustomer);
             this.panel1.Controls.Add(this.btnPanasonic);
             this.panel1.Controls.Add(this.btnLG);
             this.panel1.Controls.Add(this.btnSony);
             this.panel1.Controls.Add(this.btnSamsung);
-            this.panel1.Location = new System.Drawing.Point(11, 3);
+            this.panel1.Location = new System.Drawing.Point(11, 239);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1042, 55);
+            this.panel1.Size = new System.Drawing.Size(676, 55);
             this.panel1.TabIndex = 0;
+            // 
+            // btnAddCustomer
+            // 
+            this.btnAddCustomer.FlatAppearance.BorderSize = 0;
+            this.btnAddCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddCustomer.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCustomer.Image")));
+            this.btnAddCustomer.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAddCustomer.Location = new System.Drawing.Point(5, 352);
+            this.btnAddCustomer.Name = "btnAddCustomer";
+            this.btnAddCustomer.Size = new System.Drawing.Size(127, 81);
+            this.btnAddCustomer.TabIndex = 12;
+            this.btnAddCustomer.Text = "Thêm khách hàng";
+            this.btnAddCustomer.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAddCustomer.UseVisualStyleBackColor = true;
+            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
             // btnPanasonic
             // 
@@ -133,10 +148,11 @@
             // 
             this.panelProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
             this.panelProduct.Controls.Add(this.panel2);
+            this.panelProduct.Controls.Add(this.panel1);
             this.panelProduct.Controls.Add(this.label10);
             this.panelProduct.Controls.Add(this.lbPayment);
             this.panelProduct.Controls.Add(this.dGVProduct);
-            this.panelProduct.Location = new System.Drawing.Point(0, 65);
+            this.panelProduct.Location = new System.Drawing.Point(0, 1);
             this.panelProduct.Name = "panelProduct";
             this.panelProduct.Size = new System.Drawing.Size(1180, 522);
             this.panelProduct.TabIndex = 1;
@@ -144,6 +160,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.btnAddCustomer);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.btnCancel);
             this.panel2.Controls.Add(this.txbID);
@@ -168,7 +185,7 @@
             this.panel2.Controls.Add(this.label7);
             this.panel2.Location = new System.Drawing.Point(706, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(451, 436);
+            this.panel2.Size = new System.Drawing.Size(451, 511);
             this.panel2.TabIndex = 28;
             // 
             // label1
@@ -189,7 +206,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCancel.Location = new System.Drawing.Point(300, 364);
+            this.btnCancel.Location = new System.Drawing.Point(365, 364);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(83, 69);
             this.btnCancel.TabIndex = 27;
@@ -217,7 +234,7 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAdd.Location = new System.Drawing.Point(66, 364);
+            this.btnAdd.Location = new System.Drawing.Point(148, 364);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(83, 69);
             this.btnAdd.TabIndex = 26;
@@ -244,7 +261,7 @@
             this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPayment.Image = ((System.Drawing.Image)(resources.GetObject("btnPayment.Image")));
             this.btnPayment.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnPayment.Location = new System.Drawing.Point(185, 364);
+            this.btnPayment.Location = new System.Drawing.Point(257, 364);
             this.btnPayment.Name = "btnPayment";
             this.btnPayment.Size = new System.Drawing.Size(83, 69);
             this.btnPayment.TabIndex = 25;
@@ -438,17 +455,17 @@
             // 
             this.lbPayment.FormattingEnabled = true;
             this.lbPayment.ItemHeight = 14;
-            this.lbPayment.Location = new System.Drawing.Point(11, 253);
+            this.lbPayment.Location = new System.Drawing.Point(11, 300);
             this.lbPayment.Name = "lbPayment";
-            this.lbPayment.Size = new System.Drawing.Size(676, 186);
+            this.lbPayment.Size = new System.Drawing.Size(676, 214);
             this.lbPayment.TabIndex = 20;
             // 
             // dGVProduct
             // 
             this.dGVProduct.AllowUserToAddRows = false;
             this.dGVProduct.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            this.dGVProduct.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            this.dGVProduct.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dGVProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVProduct.BackgroundColor = System.Drawing.Color.White;
             this.dGVProduct.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -460,14 +477,14 @@
             this.type,
             this.size,
             this.priceOut});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dGVProduct.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGVProduct.DefaultCellStyle = dataGridViewCellStyle2;
             this.dGVProduct.GridColor = System.Drawing.SystemColors.Control;
             this.dGVProduct.Location = new System.Drawing.Point(11, 0);
             this.dGVProduct.MultiSelect = false;
@@ -535,23 +552,12 @@
             this.priceOut.Name = "priceOut";
             this.priceOut.ReadOnly = true;
             // 
-            // btnAddCustomer
-            // 
-            this.btnAddCustomer.Location = new System.Drawing.Point(581, 8);
-            this.btnAddCustomer.Name = "btnAddCustomer";
-            this.btnAddCustomer.Size = new System.Drawing.Size(158, 39);
-            this.btnAddCustomer.TabIndex = 12;
-            this.btnAddCustomer.Text = "Thêm khách hàng";
-            this.btnAddCustomer.UseVisualStyleBackColor = true;
-            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
-            // 
             // ProductCtr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
             this.Controls.Add(this.panelProduct);
-            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "ProductCtr";
             this.Size = new System.Drawing.Size(1180, 587);

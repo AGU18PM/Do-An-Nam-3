@@ -104,6 +104,7 @@
             this.txbPW2.TabIndex = 2;
             this.txbPW2.Text = "Nhập lại mật khẩu";
             this.txbPW2.UseSystemPasswordChar = true;
+            this.txbPW2.Enter += new System.EventHandler(this.txbPW2_Enter);
             this.txbPW2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbUsername_KeyPress);
             // 
             // pictureBox4
@@ -157,6 +158,7 @@
             this.txbPW.TabIndex = 2;
             this.txbPW.Text = "Mật khẩu";
             this.txbPW.UseSystemPasswordChar = true;
+            this.txbPW.Enter += new System.EventHandler(this.txbPW_Enter);
             this.txbPW.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbUsername_KeyPress);
             // 
             // pictureBox1
@@ -194,6 +196,7 @@
             this.txbUsername.Text = "Tên đăng nhập";
             this.txbUsername.UseSystemPasswordChar = true;
             this.txbUsername.TextChanged += new System.EventHandler(this.txbUsername_TextChanged);
+            this.txbUsername.Enter += new System.EventHandler(this.txbUsername_Enter);
             this.txbUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbUsername_KeyPress);
             // 
             // pictureBox2
@@ -220,6 +223,7 @@
             this.txbDisplayName.Text = "Nhập tên hiển thị";
             this.txbDisplayName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txbDisplayName.UseSystemPasswordChar = true;
+            this.txbDisplayName.Enter += new System.EventHandler(this.txbDisplayName_Enter);
             // 
             // cbAdmin
             // 

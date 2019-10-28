@@ -700,3 +700,4 @@ C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\Televisio
 C:\Users\Admin\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.GUI.fCustomer.resources
 C:\Users\Admin\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.GUI.fSignUp.resources
 C:\Users\Admin\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.GUI.fPasswordChange.resources
+C:\Users\thait\Documents\GitHub\Do-An-Nam-3\TelevisionsStoreManagement\TelevisionsStoreManagement\obj\Debug\TelevisionsStoreManagement.GUI.fPasswordChange.resources

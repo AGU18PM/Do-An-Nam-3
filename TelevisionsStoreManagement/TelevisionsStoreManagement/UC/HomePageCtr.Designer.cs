@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePageCtr));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.labelSold = new System.Windows.Forms.Label();
@@ -52,7 +48,8 @@
             this.labelSoldin1Month = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.chartRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -61,8 +58,9 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartRevenue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -261,6 +259,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.pictureBox5);
             this.panel5.Location = new System.Drawing.Point(13, 113);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(518, 337);
@@ -269,32 +268,27 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Controls.Add(this.chartRevenue);
+            this.panel6.Controls.Add(this.monthCalendar1);
             this.panel6.Location = new System.Drawing.Point(549, 113);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(566, 337);
             this.panel6.TabIndex = 7;
             // 
-            // chartRevenue
+            // pictureBox5
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartRevenue.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartRevenue.Legends.Add(legend1);
-            this.chartRevenue.Location = new System.Drawing.Point(0, 0);
-            this.chartRevenue.Name = "chartRevenue";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartRevenue.Series.Add(series1);
-            this.chartRevenue.Size = new System.Drawing.Size(566, 334);
-            this.chartRevenue.TabIndex = 0;
-            this.chartRevenue.Text = "chart1";
-            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title1.Name = "chartRevenue";
-            title1.Text = "Biểu đồ doanh thu";
-            this.chartRevenue.Titles.Add(title1);
+            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(518, 337);
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(28, 31);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 2;
             // 
             // HomePageCtr
             // 
@@ -326,8 +320,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartRevenue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -353,6 +348,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartRevenue;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
     }
 }

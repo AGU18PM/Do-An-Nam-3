@@ -198,5 +198,23 @@ namespace TelevisionsStoreManagement.DAL
             string sql = "SELECT PRICE_IN AS PRICE FROM TIVI WHERE ID = " + product.ProductId;
             return Convert.ToDouble(DataProvider.Instance.ExecuteQuery(sql).Rows[0][0]);
         }
+
+        public string Check_amount()
+        {
+            string sql = "EXECUTE GET_NAME_AMOUNTSMALLER3";
+            DataTable a = DataProvider.Instance.ExecuteQuery(sql);
+            int count = a.Rows.Count;
+            string result = "";
+            if (count > 0)
+            {
+                for (int i = 0; i < count; i++)
+                {
+                    result += "Sản phẩm " + a.Rows[i][1].ToString()+ " "+ a.Rows[i][2].ToString() + " sắp hết hàng!!!\n";
+                }
+            }
+            return result;
+        }
+
+       
     }
 }

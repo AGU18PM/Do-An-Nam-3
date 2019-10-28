@@ -11,11 +11,14 @@ using System.IO;
 using System.Threading;
 using TelevisionsStoreManagement.UC;
 using TelevisionsStoreManagement.DTO;
+using TelevisionsStoreManagement.DAL;
+using TelevisionsStoreManagement.BUS;
 
 namespace TelevisionsStoreManagement.GUI
 {
     public partial class fMain : Form
     {
+        ProductBUS productBUS = new ProductBUS();
         int mov;
         int movX;
         int movY;
@@ -25,6 +28,8 @@ namespace TelevisionsStoreManagement.GUI
         public fMain()
         {
             InitializeComponent();
+
+
         }
         public fMain(string displayName, int role, string img)
         {
@@ -38,7 +43,7 @@ namespace TelevisionsStoreManagement.GUI
             }
             else
                 txbRole.Text = "Staff";
-            
+
             picBUser.Image = Image.FromFile(img);
 
         }
@@ -50,7 +55,7 @@ namespace TelevisionsStoreManagement.GUI
             //
             TriangleCorner1.Show();
             TriangleCorner2.Hide();
-            
+
             TriangleCorner4.Hide();
             TriangleCorner5.Hide();
             TriangleCorner6.Hide();
@@ -58,7 +63,7 @@ namespace TelevisionsStoreManagement.GUI
             //
             PanelColorMain.Show();
             PanelColorProduct.Hide();
-            
+
             PanelColorDepot.Hide();
             PanelColorRevenue.Hide();
             PanelColorSetting.Hide();
@@ -66,9 +71,9 @@ namespace TelevisionsStoreManagement.GUI
             btnHome.Image = Image.FromFile(startupURL + "\\Icon\\button_home_blue.png");
             //
             PanelSubMenu.Hide();
-            
-            
-            
+
+
+
         }
 
         void ChangeMenuMode()
@@ -123,7 +128,7 @@ namespace TelevisionsStoreManagement.GUI
             panelMain.Controls.Add(home);
             TriangleCorner1.Show();
             TriangleCorner2.Hide();
-           
+
             TriangleCorner4.Hide();
             TriangleCorner5.Hide();
             TriangleCorner6.Hide();
@@ -131,7 +136,7 @@ namespace TelevisionsStoreManagement.GUI
             //
             PanelColorMain.Show();
             PanelColorProduct.Hide();
-            
+
             PanelColorDepot.Hide();
             PanelColorRevenue.Hide();
             PanelColorSetting.Hide();
@@ -142,19 +147,19 @@ namespace TelevisionsStoreManagement.GUI
             btnSetting.Image = Image.FromFile(startupURL + "\\Icon\\setting-icon-gray.png");
             btnReven.Image = Image.FromFile(startupURL + "\\Icon\\revenue-icon-gray.png");
             btnWareHouse.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
-            
+
             btnHome.Image = Image.FromFile(startupURL + "\\Icon\\button_home_blue.png");
             //
             btnSetting.ForeColor = System.Drawing.Color.DimGray;
             btnHelp.ForeColor = System.Drawing.Color.DimGray;
             btnReven.ForeColor = System.Drawing.Color.DimGray;
             btnWareHouse.ForeColor = System.Drawing.Color.DimGray;
-            
+
             btnProduct.ForeColor = System.Drawing.Color.DimGray;
             btnHome.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
 
             closeSubMenu();
-
+            refreshNotificationOnButton();
         }
 
 
@@ -163,7 +168,7 @@ namespace TelevisionsStoreManagement.GUI
         {
             TriangleCorner1.Hide();
             TriangleCorner2.Show();
-            
+
             TriangleCorner4.Hide();
             TriangleCorner5.Hide();
             TriangleCorner6.Hide();
@@ -171,7 +176,7 @@ namespace TelevisionsStoreManagement.GUI
             //
             PanelColorProduct.Show();
             PanelColorMain.Hide();
-            
+
             PanelColorDepot.Hide();
             PanelColorRevenue.Hide();
             PanelColorSetting.Hide();
@@ -182,14 +187,14 @@ namespace TelevisionsStoreManagement.GUI
             btnSetting.Image = Image.FromFile(startupURL + "\\Icon\\setting-icon-gray.png");
             btnReven.Image = Image.FromFile(startupURL + "\\Icon\\revenue-icon-gray.png");
             btnWareHouse.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
-            
+
             btnHome.Image = Image.FromFile(startupURL + "\\Icon\\home-icon1.png");
             //
             btnSetting.ForeColor = System.Drawing.Color.DimGray;
             btnHelp.ForeColor = System.Drawing.Color.DimGray;
             btnReven.ForeColor = System.Drawing.Color.DimGray;
             btnWareHouse.ForeColor = System.Drawing.Color.DimGray;
-            
+
             btnHome.ForeColor = System.Drawing.Color.DimGray;
             btnProduct.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
 
@@ -198,18 +203,20 @@ namespace TelevisionsStoreManagement.GUI
             /*panelMain.Controls.Clear();            
             Thread thrGenerating = new Thread(new ThreadStart(doWork));
             thrGenerating.Start();*/
-                productCtr = new ProductCtr();
-                panelMain.Controls.Clear();
-                panelMain.Controls.Add(productCtr);
+            productCtr = new ProductCtr();
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(productCtr);
+            refreshNotificationOnButton();
         }
 
 
         private void btnDepot_Click(object sender, EventArgs e)
         {
+            refreshNotificationOnButton();
             closeSubMenu();
             TriangleCorner1.Hide();
             TriangleCorner2.Hide();
-            
+
             TriangleCorner4.Show();
             TriangleCorner5.Hide();
             TriangleCorner6.Hide();
@@ -218,7 +225,7 @@ namespace TelevisionsStoreManagement.GUI
             PanelColorDepot.Show();
             PanelColorMain.Hide();
             PanelColorProduct.Hide();
-            
+
             PanelColorRevenue.Hide();
             PanelColorSetting.Hide();
             PanelColorHelp.Hide();
@@ -228,7 +235,7 @@ namespace TelevisionsStoreManagement.GUI
             btnSetting.Image = Image.FromFile(startupURL + "\\Icon\\setting-icon-gray.png");
             btnReven.Image = Image.FromFile(startupURL + "\\Icon\\revenue-icon-gray.png");
             btnWareHouse.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-blue.png");
-            
+
             btnHome.Image = Image.FromFile(startupURL + "\\Icon\\home-icon1.png");
             //
             btnSetting.ForeColor = System.Drawing.Color.DimGray;
@@ -236,7 +243,7 @@ namespace TelevisionsStoreManagement.GUI
             btnReven.ForeColor = System.Drawing.Color.DimGray;
             btnWareHouse.ForeColor = System.Drawing.Color.DimGray;
             btnProduct.ForeColor = System.Drawing.Color.DimGray;
-            
+
             btnHome.ForeColor = System.Drawing.Color.DimGray;
             btnWareHouse.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
             //
@@ -250,7 +257,7 @@ namespace TelevisionsStoreManagement.GUI
             //}
             //else
             //{
-                
+
             //}
             //flag = 1;
 
@@ -259,10 +266,11 @@ namespace TelevisionsStoreManagement.GUI
 
         private void btnReven_Click(object sender, EventArgs e)
         {
+            refreshNotificationOnButton();
             closeSubMenu();
             TriangleCorner1.Hide();
             TriangleCorner2.Hide();
-            
+
             TriangleCorner4.Hide();
             TriangleCorner5.Show();
             TriangleCorner6.Hide();
@@ -271,7 +279,7 @@ namespace TelevisionsStoreManagement.GUI
             PanelColorRevenue.Show();
             PanelColorMain.Hide();
             PanelColorProduct.Hide();
-            
+
             PanelColorDepot.Hide();
             PanelColorSetting.Hide();
             PanelColorHelp.Hide();
@@ -281,7 +289,7 @@ namespace TelevisionsStoreManagement.GUI
             btnSetting.Image = Image.FromFile(startupURL + "\\Icon\\setting-icon-gray.png");
             btnReven.Image = Image.FromFile(startupURL + "\\Icon\\revenue-icon-blue .png");
             btnWareHouse.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
-            
+
             btnHome.Image = Image.FromFile(startupURL + "\\Icon\\home-icon1.png");
             //
             btnSetting.ForeColor = System.Drawing.Color.DimGray;
@@ -289,7 +297,7 @@ namespace TelevisionsStoreManagement.GUI
             btnReven.ForeColor = System.Drawing.Color.DimGray;
             btnWareHouse.ForeColor = System.Drawing.Color.DimGray;
             btnProduct.ForeColor = System.Drawing.Color.DimGray;
-            
+
             btnHome.ForeColor = System.Drawing.Color.DimGray;
             btnReven.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
             RevenCtr revenCtr = new RevenCtr();
@@ -307,7 +315,7 @@ namespace TelevisionsStoreManagement.GUI
             closeSubMenu();
             TriangleCorner1.Hide();
             TriangleCorner2.Hide();
-            
+
             TriangleCorner4.Hide();
             TriangleCorner5.Hide();
             TriangleCorner6.Show();
@@ -315,7 +323,7 @@ namespace TelevisionsStoreManagement.GUI
             //
             PanelColorProduct.Hide();
             PanelColorMain.Hide();
-            
+
             PanelColorDepot.Hide();
             PanelColorRevenue.Hide();
             PanelColorSetting.Show();
@@ -326,14 +334,14 @@ namespace TelevisionsStoreManagement.GUI
             btnSetting.Image = Image.FromFile(startupURL + "\\Icon\\setting-icon-blue.png");
             btnReven.Image = Image.FromFile(startupURL + "\\Icon\\revenue-icon-gray.png");
             btnWareHouse.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
-            
+
             btnHome.Image = Image.FromFile(startupURL + "\\Icon\\home-icon1.png");
             //
             btnProduct.ForeColor = System.Drawing.Color.DimGray;
             btnHelp.ForeColor = System.Drawing.Color.DimGray;
             btnReven.ForeColor = System.Drawing.Color.DimGray;
             btnWareHouse.ForeColor = System.Drawing.Color.DimGray;
-            
+
             btnHome.ForeColor = System.Drawing.Color.DimGray;
             btnSetting.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
 
@@ -344,7 +352,7 @@ namespace TelevisionsStoreManagement.GUI
             closeSubMenu();
             TriangleCorner1.Hide();
             TriangleCorner2.Hide();
-            
+
             TriangleCorner4.Hide();
             TriangleCorner5.Hide();
             TriangleCorner6.Hide();
@@ -352,7 +360,7 @@ namespace TelevisionsStoreManagement.GUI
             //
             PanelColorProduct.Hide();
             PanelColorMain.Hide();
-            
+
             PanelColorDepot.Hide();
             PanelColorRevenue.Hide();
             PanelColorSetting.Hide();
@@ -363,22 +371,22 @@ namespace TelevisionsStoreManagement.GUI
             btnSetting.Image = Image.FromFile(startupURL + "\\Icon\\setting-icon-gray.png");
             btnReven.Image = Image.FromFile(startupURL + "\\Icon\\revenue-icon-gray.png");
             btnWareHouse.Image = Image.FromFile(startupURL + "\\Icon\\box-icon-gray.png");
-            
+
             btnHome.Image = Image.FromFile(startupURL + "\\Icon\\home-icon1.png");
             //
             btnProduct.ForeColor = System.Drawing.Color.DimGray;
             btnSetting.ForeColor = System.Drawing.Color.DimGray;
             btnReven.ForeColor = System.Drawing.Color.DimGray;
             btnWareHouse.ForeColor = System.Drawing.Color.DimGray;
-            
+
             btnHome.ForeColor = System.Drawing.Color.DimGray;
             btnHelp.ForeColor = System.Drawing.Color.FromArgb(86, 197, 250);
 
-            
+
 
         }
 
-        
+
         private void btnRestoreDown_Click(object sender, EventArgs e)
         {
             if (PanelForm.Location.X == 1019 && PanelForm.Location.Y == 0)
@@ -386,8 +394,8 @@ namespace TelevisionsStoreManagement.GUI
                 PanelForm.Location = new Point(840, 0);
                 Size = new Size(1191, 578);
                 Location = new Point(93, 66);
-                
-                
+
+
 
                 // MainPanel.Size = new Size(137, 65);
             }
@@ -412,6 +420,7 @@ namespace TelevisionsStoreManagement.GUI
         {
             HomePageCtr home = new HomePageCtr();
             panelMain.Controls.Add(home);
+            RefreshNotification();
         }
 
         private void btnSmartTV_Click(object sender, EventArgs e)
@@ -458,7 +467,7 @@ namespace TelevisionsStoreManagement.GUI
                 PanelForm.Location = new Point(840, 0);
                 Size = new Size(1191, 578);
             }
-            
+
 
         }
 
@@ -494,6 +503,38 @@ namespace TelevisionsStoreManagement.GUI
         {
             fPasswordChange passwordChange = new fPasswordChange();
             passwordChange.ShowDialog();
+        }
+
+        private void btnNotification_Click(object sender, EventArgs e)
+        {
+            RefreshNotification();
+        }
+
+        public void RefreshNotification()
+        {
+            if (lbNotification.Visible == false)
+            {
+                lbNotification.Visible = true;
+                if (productBUS.CheckAmount(lbNotification))
+                {
+                    labelNotification.Visible = true;
+                }
+                else
+                    labelNotification.Visible = false;
+
+            }
+            else
+                lbNotification.Visible = false;
+        }
+
+        public void refreshNotificationOnButton()
+        {
+            if (productBUS.CheckAmount(lbNotification))
+            {
+                labelNotification.Visible = true;
+            }
+            else
+                labelNotification.Visible = false;
         }
     }
 }

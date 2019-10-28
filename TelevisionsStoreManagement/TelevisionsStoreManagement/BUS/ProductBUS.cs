@@ -178,5 +178,15 @@ namespace TelevisionsStoreManagement.BUS
             return data.DoanhThu(product);
         }
 
+        public bool CheckAmount(ListBox lbOutput)
+        {
+            bool Check = false;
+            lbOutput.Items.Clear();
+            if (data.Check_amount() != "")
+                Check = true;
+            lbOutput.Items.Add(data.Check_amount());
+            return Check;
+        }
+
     }
 }

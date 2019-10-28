@@ -576,10 +576,11 @@
             this.PanelUser.Controls.Add(this.btnSignOut);
             this.PanelUser.Controls.Add(this.btnRegister);
             this.PanelUser.Controls.Add(this.btnChangePassword);
-            this.PanelUser.Location = new System.Drawing.Point(1153, 46);
+            this.PanelUser.Location = new System.Drawing.Point(1262, 170);
             this.PanelUser.Name = "PanelUser";
             this.PanelUser.Size = new System.Drawing.Size(104, 139);
             this.PanelUser.TabIndex = 17;
+            this.PanelUser.Visible = false;
             // 
             // btnSignOut
             // 
@@ -645,6 +646,7 @@
             this.btnNotification.Size = new System.Drawing.Size(40, 40);
             this.btnNotification.TabIndex = 14;
             this.btnNotification.UseVisualStyleBackColor = false;
+            this.btnNotification.Click += new System.EventHandler(this.btnNotification_Click);
             // 
             // panel1
             // 
@@ -689,7 +691,6 @@
             this.lbNotification.Name = "lbNotification";
             this.lbNotification.Size = new System.Drawing.Size(269, 95);
             this.lbNotification.TabIndex = 18;
-            this.lbNotification.Visible = false;
             // 
             // fMain
             // 

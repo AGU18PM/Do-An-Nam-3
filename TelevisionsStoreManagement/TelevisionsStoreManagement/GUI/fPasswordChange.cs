@@ -49,5 +49,15 @@ namespace TelevisionsStoreManagement.GUI
                 this.Close();
             }
         }
+
+        private void txbPW_Enter(object sender, EventArgs e)
+        {
+            txbPW.Clear();
+        }
+
+        private void txbPW2_Enter(object sender, EventArgs e)
+        {
+            txbPW2.Clear();
+        }
     }
 }

@@ -10,7 +10,7 @@ namespace TelevisionsStoreManagement.DAL
 {
     public class DataProvider
     {
-        private static DataProvider instance; // Ctrl + R + E
+        private static DataProvider instance;
 
         public static DataProvider Instance
         {
@@ -19,7 +19,7 @@ namespace TelevisionsStoreManagement.DAL
         }
         private DataProvider() { }
 
-        private string connectionSTR = @"Data Source=LAPTOP-FSNC8RV7;Initial Catalog=TVSTOREMANAGERMENT;Integrated Security=True";
+        private string connectionSTR = @"Data Source=DESKTOP-V5FECEI;Initial Catalog=TVSTOREMANAGERMENT;Integrated Security=True";
 
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
