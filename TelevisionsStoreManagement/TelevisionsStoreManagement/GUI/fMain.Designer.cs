@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMain));
             this.PanelMenuMain = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -75,6 +76,7 @@
             this.labelNotification = new System.Windows.Forms.Label();
             this.picBUser = new System.Windows.Forms.PictureBox();
             this.lbNotification = new System.Windows.Forms.ListBox();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.PanelMenuMain.SuspendLayout();
             this.PanelMenuSlide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TriangleCorner4)).BeginInit();
@@ -541,7 +543,7 @@
             this.btnRestoreDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRestoreDown.ForeColor = System.Drawing.Color.DimGray;
             this.btnRestoreDown.Image = ((System.Drawing.Image)(resources.GetObject("btnRestoreDown.Image")));
-            this.btnRestoreDown.Location = new System.Drawing.Point(54, 0);
+            this.btnRestoreDown.Location = new System.Drawing.Point(57, 0);
             this.btnRestoreDown.Name = "btnRestoreDown";
             this.btnRestoreDown.Size = new System.Drawing.Size(52, 30);
             this.btnRestoreDown.TabIndex = 5;
@@ -556,7 +558,7 @@
             this.btnMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimize.ForeColor = System.Drawing.Color.DimGray;
             this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(0, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(5, 0);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(52, 30);
             this.btnMinimize.TabIndex = 6;
@@ -692,6 +694,14 @@
             this.lbNotification.Size = new System.Drawing.Size(269, 95);
             this.lbNotification.TabIndex = 18;
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.BalloonTipText = "Một số sản phẩm trong kho đang dưới 3 sản phẩm";
+            this.notifyIcon1.BalloonTipTitle = "Televisons Store Management:";
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -784,5 +794,6 @@
         private System.Windows.Forms.Button btnChangePassword;
         private System.Windows.Forms.ListBox lbNotification;
         private System.Windows.Forms.Label labelNotification;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }

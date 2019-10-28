@@ -421,6 +421,12 @@ namespace TelevisionsStoreManagement.GUI
             HomePageCtr home = new HomePageCtr();
             panelMain.Controls.Add(home);
             RefreshNotification();
+            refreshNotificationOnButton();
+            if (productBUS.CheckAmount(lbNotification))
+            {
+                notifyIcon1.ShowBalloonTip(2000);
+            }
+            
         }
 
         private void btnSmartTV_Click(object sender, EventArgs e)
@@ -518,6 +524,7 @@ namespace TelevisionsStoreManagement.GUI
                 if (productBUS.CheckAmount(lbNotification))
                 {
                     labelNotification.Visible = true;
+                    
                 }
                 else
                     labelNotification.Visible = false;
@@ -532,6 +539,7 @@ namespace TelevisionsStoreManagement.GUI
             if (productBUS.CheckAmount(lbNotification))
             {
                 labelNotification.Visible = true;
+                
             }
             else
                 labelNotification.Visible = false;
