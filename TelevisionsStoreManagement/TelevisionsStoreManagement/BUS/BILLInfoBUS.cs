@@ -33,5 +33,18 @@ namespace TelevisionsStoreManagement.BUS
         {
             data.DeleteAndGetBill(billInfo);
         }
+
+        public void TotalSold(Label result)
+        {
+            result.Text = data.totalSold().Rows[0][0].ToString();
+        }
+
+        public void SoldInDay(Label result)
+        {
+            BillDTO billDTO = new BillDTO();
+            BillBUS billBUS = new BillBUS();
+            billDTO = billBUS.GetDate();
+            result.Text = data.SoldInDay(billDTO).Rows[0][0].ToString();
+        }
     }
 }

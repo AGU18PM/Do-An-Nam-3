@@ -40,12 +40,16 @@ namespace TelevisionsStoreManagement.GUI
             if (role == 1)
             {
                 txbRole.Text = "Administrator";
+                btnWareHouse.Enabled = true;
+                btnReven.Enabled = true;
+                btnRegister.Enabled = true;
+                btnChangePassword.Enabled = true;
             }
             else
                 txbRole.Text = "Staff";
 
             picBUser.Image = Image.FromFile(img);
-
+            
         }
 
         int mode;
@@ -419,6 +423,7 @@ namespace TelevisionsStoreManagement.GUI
         private void fMain_Load(object sender, EventArgs e)
         {
             HomePageCtr home = new HomePageCtr();
+            
             panelMain.Controls.Add(home);
             RefreshNotification();
             refreshNotificationOnButton();

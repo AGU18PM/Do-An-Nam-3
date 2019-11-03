@@ -174,6 +174,7 @@
             // btnWareHouse
             // 
             this.btnWareHouse.BackColor = System.Drawing.SystemColors.Control;
+            this.btnWareHouse.Enabled = false;
             this.btnWareHouse.FlatAppearance.BorderSize = 0;
             this.btnWareHouse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWareHouse.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -274,6 +275,7 @@
             // btnReven
             // 
             this.btnReven.BackColor = System.Drawing.SystemColors.Control;
+            this.btnReven.Enabled = false;
             this.btnReven.FlatAppearance.BorderSize = 0;
             this.btnReven.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReven.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -604,6 +606,7 @@
             // btnRegister
             // 
             this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.btnRegister.Enabled = false;
             this.btnRegister.FlatAppearance.BorderSize = 0;
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -621,6 +624,7 @@
             // btnChangePassword
             // 
             this.btnChangePassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
+            this.btnChangePassword.Enabled = false;
             this.btnChangePassword.FlatAppearance.BorderSize = 0;
             this.btnChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

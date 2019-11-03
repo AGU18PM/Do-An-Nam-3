@@ -28,5 +28,11 @@ namespace TelevisionsStoreManagement.DAL
             String sql = "SELECT * FROM REVEN";
             return DataProvider.Instance.ExecuteQuery(sql);
         }
+
+        public DataTable GetDoanhThuForHomePage()
+        {
+            String sql = "select sum(value) from reven";
+            return DataProvider.Instance.ExecuteQuery(sql);
+        }
     }
 }

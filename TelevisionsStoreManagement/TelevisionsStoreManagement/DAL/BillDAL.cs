@@ -87,5 +87,13 @@ namespace TelevisionsStoreManagement.DAL
             string sql = "DELETE BILL_OUT WHERE ID = " + bill.ID;
             DataProvider.Instance.ExecuteNonQuery(sql);
         }
+
+        public BillDTO GetDate()
+        {
+            BillDTO result = new BillDTO();
+            string sql = "SELECT MAX(DATE_CHECKIN) FROM BILL_OUT";
+            result.DateCheckin = Convert.ToDateTime(DataProvider.Instance.ExecuteQuery(sql).Rows[0][0]);
+            return result;
+        }
     }
 }

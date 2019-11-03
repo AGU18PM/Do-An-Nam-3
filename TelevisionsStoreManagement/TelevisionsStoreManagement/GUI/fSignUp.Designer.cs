@@ -57,7 +57,6 @@
             // btnPickPicture
             // 
             this.btnPickPicture.BackColor = System.Drawing.Color.Transparent;
-            this.btnPickPicture.Enabled = false;
             this.btnPickPicture.Image = ((System.Drawing.Image)(resources.GetObject("btnPickPicture.Image")));
             this.btnPickPicture.Location = new System.Drawing.Point(118, 28);
             this.btnPickPicture.Name = "btnPickPicture";

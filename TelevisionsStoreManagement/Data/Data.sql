@@ -131,18 +131,6 @@ INSERT INTO TIVI(CATEGORY_NAME , NAME , TYPE , SIZE , PRICE_OUT, PRICE_IN , COUN
 INSERT INTO TIVI(CATEGORY_NAME , NAME , TYPE , SIZE , PRICE_OUT, PRICE_IN , COUNT) VALUES('Samsung' , N'Bình thường' , '2' , 51 , 6500000 , 4000000 , 20)
 INSERT INTO TIVI(CATEGORY_NAME , NAME , TYPE , SIZE , PRICE_OUT, PRICE_IN , COUNT) VALUES('LG' , N'Bình thường' , '2' , 51 , 6500000 , 4000000 , 20)
 
-select * from tivi where CATEGORY_NAME = 'Samsung' --or CATEGORY_NAME = 'Sony'
-
-delete from tivi where 1=1
-
-
-select * from ACCOUNT
-
-select * from BILL_INFO
-
-delete BILL_out where 1=1
-
-select ID , CATEGORY_NAME , NAME , TYPE , SIZE , PRICE_OUT from tivi WHERE TYPE = '3'
 
 insert into WAREHOUSE(ID_TV,COUNT) values (1,20)
 insert into CUSTOMER(NAME,PHONE_NUMBER,TYPE,PAYCOUNT) values (N'Nam béo','0918814602',0,0)
@@ -227,3 +215,24 @@ AS
 BEGIN
 	SELECT * FROM TIVI WHERE COUNT <= 3
 END
+
+select * from account
+
+delete account where USERNAME = 'staff'
+
+SELECT * FROM BILL_OUT
+
+SELECT MAX(DATE_CHECKIN) FROM BILL_OUT
+
+SELECT SUM(COUNT) FROM BILL_INFO, BILL_OUT WHERE DATE_CHECKIN = '2019-11-03' AND BILL_INFO.ID_BILL = BILL_OUT.ID
+
+select sum(value) from reven
+
+update reven set value = 0 where thang = 12
+
+select * from BILL_OUT
+
+insert into BILL_OUT(date_checkin, id_customer, totalprice, status) values (getdate(), 1, 0, 1)
+delete BILL_OUT where totalprice = 0
+
+update bill_out set totalprice = 19500000 , status = 1 where id_customer = 1

@@ -22,7 +22,7 @@ namespace TelevisionsStoreManagement.DAL
             string sql = "SELECT TOTAL_PRICE FROM BILL_INFO WHERE ID_BILL = " + bill.ID;
             DataTable result = DataProvider.Instance.ExecuteQuery(sql);
             bill.TotalPrice = 0;
-            for(int i = 0; i < result.Rows.Count; i++)
+            for (int i = 0; i < result.Rows.Count; i++)
             {
                 bill.TotalPrice += Convert.ToDouble(result.Rows[i][0]);
             }
@@ -42,7 +42,7 @@ namespace TelevisionsStoreManagement.DAL
             bill.ID = billInfo.IDBill;
             string sql = "SELECT ID_BILL FROM BILL_INFO WHERE ID_TV = " + billInfo.Tivi.ProductId;
             DataTable result = DataProvider.Instance.ExecuteQuery(sql);
-            
+
             for (int i = 0; i < result.Rows.Count; i++)
             {
                 sql = "DELETE BILL_INFO WHERE ID_BILL = " + Convert.ToInt32(result.Rows[i][0]);
@@ -51,7 +51,20 @@ namespace TelevisionsStoreManagement.DAL
                 sql = "DELETE BILL_OUT WHERE ID = " + bill.ID;
                 DataProvider.Instance.ExecuteNonQuery(sql);
             }
+
+        }
+
+        public DataTable totalSold()
+        {
+            string sql = "SELECT SUM(COUNT) FROM BILL_INFO";
+            return DataProvider.Instance.ExecuteQuery(sql);
+        }
+
+        public DataTable SoldInDay(BillDTO bill)
+        {
             
+            string sql = "SELECT SUM(COUNT) FROM BILL_INFO, BILL_OUT WHERE DATE_CHECKIN = '" + bill.DateCheckin.ToShortDateString() + "' AND BILL_INFO.ID_BILL = BILL_OUT.ID";
+            return DataProvider.Instance.ExecuteQuery(sql);
         }
     }
 }

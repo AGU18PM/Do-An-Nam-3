@@ -23,10 +23,12 @@ namespace TelevisionsStoreManagement.UC
             InitializeComponent();
             dGVWareHouse.AutoGenerateColumns = false;
             productBUS.loadDataToDGV(dGVWareHouse, txbID, cboCategory, txbName, cboType, txbSize, nUDCount, txbPriceOut, txbPriceIn);
+            
         }
 
         private void WareHouseCtr_Load(object sender, EventArgs e)
         {
+            loadNUD();
             cboCategory.Items.Add("Samsung");
             cboCategory.Items.Add("Panasonic");
             cboCategory.Items.Add("Sony");
@@ -168,6 +170,7 @@ namespace TelevisionsStoreManagement.UC
                 nUDUpdate.Visible = false;
             }
             productBUS.loadDataToDGV(dGVWareHouse, txbID, cboCategory, txbName, cboType, txbSize, nUDCount, txbPriceOut, txbPriceIn);
+            loadNUD();
         }
 
         public bool CheckBeforeSave()
@@ -177,11 +180,20 @@ namespace TelevisionsStoreManagement.UC
                 MessageBox.Show("Nhập dữ liệu trước khi lưu");
                 return false;
             }
-            if (txbSize.Text == "" || nUDCount.Value == 0)
+            if(toDo!=2)
+            {
+                if (txbSize.Text == "" || nUDCount.Value == 0)
+                {
+                    MessageBox.Show("Nhập dữ liệu đầy đủ trước khi lưu");
+                    return false;
+                }
+            }
+            else if(txbSize.Text == "" || nUDUpdate.Value == 0)
             {
                 MessageBox.Show("Nhập dữ liệu đầy đủ trước khi lưu");
                 return false;
             }
+            
             return true;
         }
 
@@ -189,8 +201,6 @@ namespace TelevisionsStoreManagement.UC
         {
             nUDCount.Visible = false;
             nUDUpdate.Visible = true;
-            nUDCount.Value = 1;
-            nUDUpdate.Value = nUDCount.Maximum;
             toDo = 2;
             DataMode(2, true);
             btnAdd.Enabled = false;
@@ -244,6 +254,14 @@ namespace TelevisionsStoreManagement.UC
         private void txbPriceOut_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = NumberOnly(sender, e);
+        }
+
+        private void loadNUD()
+        {
+            if (nUDUpdate.Maximum == 0)
+            {
+                nUDUpdate.Minimum = -1;
+            }
         }
     }
 }

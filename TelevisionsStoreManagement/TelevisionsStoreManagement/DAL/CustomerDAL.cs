@@ -57,5 +57,11 @@ namespace TelevisionsStoreManagement.DAL
             DataProvider.Instance.ExecuteNonQuery(sql);
             return true;
         }
+
+        public DataTable CountCustomer()
+        {
+            string sql = "SELECT * FROM CUSTOMER";
+            return DataProvider.Instance.ExecuteQuery(sql);
+        }
     }
 }

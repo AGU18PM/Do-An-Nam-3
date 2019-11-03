@@ -65,5 +65,10 @@ namespace TelevisionsStoreManagement.BUS
         {
             data.Delete(bill);
         }
+
+        public BillDTO GetDate()
+        {
+            return data.GetDate();
+        }
     }
 }

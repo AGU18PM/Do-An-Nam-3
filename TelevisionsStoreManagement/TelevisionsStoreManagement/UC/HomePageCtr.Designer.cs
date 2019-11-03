@@ -236,9 +236,9 @@
             this.label9.ForeColor = System.Drawing.Color.DimGray;
             this.label9.Location = new System.Drawing.Point(89, 53);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(58, 19);
+            this.label9.Size = new System.Drawing.Size(40, 19);
             this.label9.TabIndex = 4;
-            this.label9.Text = "1 tháng";
+            this.label9.Text = "ngày";
             // 
             // label7
             // 

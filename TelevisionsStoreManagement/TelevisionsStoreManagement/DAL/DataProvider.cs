@@ -19,7 +19,8 @@ namespace TelevisionsStoreManagement.DAL
         }
         private DataProvider() { }
 
-        private string connectionSTR = @"Data Source=DESKTOP-V5FECEI;Initial Catalog=TVSTOREMANAGERMENT;Integrated Security=True";
+        //DESKTOP-NGCOBG4
+        private string connectionSTR = @"Data Source=DESKTOP-NGCOBG4;Initial Catalog=TVSTOREMANAGERMENT;Integrated Security=True";
 
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {

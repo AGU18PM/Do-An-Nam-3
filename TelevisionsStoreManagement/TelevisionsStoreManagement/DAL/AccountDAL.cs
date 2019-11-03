@@ -19,7 +19,7 @@ namespace TelevisionsStoreManagement.DAL
 
         public void AddAccount(AccountDTO account)
         {
-            string sql = "INSERT INTO ACCOUNT(USERNAME, PASSWORD, DISPLAYNAME, ROLE, IMG) VALUES('" + account.Username + "' , '" + account.Password + "' , N'" + account.Displayname + "' , 1 , '" + account.Img + "' )";
+            string sql = "INSERT INTO ACCOUNT(USERNAME, PASSWORD, DISPLAYNAME, ROLE, IMG) VALUES('" + account.Username + "' , '" + account.Password + "' , N'" + account.Displayname + "' , " + account.Role + " , '" + account.Img + "' )";
             DataProvider.Instance.ExecuteNonQuery(sql);
         }
 

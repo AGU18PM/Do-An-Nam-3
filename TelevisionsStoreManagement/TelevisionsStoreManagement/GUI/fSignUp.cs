@@ -44,14 +44,14 @@ namespace TelevisionsStoreManagement.GUI
                     if (cbAdmin.Checked)
                         accountDTO.Role = 1;
                     else
-                        accountDTO.Role = 2;
+                        accountDTO.Role = 0;
                     if (imgURL == "")
                         accountDTO.Img = "\\IMG\\ACCOUNT\\user-icon-grey.png";
                     else
                     {
-                        string bede = accountDTO.Username + ".jpg";
-                        File.Copy(imgURL, Application.StartupPath + "\\IMG\\ACCOUNT\\" + bede);
-                        accountDTO.Img = "\\IMG\\ACCOUNT\\" + bede;
+                        string tg = accountDTO.Username + ".jpg";
+                        File.Copy(imgURL, Application.StartupPath + "\\IMG\\ACCOUNT\\" + tg);
+                        accountDTO.Img = "\\IMG\\ACCOUNT\\" + tg;
                     }
 
                     accountBUS.AddAccount(accountDTO);
