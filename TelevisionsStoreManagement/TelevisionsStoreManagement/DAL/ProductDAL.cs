@@ -199,7 +199,7 @@ namespace TelevisionsStoreManagement.DAL
             return Convert.ToDouble(DataProvider.Instance.ExecuteQuery(sql).Rows[0][0]);
         }
 
-        public string Check_amount()
+        public string Check_amount(ListBox lbOutput)
         {
             string sql = "EXECUTE GET_NAME_AMOUNTSMALLER3";
             DataTable a = DataProvider.Instance.ExecuteQuery(sql);
@@ -209,9 +209,12 @@ namespace TelevisionsStoreManagement.DAL
             {
                 for (int i = 0; i < count; i++)
                 {
-                    result += "Sản phẩm " + a.Rows[i][1].ToString()+ " "+ a.Rows[i][2].ToString() + " sắp hết hàng!!!\n";
+                    result = "Thông báo: Sản phẩm " + a.Rows[i][1].ToString()+ " "+ a.Rows[i][2].ToString() + " sắp hết hàng!!!";
+                    lbOutput.Items.Add(result);
                 }
+                
             }
+            
             return result;
         }
 

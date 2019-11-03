@@ -27,8 +27,7 @@ namespace TelevisionsStoreManagement.UC
         }
 
         private void HomePageCtr_Load(object sender, EventArgs e)
-        {
-            doanhThuBUS.ShowDoanhThu(chart1, doanhThu);
+        {            
             doanhThuBUS.GetDoanhThuForHomePage(labelRevenue);
             billInfoBus.TotalSold(labelSold);
             billInfoBus.SoldInDay(labelSoldin1Month);

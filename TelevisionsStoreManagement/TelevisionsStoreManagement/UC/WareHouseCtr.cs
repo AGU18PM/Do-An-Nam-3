@@ -99,7 +99,7 @@ namespace TelevisionsStoreManagement.UC
                 productDTO.PriceOut = Convert.ToDouble(txbPriceOut.Text);
                 if (productDTO.PriceIn <= 0)
                 {
-                    MessageBox.Show("Vui lòng nhập giá nhập sản phẩm lớn hơn 0");
+                    MessageBox.Show("Vui lòng nhập giá nhập sản phẩm lớn hơn 0!!!");
                     DataMode(0, false);
                     btnAdd.Enabled = true;
                     btnUpdate.Enabled = true;
@@ -110,7 +110,7 @@ namespace TelevisionsStoreManagement.UC
                 }
                 if (productDTO.PriceIn > productDTO.PriceOut)
                 {
-                    MessageBox.Show("Vui lòng nhập giá bán lớn hơn giá nhập");
+                    MessageBox.Show("Vui lòng nhập giá bán lớn hơn giá nhập!!!");
                     DataMode(0, false);
                     btnAdd.Enabled = true;
                     nUDCount.Visible = true;
@@ -126,7 +126,7 @@ namespace TelevisionsStoreManagement.UC
                 {
                     if (productBUS.AddProduct(productDTO))
                     {
-                        MessageBox.Show("Nhập thành công");
+                        MessageBox.Show("Nhập thành công!!!");
                         DataMode(0, false);
                         btnAdd.Enabled = true;
                         nUDCount.Visible = true;
@@ -136,7 +136,7 @@ namespace TelevisionsStoreManagement.UC
                     }
                     else
                     {
-                        MessageBox.Show("Nhập không thành công vui lòng kiểm tra lại dữ liệu");
+                        MessageBox.Show("Nhập không thành công vui lòng kiểm tra lại dữ liệu!!!");
                         DataMode(0, false);
                         nUDCount.Visible = true;
                         nUDUpdate.Visible = false;
@@ -150,7 +150,7 @@ namespace TelevisionsStoreManagement.UC
                     productDTO.Count = Convert.ToInt32(nUDUpdate.Value);
                     productDTO.ProductId = Convert.ToInt32(txbID.Text);
                     productBUS.UpdateProduct(productDTO);
-                    MessageBox.Show("Cập nhật thành công");
+                    MessageBox.Show("Cập nhật thành công!!!");
                     DataMode(0, false);
                     btnAdd.Enabled = true;
                     nUDCount.Visible = true;
@@ -177,20 +177,20 @@ namespace TelevisionsStoreManagement.UC
         {
             if (txbName.Text.Trim() == "" || txbPriceIn.Text.Trim() == "" || txbPriceOut.Text.Trim() == "")
             {
-                MessageBox.Show("Nhập dữ liệu trước khi lưu");
+                MessageBox.Show("Nhập dữ liệu trước khi lưu!!!");
                 return false;
             }
             if(toDo!=2)
             {
                 if (txbSize.Text == "" || nUDCount.Value == 0)
                 {
-                    MessageBox.Show("Nhập dữ liệu đầy đủ trước khi lưu");
+                    MessageBox.Show("Nhập dữ liệu đầy đủ trước khi lưu!!!");
                     return false;
                 }
             }
             else if(txbSize.Text == "" || nUDUpdate.Value == 0)
             {
-                MessageBox.Show("Nhập dữ liệu đầy đủ trước khi lưu");
+                MessageBox.Show("Nhập dữ liệu đầy đủ trước khi lưu!!!");
                 return false;
             }
             
@@ -234,7 +234,7 @@ namespace TelevisionsStoreManagement.UC
                 productDTO.ProductId = Convert.ToInt32(txbID.Text);
                 productBUS.DeleteProduct(productDTO);
                 productBUS.loadDataToDGV(dGVWareHouse, txbID, cboCategory, txbName, cboType, txbSize, nUDCount, txbPriceOut, txbPriceIn);
-                MessageBox.Show("Xóa thành công");
+                MessageBox.Show("Xóa thành công!!!");
             }
         }
 

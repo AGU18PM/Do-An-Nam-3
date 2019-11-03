@@ -54,8 +54,7 @@ namespace TelevisionsStoreManagement.GUI
 
                 if (panelLoading.Width >= 368)
                 {
-                    timerLoading.Stop();
-                    
+                    timerLoading.Stop();                   
                     
                     fLogin f = new fLogin();
                     this.Hide();

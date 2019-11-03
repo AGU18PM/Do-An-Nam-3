@@ -692,10 +692,11 @@
             // 
             // lbNotification
             // 
+            this.lbNotification.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbNotification.FormattingEnabled = true;
-            this.lbNotification.Location = new System.Drawing.Point(822, 84);
+            this.lbNotification.Location = new System.Drawing.Point(762, 45);
             this.lbNotification.Name = "lbNotification";
-            this.lbNotification.Size = new System.Drawing.Size(269, 95);
+            this.lbNotification.Size = new System.Drawing.Size(329, 130);
             this.lbNotification.TabIndex = 18;
             // 
             // notifyIcon1

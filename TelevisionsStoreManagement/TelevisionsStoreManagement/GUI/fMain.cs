@@ -103,27 +103,7 @@ namespace TelevisionsStoreManagement.GUI
             PanelSubMenu.Hide();
             mode = 0;
         }
-
-        /*private void doWork()
-        {
-            for (int i = 1; i <= 100; i++)
-            {
-                
-                panelMain.Invoke(new MethodInvoker(delegate ()
-                {
-                    ProductCtr productControl = new ProductCtr();
-                    panelMain.Controls.Add(productControl);
-                    
-                }));
-                progressBar1.Invoke(new MethodInvoker(delegate ()
-                {
-                    progressBar1.Value = (i * 100 / 100);
-                    
-                }));
-            }
-            
-            
-        }*/
+        
 
         private void btnHome_Click(object sender, EventArgs e)
         {
@@ -421,7 +401,7 @@ namespace TelevisionsStoreManagement.GUI
         }
 
         private void fMain_Load(object sender, EventArgs e)
-        {
+        {            
             HomePageCtr home = new HomePageCtr();
             
             panelMain.Controls.Add(home);
@@ -549,5 +529,7 @@ namespace TelevisionsStoreManagement.GUI
             else
                 labelNotification.Visible = false;
         }
+
+        
     }
 }

@@ -18,7 +18,10 @@ namespace TelevisionsStoreManagement
     {
         AccountBUS accountBus = new AccountBUS();
         AccountDTO accountDTO = new AccountDTO();
-        
+        int mov;
+        int movX;
+        int movY;
+
         public fLogin()
         {
             InitializeComponent();
@@ -126,6 +129,26 @@ namespace TelevisionsStoreManagement
             {
                 txbPassword.Text = "Password";
             }
+        }
+
+        private void fLogin_MouseDown(object sender, MouseEventArgs e)
+        {
+            mov = 1;
+            movX = e.X;
+            movY = e.Y;
+        }
+
+        private void fLogin_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mov == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - movX, MousePosition.Y - movY);                
+            }
+        }
+
+        private void fLogin_MouseUp(object sender, MouseEventArgs e)
+        {
+            mov = 0;
         }
     }
 }

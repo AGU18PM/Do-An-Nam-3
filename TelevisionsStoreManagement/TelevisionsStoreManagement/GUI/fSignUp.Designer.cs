@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fSignUp));
-            this.btnPickPicture = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txbPW2 = new System.Windows.Forms.TextBox();
@@ -44,7 +43,7 @@
             this.txbDisplayName = new System.Windows.Forms.TextBox();
             this.cbAdmin = new System.Windows.Forms.CheckBox();
             this.btnExit = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.btnPickPicture)).BeginInit();
+            this.btnPickPicture = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -53,18 +52,6 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnPickPicture
-            // 
-            this.btnPickPicture.BackColor = System.Drawing.Color.Transparent;
-            this.btnPickPicture.Image = ((System.Drawing.Image)(resources.GetObject("btnPickPicture.Image")));
-            this.btnPickPicture.Location = new System.Drawing.Point(118, 28);
-            this.btnPickPicture.Name = "btnPickPicture";
-            this.btnPickPicture.Size = new System.Drawing.Size(96, 96);
-            this.btnPickPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnPickPicture.TabIndex = 21;
-            this.btnPickPicture.TabStop = false;
-            this.btnPickPicture.Click += new System.EventHandler(this.btnPickPicture_Click);
             // 
             // panel1
             // 
@@ -251,23 +238,35 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnPickPicture
+            // 
+            this.btnPickPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPickPicture.BackgroundImage")));
+            this.btnPickPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPickPicture.FlatAppearance.BorderSize = 0;
+            this.btnPickPicture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPickPicture.Location = new System.Drawing.Point(115, 32);
+            this.btnPickPicture.Name = "btnPickPicture";
+            this.btnPickPicture.Size = new System.Drawing.Size(96, 96);
+            this.btnPickPicture.TabIndex = 24;
+            this.btnPickPicture.UseVisualStyleBackColor = true;
+            this.btnPickPicture.Click += new System.EventHandler(this.btnPickPicture_Click);
+            // 
             // fSignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(333, 496);
+            this.Controls.Add(this.btnPickPicture);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.cbAdmin);
             this.Controls.Add(this.txbDisplayName);
-            this.Controls.Add(this.btnPickPicture);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fSignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fSignUp";
-            ((System.ComponentModel.ISupportInitialize)(this.btnPickPicture)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -284,8 +283,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox btnPickPicture;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txbPW2;
@@ -300,5 +297,6 @@
         private System.Windows.Forms.TextBox txbDisplayName;
         private System.Windows.Forms.CheckBox cbAdmin;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnPickPicture;
     }
 }

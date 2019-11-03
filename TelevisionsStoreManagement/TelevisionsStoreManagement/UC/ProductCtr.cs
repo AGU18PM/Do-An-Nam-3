@@ -233,7 +233,7 @@ namespace TelevisionsStoreManagement.UC
             #endregion
             if (lbPayment.Items.Count == 0)
             {
-                MessageBox.Show("Vui long them san pham truoc khi thanh toan");
+                MessageBox.Show("Vui lòng thêm sản phẩm trước khi thanh toán");
             }
             else
             {
@@ -243,7 +243,7 @@ namespace TelevisionsStoreManagement.UC
                     if (txbCustomerPhonenumber.Text != "")
                     {
                         billBUS.submitOrCancelPayment(billDTO, txbCustomerPhonenumber.Text, doanhThu);
-                        MessageBox.Show("Tong gia la: " + billDTO.TotalPrice.ToString());
+                        MessageBox.Show("Tổng thành tiền là: " + billDTO.TotalPrice.ToString());
                         lbPayment.Items.Clear();
                         isCreateBill = 0;
                         productBUS.ShowProductData(dGVProduct, txbID, txbCategory, txbName, txbType, txbSize, txbPrice, typeInput, nUDCount);
@@ -253,7 +253,7 @@ namespace TelevisionsStoreManagement.UC
                         txbCustomerPhonenumber.Text = "1";
                         billDTO.Customer.ID = 3;
                         billBUS.submitOrCancelPayment(billDTO, txbCustomerPhonenumber.Text, doanhThu);
-                        MessageBox.Show("Tong gia la: " + billDTO.TotalPrice.ToString());
+                        MessageBox.Show("Tổng thành tiền là: " + billDTO.TotalPrice.ToString());
                         lbPayment.Items.Clear();
                         isCreateBill = 0;
                         productBUS.ShowProductData(dGVProduct, txbID, txbCategory, txbName, txbType, txbSize, txbPrice, typeInput, nUDCount);
@@ -281,7 +281,7 @@ namespace TelevisionsStoreManagement.UC
             #endregion
             if (nUDCount.Value == 0)
             {
-                MessageBox.Show("Vui long nhap so luong lon hon 0");
+                MessageBox.Show("Vui lòng nhập số lượng lớn hơn 0!!!");
             }
             else
             {
@@ -301,7 +301,7 @@ namespace TelevisionsStoreManagement.UC
                 pro.ProductId = Convert.ToInt32(txbID.Text);
                 dthu = productBUS.DoanhThu(pro);
                 billDTO = billInfoBus.getTotalPriceByIDBill(billDTO);
-                string payment = "Ban da them " + txbName.Text + " hang " + txbCategory.Text + " so luong " + nUDCount.Value.ToString() + " tong gia = " + totalPrice.ToString();
+                string payment = "Bạn đã thêm " + txbName.Text + " hãng " + txbCategory.Text + " số lượng " + nUDCount.Value.ToString() + " tổng tiền = " + totalPrice.ToString();
                 lbPayment.Items.Add(payment);
                 dthu *= Convert.ToDouble(nUDCount.Value);
                 btnCancel.Enabled = true;

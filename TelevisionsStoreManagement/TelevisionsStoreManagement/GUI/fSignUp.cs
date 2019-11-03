@@ -74,7 +74,7 @@ namespace TelevisionsStoreManagement.GUI
                 //if (open.CheckFileExists)
                 //    File.Copy(open.FileName, Application.StartupPath + "\\IMG\\ACCOUNT\\tam.jpg");
             }
-            btnPickPicture.Image = Image.FromFile(open.FileName);
+            btnPickPicture.BackgroundImage = Image.FromFile(open.FileName);
 
         }
 

@@ -106,6 +106,7 @@
             this.panelLoading.Name = "panelLoading";
             this.panelLoading.Size = new System.Drawing.Size(0, 6);
             this.panelLoading.TabIndex = 20;
+            this.panelLoading.Visible = false;
             // 
             // label5
             // 

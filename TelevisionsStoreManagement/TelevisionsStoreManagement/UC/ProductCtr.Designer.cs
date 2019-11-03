@@ -32,11 +32,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAddCustomer = new System.Windows.Forms.Button();
             this.btnPanasonic = new DevExpress.XtraEditors.CheckButton();
             this.btnLG = new DevExpress.XtraEditors.CheckButton();
             this.btnSony = new DevExpress.XtraEditors.CheckButton();
             this.btnSamsung = new DevExpress.XtraEditors.CheckButton();
+            this.btnAddCustomer = new System.Windows.Forms.Button();
             this.panelProduct = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -88,6 +88,46 @@
             this.panel1.Size = new System.Drawing.Size(676, 55);
             this.panel1.TabIndex = 0;
             // 
+            // btnPanasonic
+            // 
+            this.btnPanasonic.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPanasonic.ImageOptions.Image")));
+            this.btnPanasonic.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnPanasonic.Location = new System.Drawing.Point(514, 8);
+            this.btnPanasonic.Name = "btnPanasonic";
+            this.btnPanasonic.Size = new System.Drawing.Size(154, 39);
+            this.btnPanasonic.TabIndex = 11;
+            this.btnPanasonic.CheckedChanged += new System.EventHandler(this.btnPanasonic_CheckedChanged);
+            // 
+            // btnLG
+            // 
+            this.btnLG.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLG.ImageOptions.Image")));
+            this.btnLG.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.BottomCenter;
+            this.btnLG.Location = new System.Drawing.Point(344, 8);
+            this.btnLG.Name = "btnLG";
+            this.btnLG.Size = new System.Drawing.Size(154, 39);
+            this.btnLG.TabIndex = 10;
+            this.btnLG.CheckedChanged += new System.EventHandler(this.btnLG_CheckedChanged);
+            // 
+            // btnSony
+            // 
+            this.btnSony.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSony.ImageOptions.Image")));
+            this.btnSony.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnSony.Location = new System.Drawing.Point(174, 8);
+            this.btnSony.Name = "btnSony";
+            this.btnSony.Size = new System.Drawing.Size(154, 39);
+            this.btnSony.TabIndex = 9;
+            this.btnSony.CheckedChanged += new System.EventHandler(this.btnSony_CheckedChanged);
+            // 
+            // btnSamsung
+            // 
+            this.btnSamsung.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSamsung.ImageOptions.Image")));
+            this.btnSamsung.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.BottomCenter;
+            this.btnSamsung.Location = new System.Drawing.Point(3, 8);
+            this.btnSamsung.Name = "btnSamsung";
+            this.btnSamsung.Size = new System.Drawing.Size(154, 39);
+            this.btnSamsung.TabIndex = 4;
+            this.btnSamsung.CheckedChanged += new System.EventHandler(this.btnSamsung_CheckedChanged);
+            // 
             // btnAddCustomer
             // 
             this.btnAddCustomer.FlatAppearance.BorderSize = 0;
@@ -103,46 +143,6 @@
             this.btnAddCustomer.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAddCustomer.UseVisualStyleBackColor = true;
             this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
-            // 
-            // btnPanasonic
-            // 
-            this.btnPanasonic.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPanasonic.ImageOptions.Image")));
-            this.btnPanasonic.Location = new System.Drawing.Point(378, 8);
-            this.btnPanasonic.Name = "btnPanasonic";
-            this.btnPanasonic.Size = new System.Drawing.Size(120, 39);
-            this.btnPanasonic.TabIndex = 11;
-            this.btnPanasonic.Text = "Panasonic";
-            this.btnPanasonic.CheckedChanged += new System.EventHandler(this.btnPanasonic_CheckedChanged);
-            // 
-            // btnLG
-            // 
-            this.btnLG.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLG.ImageOptions.Image")));
-            this.btnLG.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.BottomCenter;
-            this.btnLG.Location = new System.Drawing.Point(252, 8);
-            this.btnLG.Name = "btnLG";
-            this.btnLG.Size = new System.Drawing.Size(120, 39);
-            this.btnLG.TabIndex = 10;
-            this.btnLG.CheckedChanged += new System.EventHandler(this.btnLG_CheckedChanged);
-            // 
-            // btnSony
-            // 
-            this.btnSony.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSony.ImageOptions.Image")));
-            this.btnSony.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnSony.Location = new System.Drawing.Point(126, 8);
-            this.btnSony.Name = "btnSony";
-            this.btnSony.Size = new System.Drawing.Size(120, 39);
-            this.btnSony.TabIndex = 9;
-            this.btnSony.CheckedChanged += new System.EventHandler(this.btnSony_CheckedChanged);
-            // 
-            // btnSamsung
-            // 
-            this.btnSamsung.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSamsung.ImageOptions.Image")));
-            this.btnSamsung.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.BottomCenter;
-            this.btnSamsung.Location = new System.Drawing.Point(0, 8);
-            this.btnSamsung.Name = "btnSamsung";
-            this.btnSamsung.Size = new System.Drawing.Size(120, 39);
-            this.btnSamsung.TabIndex = 4;
-            this.btnSamsung.CheckedChanged += new System.EventHandler(this.btnSamsung_CheckedChanged);
             // 
             // panelProduct
             // 
@@ -469,6 +469,7 @@
             this.dGVProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGVProduct.BackgroundColor = System.Drawing.Color.White;
             this.dGVProduct.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dGVProduct.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dGVProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dGVProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,

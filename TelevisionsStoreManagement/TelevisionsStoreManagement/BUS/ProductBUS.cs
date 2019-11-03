@@ -182,11 +182,11 @@ namespace TelevisionsStoreManagement.BUS
         {
             bool Check = false;
             lbOutput.Items.Clear();
-            if (data.Check_amount() != "")
-                Check = true;
-            lbOutput.Items.Add(data.Check_amount());
+            if (data.Check_amount(lbOutput) != "")
+                Check = true;            
             return Check;
+           
         }
-
+        
     }
 }
