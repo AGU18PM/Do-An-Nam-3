@@ -68,13 +68,15 @@ namespace TelevisionsStoreManagement.GUI
             OpenFileDialog open = new OpenFileDialog();
             open.Filter = "Images Files (*.jpg)|*.jpg|All Files(*.*)|*.*";
             open.FilterIndex = 1;
-            if (open.ShowDialog() == DialogResult.OK)
+            DialogResult kq = open.ShowDialog();
+            if (kq /*open.ShowDialog()*/ == DialogResult.OK)
             {
                 imgURL = open.FileName;
                 //if (open.CheckFileExists)
                 //    File.Copy(open.FileName, Application.StartupPath + "\\IMG\\ACCOUNT\\tam.jpg");
+                btnPickPicture.BackgroundImage = Image.FromFile(open.FileName);
             }
-            btnPickPicture.BackgroundImage = Image.FromFile(open.FileName);
+            //btnPickPicture.BackgroundImage = Image.FromFile(open.FileName);
 
         }
 
